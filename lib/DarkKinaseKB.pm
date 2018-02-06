@@ -7,4 +7,11 @@ get '/' => sub {
     template 'index' => { 'title' => 'DarkKinaseKB' };
 };
 
+get '/kinase/:kinase' => sub {
+  
+
+  template 'kinase' => { 'kinase' => params->{kinase} };
+};
+
+
 true;
