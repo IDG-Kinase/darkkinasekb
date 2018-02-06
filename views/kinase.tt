@@ -1,4 +1,14 @@
 <!-- Begin page content -->
 <main role="main" class="container">
 <h1 class="mt-5"><% kinase %></h1>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h4 class="panel-title">Outside Links</h4>
+  </div>
+  <div class="panel-body">
+    <a href="https://pharos.nih.gov/idg/targets/<% kinase %>">Pharos</a>
+  </div>
+</div>
+
 </main>
