@@ -1,3 +1,26 @@
 <main role="main" class="container">
-<h1 class="mt-5"></h1>
+
+
+<p>Hello and welcome to the Dark Kinase Knowledge Base Prototype. This website will serve as a test bed for ideas concerning how to display and collate information concerning understudied kinases.
+
+<p>List of Kinases:
+
+<div class="row">
+  <div class="col-sm">
+    [% FOREACH kinase IN kinase_1 %]
+    <a href="/kinase/[% kinase %]">[% kinase %]</a><br>
+    [%  END %]
+  </div>
+  <div class="col-sm">
+    [% FOREACH kinase IN kinase_2 %]
+    <a href="/kinase/[% kinase %]">[% kinase %]</a><br>
+    [%  END %]
+  </div>
+  <div class="col-sm">
+    [% FOREACH kinase IN kinase_3 %]
+    <a href="/kinase/[% kinase %]">[% kinase %]</a><br>
+    [%  END %]
+  </div>
+</div>
+
 <main>
