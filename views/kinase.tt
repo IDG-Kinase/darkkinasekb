@@ -1,12 +1,21 @@
 <!-- Begin page content -->
 <main role="main" class="container">
-<h1 class="mt-5">[% kinase %]</h1>
-  
-<div class="alert alert-info" role="alert">
-  <h4 class="alert-heading">Outside Links</h4>
-  <hr>
-  <a href="https://pharos.nih.gov/idg/targets/[% kinase %]">Pharos</a> |
-  <a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=[% kinase %]">Gene Cards</a> 
+<div class=row>
+  <div class="col-sm">
+    <h1>[% kinase %]</h1>
+  </div>
+</div>
+
+<div class=row>
+  <div class="col-sm">
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading">Resources</h4>
+      <hr>
+      <a href="https://pharos.nih.gov/idg/targets/[% kinase %]">Pharos</a> |
+      <a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=[% kinase %]">Gene Cards</a> |
+      <a href="https://www.gtexportal.org/home/gene/[% kinase %]">GTex</a> 
+    </div>
+  </div>
 </div>
 
 </main>
