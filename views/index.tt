@@ -6,21 +6,25 @@
 <p>List of Kinases:
 
 <div class="row">
-  <div class="col-sm">
+  <div class="col">
     [% FOREACH kinase IN kinase_1 %]
     <a href="/kinase/[% kinase %]">[% kinase %]</a><br>
     [%  END %]
   </div>
-  <div class="col-sm">
+  <div class="col">
     [% FOREACH kinase IN kinase_2 %]
     <a href="/kinase/[% kinase %]">[% kinase %]</a><br>
     [%  END %]
   </div>
-  <div class="col-sm">
+  <div class="col">
     [% FOREACH kinase IN kinase_3 %]
     <a href="/kinase/[% kinase %]">[% kinase %]</a><br>
     [%  END %]
   </div>
+  <div class="col">
+    <img src="images/kinase_tree.png" width=700>
+  </div>
 </div>
 
-<main>
+
+</main>
