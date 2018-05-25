@@ -15,8 +15,8 @@ get '/' => sub {
   my @kinase_list;
   #skip the first line, header
   for (1..(scalar(@kinase_info) - 1)) {
-    if ($kinase_info[$_][2] eq "dark") {
-      push @kinase_list, $kinase_info[$_][0];
+    if ($kinase_info[$_][3] eq "Dark") {
+      push @kinase_list, $kinase_info[$_][1];
     }
   }
 
