@@ -1,9 +1,7 @@
 <!-- Begin page content -->
 <main role="main" class="container">
 <div class=row>
-  <div class="col-sm">
-    <h1>[% kinase %]</h1>
-  </div>
+  <h1>[% kinase %]</h1>
 </div>
 
 <div class=row>
@@ -17,5 +15,15 @@
     </div>
   </div>
 </div>
+
+<div class=row>
+    <h3>TCGA Data Summary</h3>
+</div>
+
+<div class=row>
+    <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg">
+    <img height="400px" src="/images/CNV_heatmaps/[% kinase %].svg">
+</div>
+
 
 </main>
