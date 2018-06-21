@@ -8,9 +8,14 @@ use POSIX;
 
 our $VERSION = '0.1';
 
-get '/' => sub {
+hook before => sub {
   my $parser = Text::CSV::Simple->new;
   my @kinase_info = $parser->read_file('../data_sets/full_kinase_list.csv') or die "$!";
+  var kinase_info => \@kinase_info 
+};
+
+get '/' => sub {
+  my @kinase_info = @{var 'kinase_info'};
   
   my @kinase_list;
   #skip the first line, header
@@ -38,18 +43,14 @@ get '/' => sub {
 };
 
 get '/kinase/:kinase' => sub {
-  my $parser = Text::CSV::Simple->new;
-  my @kinase_info = $parser->read_file('../data_sets/full_kinase_list.csv') or die "$!";
+  my @kinase_info = @{var 'kinase_info'};
   
   my $kinase = params->{kinase};
   
-  my @kinase_info = grep $_->[1] eq $kinase, @kinase_info;
-
-  debug('test');
-  debug($kinase_info[0][0]);
+  my @this_kinase_info = grep $_->[1] eq $kinase, @kinase_info;
 
   my $hgnc_num = "NA"; 
-  if($kinase_info[0][0] =~ /(\d+)/) {
+  if($this_kinase_info[0][0] =~ /(\d+)/) {
     $hgnc_num = $1;
   }
   debug($hgnc_num);
