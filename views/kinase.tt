@@ -9,7 +9,8 @@
       <hr>
       <a href="https://pharos.nih.gov/idg/targets/[% kinase %]">Pharos</a> |
       <a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=[% kinase %]">Gene Cards</a> |
-      <a href="https://www.gtexportal.org/home/gene/[% kinase %]">GTex</a> 
+      <a href="https://www.gtexportal.org/home/gene/[% kinase %]">GTex</a> |
+      <a href="https://monarchinitiative.org/gene/HGNC%3A[% hgnc_num %]">Monarch Initiative</a> 
     </div>
   </div>
   <div class="col-1">
