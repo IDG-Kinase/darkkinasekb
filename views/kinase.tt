@@ -1,10 +1,8 @@
 <!-- Begin page content -->
 <main role="main" class="container">
-<div class=row>
-</div>
 
 <div class=row>
-  <div class="col-6">
+  <div class="col-8">
     <h1>[% kinase %]</h1>
     <div class="alert alert-info" role="alert">
       <h4 class="alert-heading">Resources</h4>
@@ -14,8 +12,10 @@
       <a href="https://www.gtexportal.org/home/gene/[% kinase %]">GTex</a> 
     </div>
   </div>
+  <div class="col-1">
+  </div>
   <div class="col">
-      <img height="400px" src="/images/single_kinase_trees/[% kinase %].svg">
+      <img height="200px" src="/images/single_kinase_trees/[% kinase %].svg">
       <!-- <img height="200px" src="/images/single_kinase_trees_png/[% kinase %].png"> -->
   </div>
 </div>
