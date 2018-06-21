@@ -1,4 +1,4 @@
-<svg viewBox="50 -10 800 640"  preserveAspectRatio="xMidYMid meet"
+<svg viewBox="225 -10 640 577"  preserveAspectRatio="xMidYMid meet"
 
 xmlns="http://www.w3.org/2000/svg"
 
@@ -1582,5 +1582,20 @@ xmlns:xlink="http://www.w3.org/1999/xlink" >
 <a xlink:href="http://www.uniprot.org/uniprot/O43293" target="_blank"><text id="t_x5F_DAPK3" x="364.5206" y="512.1268" font-weight="700"  font-size="20px" fill="#000000" font-family="'Roboto-Bold'" letter-spacing=".035">DAPK3</text></a>
 </g>
 <g id="GROUPS">
+<text transform="matrix(1 0 0 1 709.5648 117.5302)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">ABC1</text>
+<text transform="matrix(1 0 0 1 707.5311 149.8009)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">Alpha</text>
+<text transform="matrix(1 0 0 1 713.6572 180.4477)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">Brd</text>
+<text transform="matrix(1 0 0 1 707.6708 207.9581)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">PDHK</text>
+<text transform="matrix(1 0 0 1 710.8926 241.306)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">PIKK</text>
+<text transform="matrix(1 0 0 1 713.4592 270.3408)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">RIO</text>
+<text transform="matrix(1 0 0 1 711.8387 290.2847)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="6px">TIF1</text>
+<text transform="matrix(1 0 0 1 724.2949 87.9301)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="9px">Atypical Kinases</text>
+<text transform="matrix(1 0 0 1 630.7547 194.3814)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">STE</text>
+<text transform="matrix(1 0 0 1 612.7784 338.743)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">CK1</text>
+<text transform="matrix(1 0 0 1 621.9781 493.4888)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">AGC</text>
+<text transform="matrix(1 0 0 1 488.747 579.64)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">CAMK</text>
+<text transform="matrix(1 0 0 1 224.9432 295.8514)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">CMGC</text>
+<text transform="matrix(1 0 0 1 232.4214 134.5237)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">TK</text>
+<text transform="matrix(1 0 0 1 556.7155 125.6519)"  fill="#000000" font-family="Helvetica" font-weight="700" letter-spacing=".035" font-size="13px">TKL</text>
 </g>
 </svg>
