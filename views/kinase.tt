@@ -13,11 +13,8 @@
       <a href="https://monarchinitiative.org/gene/HGNC%3A[% hgnc_num %]">Monarch Initiative</a> 
     </div>
   </div>
-  <div class="col-1">
-  </div>
   <div class="col">
-      <img height="200px" src="/images/single_kinase_trees/[% kinase %].svg">
-      <!-- <img height="200px" src="/images/single_kinase_trees_png/[% kinase %].png"> -->
+    <img height="200px" src="/images/single_kinase_trees/[% kinase %].svg">
   </div>
 </div>
 
@@ -37,6 +34,9 @@
       <li class="nav-item">
         <a class="nav-link" id="CNV-tab" data-toggle="tab" href="#CNV" role="tab" aria-controls="CNV" aria-selected="false">Copy Number Variation</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" id="mRNA-tab" data-toggle="tab" href="#mRNA" role="tab" aria-controls="mRNA" aria-selected="false">mRNA Expression</a>
+      </li>
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
@@ -44,6 +44,9 @@
       </div>
       <div class="tab-pane fade" id="CNV" role="tabpanel" aria-labelledby="CNV-tab">
         <img height="400px" src="/images/CNV_heatmaps/[% kinase %].svg">
+      </div>
+      <div class="tab-pane fade" id="mRNA" role="tabpanel" aria-labelledby="mRNA-tab">
+        <img height="400px" src="/images/mRNA_heatmaps/[% kinase %].svg">
       </div>
     </div>
   </div>
