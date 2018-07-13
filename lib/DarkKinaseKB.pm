@@ -42,8 +42,6 @@ get '/' => sub {
     10 => [ splice @kinase_list, 0 ],
   );
 
-  warning(Dumper(\%split_kinase_lists));
-
   template 'index' => { 'title' => 'DarkKinaseKB', 
                         'kinase_1' => $split_kinase_lists{1},
                         'kinase_2' => $split_kinase_lists{2},
@@ -69,9 +67,9 @@ get '/kinase/:kinase' => sub {
   if($this_kinase_info[0][0] =~ /(\d+)/) {
     $hgnc_num = $1;
   }
-  debug($hgnc_num);
 
-  my %template_data = ('kinase' => $kinase, 'title' => $kinase, 'hgnc_num' => $hgnc_num);
+  my %template_data = ('kinase' => $kinase, 'title' => $kinase, 
+    'hgnc_num' => $hgnc_num, 'description' => $this_kinase_info[0][4]);
 
   template 'kinase' => \%template_data;
 };
