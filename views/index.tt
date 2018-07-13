@@ -11,10 +11,10 @@
   <div ng-app="myApp" ng-controller="namesCtrl"class="col-4">
   <p>Search for a Kinase:</p>
 
-  <p><input type="text" size="35" ng-model="searchKinase" ng-minlength="2" /></p>
+  <p><input type="text" size="35" ng-model="searchKinase"/></p>
 
   <ul class="list-group">
-    <a ng-href="{{ x.link }}" class="list-group-item list-group-item-action" ng-repeat="x in names | filter:searchKinase | limitTo:10">{{ x.name }}</a>
+    <a ng-href="{{ x.link }}" class="list-group-item list-group-item-action" ng-repeat="x in names | filter: {name: searchKinase} | limitTo:10">{{ x.name }}</a>
   </ul>
   </div>
 
