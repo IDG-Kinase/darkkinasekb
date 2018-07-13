@@ -27,18 +27,34 @@ get '/' => sub {
 
   @kinase_list = sort @kinase_list;
   
-  my $kinase_list_length = ceil(scalar(@kinase_list)/3);
+  my $kinase_list_length = ceil(scalar(@kinase_list)/10);
     
   my %split_kinase_lists = (
     1 => [ splice @kinase_list, 0, $kinase_list_length ],
     2 => [ splice @kinase_list, 0, $kinase_list_length ],
-    3 => [ splice @kinase_list, 0 ]
+    3 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    4 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    5 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    6 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    7 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    8 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    9 => [ splice @kinase_list, 0 ,$kinase_list_length ],
+    10 => [ splice @kinase_list, 0 ],
   );
 
-  template 'index' => { 'title' => 'DarkKinaseKB' , 
+  warning(Dumper(\%split_kinase_lists));
+
+  template 'index' => { 'title' => 'DarkKinaseKB', 
                         'kinase_1' => $split_kinase_lists{1},
                         'kinase_2' => $split_kinase_lists{2},
-                        'kinase_3' => $split_kinase_lists{3}
+                        'kinase_3' => $split_kinase_lists{3},
+                        'kinase_4' => $split_kinase_lists{4},
+                        'kinase_5' => $split_kinase_lists{5},
+                        'kinase_6' => $split_kinase_lists{6},
+                        'kinase_7' => $split_kinase_lists{7},
+                        'kinase_8' => $split_kinase_lists{8},
+                        'kinase_9' => $split_kinase_lists{9},
+                        'kinase_10' => $split_kinase_lists{10},
                       };
 };
 
