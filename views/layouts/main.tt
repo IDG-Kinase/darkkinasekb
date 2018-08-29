@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <title>[% title %]</title>
     <link rel="stylesheet" href="[% request.uri_base %]/css/style.css">
   
@@ -18,33 +16,107 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script src="javascripts/typeahead.js/typeahead.bundle.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   </head>
   <body>
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/">Dark Kinase Knowledgebase Prototype</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <!-- <ul class="navbar-nav mr-auto"> -->
-          <!--   <li class="nav-item active"> -->
-          <!--     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a> -->
-          <!--   </li> -->
-          <!-- </ul> -->
-          <!-- <form class="form-inline mt-2 mt-md-0"> -->
-          <!--   <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
-          <!--   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-          <!-- </form> -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Dark Kinase Knowledgebase</a>
         </div>
-      </nav>
-    </header>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="about">About<span class="sr-only">(current)</span></a></li>
+            <li><a href="tools">Tools</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group" id="kinase-search">
+              <input class="typeahead" type="text" class="form-control" placeholder="Dark Kinase">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    <script>
+      var substringMatcher = function(strs) {
+        return function findMatches(q, cb) {
+          var matches, substringRegex;
+
+          // an array that will be populated with substring matches
+          matches = [];
+
+          // regex used to determine if a string contains the substring `q`
+          substrRegex = new RegExp(q, 'i');
+
+          // iterate through the pool of strings and for any string that
+          // contains the substring `q`, add it to the `matches` array
+          $.each(strs, function(i, str) {
+            if (substrRegex.test(str)) {
+              matches.push(str);
+            }
+          });
+
+          cb(matches);
+        };
+      };
+
+    var dark_kinases = ['ADCK1', 'ADCK2', 'ADCK5', 'ALPK2', 'ALPK3', 'BCKDK',
+      'BRSK1', 'BRSK2', 'CAMK1D', 'CAMK1G', 'CAMKK1', 'CAMKK2', 'CAMKV',
+      'CDC42BPA', 'CDC42BPB', 'CDC42BPG', 'CDK10', 'CDK11A', 'CDK11B', 'CDK12',
+      'CDK13', 'CDK14', 'CDK15', 'CDK16', 'CDK17', 'CDK18', 'CDK19', 'CDK20',
+      'CDKL1', 'CDKL2', 'CDKL3', 'CDKL4', 'CDKL5', 'CLK3', 'CLK4', 'COQ8A',
+      'COQ8B', 'CSNK1A1L', 'CSNK1G1', 'CSNK1G2', 'CSNK1G3', 'CSNK2A2', 'CSNK2A3',
+      'DCLK3', 'DSTYK', 'DYRK1B', 'DYRK2', 'DYRK3', 'DYRK4', 'EEF2K', 'ERN2',
+      'HIPK1', 'HIPK3', 'HIPK4', 'ICK', 'LMTK2', 'LMTK3', 'LRRK1', 'LTK',
+      'MAP3K10', 'MAP3K14', 'MAP3K15', 'MAP3K21', 'MAPK4', 'MAPK15', 'MARK1',
+      'MARK3', 'MARK4', 'MAST2', 'MAST3', 'MAST4', 'MKNK1', 'MKNK2', 'NEK1',
+      'NEK3', 'NEK4', 'NEK5', 'NEK6', 'NEK7', 'NEK8', 'NEK9', 'NEK10', 'NEK11',
+      'NIM1K', 'NRBP2', 'NRK', 'NUAK2', 'OBSCN', 'PAK3', 'PAK5', 'PAK6', 'PAN3',
+      'PDIK1L', 'PHKG1', 'PHKG2', 'PI4KA', 'PIK3C2B', 'PIK3C2G', 'PIP4K2C',
+      'PIP5K1A', 'PIP5K1B', 'PIP5K1C', 'PKMYT1', 'PKN3', 'PNCK', 'POMK', 'PRAG1',
+      'PRKACB', 'PRKACG', 'PRKCQ', 'PRPF4B', 'PSKH1', 'PSKH2', 'PXK', 'RIOK1',
+      'RIOK2', 'RIOK3', 'RNASEL', 'RPS6KC1', 'RPS6KL1', 'SBK1', 'SBK2', 'SBK3',
+      'SCYL1', 'SCYL2', 'SCYL3', 'SRPK3', 'STK3', 'STK17A', 'STK17B', 'STK19',
+      'STK31', 'STK32A', 'STK32B', 'STK32C', 'STK33', 'STK36', 'STK38L', 'STK40',
+      'STKLD1', 'TAOK1', 'TAOK2', 'TBCK', 'TESK1', 'TESK2', 'TLK1', 'TLK2',
+      'TP53RK', 'TSSK1B', 'TSSK2', 'TSSK3', 'TSSK4', 'TSSK6', 'TTBK1', 'TTBK2',
+      'ULK4', 'VRK2', 'VRK3', 'WEE2', 'WNK2', 'WNK3'];
+
+    $('#kinase-search .typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+      {
+        name: 'dark_kinases',
+        source: substringMatcher(dark_kinases)
+      });
+    </script>
 
     [% content %]
 
