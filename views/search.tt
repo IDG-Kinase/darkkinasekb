@@ -1,0 +1,11 @@
+<main role="main" class="container">
+
+<h1>Search Results</h1>
+
+<ul class="list-unstyled">
+[% FOREACH i IN potential_matches %]
+<li><h3><a href="/kinase/[% i %]">[% i %]</a></h3></li>
+[% END %]
+</ul>
+
+</main>
