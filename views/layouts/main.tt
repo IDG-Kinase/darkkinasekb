@@ -48,7 +48,7 @@
             <a class="nav-link" href="/tools">Tools</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search" method="get">
+        <form class="form-inline my-2 my-lg-0" action="/search" method="get">
           <div id="kinase-search">
             <input class="typeahead form-control mr-sm-2" type="search" placeholder="Dark Kinase" name="kinase_text">
           </div>
