@@ -2,7 +2,7 @@
 <main role="main" class="container">
 
 <div class=row>
-  <div class="col-8">
+  <div class="col-lg-6">
     <h1>[% kinase %]</h1>
     <h6 class="text-muted">[% description %]</h4>
     <div class="alert alert-info" role="alert">
@@ -14,45 +14,41 @@
       <a href="https://monarchinitiative.org/gene/HGNC%3A[% hgnc_num %]">Monarch Initiative</a> 
     </div>
   </div>
-  <div class="col">
-    <img height="200px" src="/images/single_kinase_trees/[% kinase %].svg">
+  <div class="col-lg-2">
+  </div>
+  <div class="col-lg-4">
+    <img height="500px" src="/images/single_kinase_trees/[% kinase %].svg">
   </div>
 </div>
 
-<div class=row>
-  <div class=card>
-    <div class="card-header">
-      PRM Peptides 
-    </div>
-    <ul class="nav nav-tabs" id="PRM-Tab" role="tablist">
-      [% FOREACH peptide_info IN PRM_info %]
-      <li class="nav-item">
-        <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-control="[% peptide_info.1 %]" aria-selected="true">[% peptide_info.1 %]</a>
-      </li>
-      [% END %]
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      [% FOREACH peptide_info IN PRM_info %]
-      <div class="tab-pane fade show active" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
-        <img height="400px" src="/images/PRM_standard_curves/[% peptide_info.2 %]">
-      </div>
-      [% END %]
-    </div>
+<!-- <div class=row> -->
+<!--   <div class=card> -->
+<!--     <div class="card-header"> -->
+<!--       PRM Peptides  -->
+<!--     </div> -->
+<!--     <ul class="nav nav-tabs" id="myTab" role="tablist"> -->
+<!--       [% FOREACH peptide_info IN PRM_info %] -->
+<!--       <li class="nav-item"> -->
+<!--         <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">[% peptide_info.1 %]</a> -->
+<!--       </li> -->
+<!--       [% END %] -->
+<!--     </ul> -->
+<!--     <div class="tab-content" id="myTabContent"> -->
+<!--       [% FOREACH peptide_info IN PRM_info %] -->
+<!--       <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab"> -->
+<!--         <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg"> -->
+<!--       </div> -->
+<!--       [% END %] -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </div> -->
+
+
+<div class="card">
+  <div class="card-header">
+    TCGA Data Summary
   </div>
-</div>
-
-<script>
-  $(function () {
-    $('#PRM-Tab li:last-child a').tab('show')
-  })
-</script>
-
-
-<div class=row>
-  <div class=card>
-    <div class="card-header">
-      TCGA Data Summary
-    </div>
+  <div class="card-body">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">Mutations</a>
@@ -64,7 +60,7 @@
         <a class="nav-link" id="mRNA-tab" data-toggle="tab" href="#mRNA" role="tab" aria-controls="mRNA" aria-selected="false">mRNA Expression</a>
       </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
+    <div class="tab-content" id="TCGATabs">
       <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
         <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg">
       </div>
