@@ -5,25 +5,29 @@ use Cwd;
 use Data::Dumper;
 use Math::Round;
 use POSIX;
+use Text::Fuzzy;
 
 our $VERSION = '0.1';
 
 hook before => sub {
   my $parser = Text::CSV::Simple->new;
   my @kinase_info = $parser->read_file('../data_sets/full_kinase_list.csv') or die "$!";
-  var kinase_info => \@kinase_info 
+
+  my @dark_kinase_info;
+  for (1..(scalar(@kinase_info) - 1)) {
+    if ($kinase_info[$_][3] eq "Dark") {
+      push @dark_kinase_info, $kinase_info[$_][1];
+    }
+  }
+
+  var kinase_info => \@kinase_info;
+  var dark_kinase_info => \@dark_kinase_info;
 };
 
 get '/' => sub {
   my @kinase_info = @{var 'kinase_info'};
   
-  my @kinase_list;
-  #skip the first line, header
-  for (1..(scalar(@kinase_info) - 1)) {
-    if ($kinase_info[$_][3] eq "Dark") {
-      push @kinase_list, $kinase_info[$_][1];
-    }
-  }
+  my @kinase_list = @{var 'dark_kinase_info'};
 
   @kinase_list = sort @kinase_list;
   
@@ -78,6 +82,34 @@ get '/kinase/:kinase' => sub {
     'PRM_info' => \@this_PRM_info);
 
   template 'kinase' => \%template_data;
+};
+
+get '/search' => sub {
+  
+  my @kinase_info = @{var 'kinase_info'};
+  my @this_kinase_info = grep $_->[1] eq params->{kinase_text}, @kinase_info;
+  
+  # The search hit only one kinase, forward the user onto that kinase page
+  if (scalar(@this_kinase_info) == 1) {
+    redirect '/kinase/'.$this_kinase_info[0][1];
+  }
+  
+  my $search_text = params->{kinase_text};
+
+  my $kinase_search = Text::Fuzzy->new($search_text);
+  my @kinase_list = map $_->[1], @kinase_info;
+  
+  my @potential_matches = grep $_ =~ /$search_text/i, @kinase_list;
+
+  my @nearest = $kinase_search->nearestv(\@kinase_list);
+  
+  push @potential_matches, @nearest;
+
+  @potential_matches = @potential_matches[0..9];
+  
+  my %template_data =('potential_matches' => \@potential_matches);
+
+  template 'search' => \%template_data;
 };
 
 true;
