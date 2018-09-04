@@ -97,7 +97,7 @@ get '/search' => sub {
   my $search_text = params->{kinase_text};
 
   my $kinase_search = Text::Fuzzy->new($search_text);
-  my @kinase_list = map $_->[1], @kinase_info;
+  my @kinase_list = map $_->[1], @kinase_info[1..$#kinase_info];
   
   my @potential_matches = grep $_ =~ /$search_text/i, @kinase_list;
 
