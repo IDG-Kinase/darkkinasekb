@@ -21,35 +21,34 @@
   </div>
 </div>
 
-<!-- <div class=row> -->
-<!--   <div class=card> -->
-<!--     <div class="card-header"> -->
-<!--       PRM Peptides  -->
-<!--     </div> -->
-<!--     <ul class="nav nav-tabs" id="myTab" role="tablist"> -->
-<!--       [% FOREACH peptide_info IN PRM_info %] -->
-<!--       <li class="nav-item"> -->
-<!--         <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">[% peptide_info.1 %]</a> -->
-<!--       </li> -->
-<!--       [% END %] -->
-<!--     </ul> -->
-<!--     <div class="tab-content" id="myTabContent"> -->
-<!--       [% FOREACH peptide_info IN PRM_info %] -->
-<!--       <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab"> -->
-<!--         <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg"> -->
-<!--       </div> -->
-<!--       [% END %] -->
-<!--     </div> -->
-<!--   </div> -->
-<!-- </div> -->
-
+[% IF include_PRM == 1 %]
+<div class=card>
+  <div class="card-header">
+    PRM Peptides 
+  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    [% FOREACH peptide_info IN PRM_info %]
+    <li class="nav-item">
+      <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]" aria-selected="true">[% peptide_info.1 %]</a>
+    </li>
+    [% END %]
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    [% FOREACH peptide_info IN PRM_info %]
+    <div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
+      <img height="400px" src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+    </div>
+    [% END %]
+  </div>
+</div>
+[% END %]
 
 <div class="card">
   <div class="card-header">
     TCGA Data Summary
   </div>
   <div class="card-body">
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <ul class="nav nav-tabs" id="TCGATabs" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">Mutations</a>
       </li>
