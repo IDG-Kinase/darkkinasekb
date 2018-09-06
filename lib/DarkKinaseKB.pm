@@ -120,12 +120,20 @@ get '/about' => sub {
   template 'about';
 };
 
+get '/data' => sub {
+  template 'data';
+};
+
 get '/tools' => sub {
   template 'tools';
 };
 
-get '/data' => sub {
-  template 'data';
+get '/publications' => sub {
+  template 'publications';
+};
+
+get '/people' => sub {
+  template 'people';
 };
 
 true;
