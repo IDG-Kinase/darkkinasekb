@@ -124,4 +124,8 @@ get '/tools' => sub {
   template 'tools';
 };
 
+get '/data' => sub {
+  template 'data';
+};
+
 true;
