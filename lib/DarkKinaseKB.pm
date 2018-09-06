@@ -72,6 +72,11 @@ get '/kinase/:kinase' => sub {
   
   my @this_PRM_info = grep $_->[0] eq $kinase, @PRM_info;
   
+  my $include_PRM = 1;
+  if (scalar(@this_PRM_info) == 0) {
+    $include_PRM = 0;
+  }
+
   my $hgnc_num = "NA"; 
   if($this_kinase_info[0][0] =~ /(\d+)/) {
     $hgnc_num = $1;
@@ -79,13 +84,12 @@ get '/kinase/:kinase' => sub {
 
   my %template_data = ('kinase' => $kinase, 'title' => $kinase, 
     'hgnc_num' => $hgnc_num, 'description' => $this_kinase_info[0][4],
-    'PRM_info' => \@this_PRM_info);
+    'include_PRM' => $include_PRM, 'PRM_info' => \@this_PRM_info);
 
   template 'kinase' => \%template_data;
 };
 
 get '/search' => sub {
-  
   my @kinase_info = @{var 'kinase_info'};
   my @this_kinase_info = grep $_->[1] eq params->{kinase_text}, @kinase_info;
   
