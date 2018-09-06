@@ -116,4 +116,8 @@ get '/search' => sub {
   template 'search' => \%template_data;
 };
 
+get '/about' => sub {
+  template 'about';
+};
+
 true;
