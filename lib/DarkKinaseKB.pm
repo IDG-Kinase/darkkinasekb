@@ -120,4 +120,8 @@ get '/about' => sub {
   template 'about';
 };
 
+get '/tools' => sub {
+  template 'tools';
+};
+
 true;
