@@ -1,4 +1,71 @@
 <main role="main" class="container">
 
+<div class=row>
+  </br>
+</div>
+
+<div class=row>
+  <div class="col-lg-3">
+    <a href="http://phanstiel-lab.med.unc.edu/CORAL/">
+      <img class="img-fluid" src="images/coral-logo.png">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>Coral: Clear and Customizable Visualization of Human Kinome Data</h4>
+    Coral is a user-friendly interactive web application for visualizing both
+    quantitative and qualitative data. Unlike previous tools, Coral can encode
+    data in three features (node color, node size, and branch color), allows
+    three modes of kinome visualization (the traditional kinome tree as well
+    as radial and dynamic-force networks) and generates high-resolution
+    scalable vector graphic files suitable for publication without the need
+    for refinement in graphic editing software. Due to its user-friendly,
+    interactive, and highly customizable design, Coral is broadly applicable
+    to high-throughput studies of the human kinome.
+    </br>
+    </p>Coral was developed in collaboration with the <a
+       href="http://phanstiel-lab.med.unc.edu">Phanstiel lab</a> and is
+     available through <a href="https://github.com/dphansti/CORAL">github</a>
+     and the <a href="http://phanstiel-lab.med.unc.edu/CORAL/">web</a>.
+  </div>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class=row>
+  <div class="col-lg-3">
+    <a href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">
+      <img class="img-fluid" src="images/small-molecule-logo.png">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>The Small Molecule Suite: A Set of Tools to Explore the HMS-LINCS Compound Library</h4>
+  </div>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class=row>
+  <div class="col-lg-3">
+    <a href="http://www.grcalculator.org/grtutorial/Home.html">
+      <img class="img-fluid" src="images/GR-logo.png">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>GRbrowser and GRcalulator: Parameterizing Drug Response</h4>
+  </div>
+</div>
+
 
 </main>
