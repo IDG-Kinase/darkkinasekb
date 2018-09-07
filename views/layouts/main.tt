@@ -22,6 +22,55 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+          <img src="/safari-pinned-tab.svg" width="30" height="30" class="d-inline-block align-top" alt="Dark Kinase Knowledgebase Logo">
+          Dark Kinase Knowledgebase
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/data">Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tools">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/people">People</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" action="/search" method="get">
+            <div id="kinase-search">
+              <input class="typeahead form-control mr-sm-2" type="search" placeholder="Dark Kinase" name="kinase_text">
+            </div>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    [% content %]
+    
+  
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Dark Kinase IDG</span>
+      </div>
+    </footer>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -30,53 +79,5 @@
     <script src="/javascripts/typeahead.js/typeahead.bundle.min.js"></script>
     
     <script src="/javascripts/kinase_typeahead.js"></script>
-
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">
-        <img src="/safari-pinned-tab.svg" width="30" height="30" class="d-inline-block align-top" alt="Dark Kinase Knowledgebase Logo">
-        Dark Kinase Knowledgebase
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/data">Data</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/tools">Tools</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/publications">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/people">People</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0" action="/search" method="get">
-          <div id="kinase-search">
-            <input class="typeahead form-control mr-sm-2" type="search" placeholder="Dark Kinase" name="kinase_text">
-          </div>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-
-    [% content %]
-    
-    <script src="/javascripts/kinase_typeahead.js"></script>
-
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">Dark Kinase IDG</span>
-      </div>
-    </footer>
   </body>
 </html>
