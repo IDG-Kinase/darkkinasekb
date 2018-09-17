@@ -14,7 +14,7 @@
   </div>
   <div class="col-lg-8">
     <h4>Coral: Clear and Customizable Visualization of Human Kinome Data</h4>
-    Coral is a user-friendly interactive web application for visualizing both
+    </p>Coral is a user-friendly interactive web application for visualizing both
     quantitative and qualitative data. Unlike previous tools, Coral can encode
     data in three features (node color, node size, and branch color), allows
     three modes of kinome visualization (the traditional kinome tree as well
@@ -45,7 +45,19 @@
   <div class="col-lg-1">
   </div>
   <div class="col-lg-8">
-    <h4>The Small Molecule Suite: A Set of Tools to Explore the HMS-LINCS Compound Library</h4>
+    <h4>The Small Molecule Suite: A Set of Tools to Explore Small Molecule Perturbagens</h4>
+    </p>The Small Molecule Suite is a collection of cheminformatics tools that
+    allow researchers to get insight in the selectivity and similarity of
+    compounds and build custom chemical genetics libraries based on desired
+    target coverage and other user-specified criteria. The applications in the
+    suite use state-of-the-art quantitative methods such as target affinity
+    spectrum similarity and phenotypic fingerprint similarity, which are
+    data-driven. The suite updates regularly to keep incorporating the latest
+    published data.
+    
+    </p>The Small Molecule Suite was developed by the Laboratory of Systems
+    Pharmacology and is freely available on the <a
+    href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">web</a>.
   </div>
 </div>
 
@@ -54,18 +66,18 @@
   <br>
 </div>
 
-<div class=row>
-  <div class="col-lg-3">
-    <a href="http://www.grcalculator.org/grtutorial/Home.html">
-      <img class="img-fluid" src="images/GR-logo.png">
-    </a>
-  </div>
-  <div class="col-lg-1">
-  </div>
-  <div class="col-lg-8">
-    <h4>GRbrowser and GRcalulator: Parameterizing Drug Response</h4>
-  </div>
-</div>
+<!-- <div class=row> -->
+<!--   <div class="col-lg-3"> -->
+<!--     <a href="http://www.grcalculator.org/grtutorial/Home.html"> -->
+<!--       <img class="img-fluid" src="images/GR-logo.png"> -->
+<!--     </a> -->
+<!--   </div> -->
+<!--   <div class="col-lg-1"> -->
+<!--   </div> -->
+<!--   <div class="col-lg-8"> -->
+<!--     <h4>GRbrowser and GRcalulator: Parameterizing Drug Response</h4> -->
+<!--   </div> -->
+<!-- </div> -->
 
 
 </main>
