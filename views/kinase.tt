@@ -13,11 +13,17 @@
       <a href="https://www.gtexportal.org/home/gene/[% kinase %]">GTex</a> |
       <a href="https://monarchinitiative.org/gene/HGNC%3A[% hgnc_num %]">Monarch Initiative</a> 
     </div>
+    [% IF include_long_description == 1 %]
+    <div class=card>
+      [% kinase_text %]
+    </div>
+    [% END %]
   </div>
   <div class="col-lg-6">
     <img src="/images/single_kinase_trees/[% kinase %].svg">
   </div>
 </div>
+
 
 [% IF include_PRM == 1 %]
 <div class=card>
