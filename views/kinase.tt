@@ -1,5 +1,5 @@
 <!-- Begin page content -->
-<main role="main" class="container">
+<main role="main" class="container-fluid">
 
 <div class=row>
   <div class="col-lg-6">
@@ -25,31 +25,42 @@
 </div>
 
 
-[% IF include_PRM == 1 %]
-<div class="col-lg-12">
+<div class="card-columns">
+  [% IF include_ReNcell == 1 %]
+  <div class=card>
+    <div class="card-header">
+      ReNcell Visualizations
+    </div>
+    <div class="card-body">
+      <img height="400px" src="/images/ReNcell/[% kinase %].svg">
+    </div>
+  </div>
+  [% END %]
+
+  [% IF include_PRM == 1 %]
   <div class=card>
     <div class="card-header">
       PRM Peptides 
     </div>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      [% FOREACH peptide_info IN PRM_info %]
-      <li class="nav-item">
-        <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]">[% peptide_info.1 %]</a>
-      </li>
-      [% END %]
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      [% FOREACH peptide_info IN PRM_info %]
-      <div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
-        <img width="600px" src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+    <div class="card-body">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        [% FOREACH peptide_info IN PRM_info %]
+        <li class="nav-item">
+          <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]">[% peptide_info.1 %]</a>
+        </li>
+        [% END %]
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        [% FOREACH peptide_info IN PRM_info %]
+        <div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
+          <img width="600px" src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+        </div>
+        [% END %]
       </div>
-      [% END %]
     </div>
   </div>
-</div>
-[% END %]
+  [% END %]
 
-<div class="col-lg-12">
   <div class="card">
     <div class="card-header">
       TCGA Data Summary
@@ -68,13 +79,13 @@
       </ul>
       <div class="tab-content" id="TCGATabs">
         <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
-          <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg">
+          <img src="/images/mutation_heatmaps/[% kinase %].svg">
         </div>
         <div class="tab-pane fade" id="CNV" role="tabpanel" aria-labelledby="CNV-tab">
-          <img height="400px" src="/images/CNV_heatmaps/[% kinase %].svg">
+          <img src="/images/CNV_heatmaps/[% kinase %].svg">
         </div>
         <div class="tab-pane fade" id="mRNA" role="tabpanel" aria-labelledby="mRNA-tab">
-          <img height="400px" src="/images/mRNA_heatmaps/[% kinase %].svg">
+          <img src="/images/mRNA_heatmaps/[% kinase %].svg">
         </div>
       </div>
     </div>
