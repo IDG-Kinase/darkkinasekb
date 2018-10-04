@@ -26,52 +26,56 @@
 
 
 [% IF include_PRM == 1 %]
-<div class=card>
-  <div class="card-header">
-    PRM Peptides 
-  </div>
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-    [% FOREACH peptide_info IN PRM_info %]
-    <li class="nav-item">
-      <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]" aria-selected="true">[% peptide_info.1 %]</a>
-    </li>
-    [% END %]
-  </ul>
-  <div class="tab-content" id="myTabContent">
-    [% FOREACH peptide_info IN PRM_info %]
-    <div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
-      <img height="400px" src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+<div class="col-lg-12">
+  <div class=card>
+    <div class="card-header">
+      PRM Peptides 
     </div>
-    [% END %]
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      [% FOREACH peptide_info IN PRM_info %]
+      <li class="nav-item">
+        <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]">[% peptide_info.1 %]</a>
+      </li>
+      [% END %]
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      [% FOREACH peptide_info IN PRM_info %]
+      <div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
+        <img width="600px" src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+      </div>
+      [% END %]
+    </div>
   </div>
 </div>
 [% END %]
 
-<div class="card">
-  <div class="card-header">
-    TCGA Data Summary
-  </div>
-  <div class="card-body">
-    <ul class="nav nav-tabs" id="TCGATabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">Mutations</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="CNV-tab" data-toggle="tab" href="#CNV" role="tab" aria-controls="CNV" aria-selected="false">Copy Number Variation</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="mRNA-tab" data-toggle="tab" href="#mRNA" role="tab" aria-controls="mRNA" aria-selected="false">mRNA Expression</a>
-      </li>
-    </ul>
-    <div class="tab-content" id="TCGATabs">
-      <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
-        <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg">
-      </div>
-      <div class="tab-pane fade" id="CNV" role="tabpanel" aria-labelledby="CNV-tab">
-        <img height="400px" src="/images/CNV_heatmaps/[% kinase %].svg">
-      </div>
-      <div class="tab-pane fade" id="mRNA" role="tabpanel" aria-labelledby="mRNA-tab">
-        <img height="400px" src="/images/mRNA_heatmaps/[% kinase %].svg">
+<div class="col-lg-12">
+  <div class="card">
+    <div class="card-header">
+      TCGA Data Summary
+    </div>
+    <div class="card-body">
+      <ul class="nav nav-tabs" id="TCGATabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">Mutations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="CNV-tab" data-toggle="tab" href="#CNV" role="tab" aria-controls="CNV" aria-selected="false">Copy Number Variation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="mRNA-tab" data-toggle="tab" href="#mRNA" role="tab" aria-controls="mRNA" aria-selected="false">mRNA Expression</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="TCGATabs">
+        <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
+          <img height="400px" src="/images/mutation_heatmaps/[% kinase %].svg">
+        </div>
+        <div class="tab-pane fade" id="CNV" role="tabpanel" aria-labelledby="CNV-tab">
+          <img height="400px" src="/images/CNV_heatmaps/[% kinase %].svg">
+        </div>
+        <div class="tab-pane fade" id="mRNA" role="tabpanel" aria-labelledby="mRNA-tab">
+          <img height="400px" src="/images/mRNA_heatmaps/[% kinase %].svg">
+        </div>
       </div>
     </div>
   </div>
