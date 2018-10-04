@@ -61,9 +61,8 @@ get '/' => sub {
 };
 
 get '/kinase/:kinase' => sub {
-  my $parser = Text::CSV::Simple->new;
-  my @PRM_info = $parser->read_file('../data_sets/curve_info.csv') or die "$!";
   
+
   #############################################################################
   # General Kinase Infomation
   #############################################################################
@@ -79,13 +78,25 @@ get '/kinase/:kinase' => sub {
   }
   
   #############################################################################
-  # PRM
+  # PRM Images
   #############################################################################
+  my $parser = Text::CSV::Simple->new;
+  my @PRM_info = $parser->read_file('../data_sets/curve_info.csv') or die "$!";
+  
   my @this_PRM_info = grep $_->[0] eq $kinase, @PRM_info;
   
   my $include_PRM = 1;
   if (scalar(@this_PRM_info) == 0) {
     $include_PRM = 0;
+  }
+  
+  #############################################################################
+  # ReNcell Images
+  #############################################################################
+  my @ReNcell_file_matches = grep $_ =~ /$kinase/, <'../public/images/ReNcell/*'>;
+  my $include_ReNcell = 1;
+  if (scalar(@ReNcell_file_matches) == 0) {
+    $include_ReNcell = 0;
   }
   
   #############################################################################
@@ -109,8 +120,9 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   my %template_data = ('kinase' => $kinase, 'title' => $kinase, 
     'hgnc_num' => $hgnc_num, 'description' => $this_kinase_info[0][4],
-    'include_long_description',$include_long_description,
+    'include_long_description' => $include_long_description,
     "kinase_text" => $kinase_text[0],
+    'include_ReNcell' => $include_ReNcell,
     'include_PRM' => $include_PRM, 'PRM_info' => \@this_PRM_info);
 
   template 'kinase' => \%template_data;
