@@ -62,11 +62,11 @@
         </div>
       </nav>
     </header>
+
     [% content %]
-    
   
     <footer class="footer">
-      <div class="container">
+      <div class="container-fluid">
         <span class="text-muted">Dark Kinase IDG</span>
       </div>
     </footer>
