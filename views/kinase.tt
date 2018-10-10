@@ -18,8 +18,22 @@
       [% kinase_text %]
     </div>
     [% END %]
+    [% IF include_KO == 1 %]
+    <div class=card>
+      <div class="card-header">
+        Horizon KO HAP1 Cell Lines
+      </div>
+      <div class="card-body">
+        [% FOREACH line_info IN KO_info %]
+          <a href="[% line_info.8 %]">[% line_info.0 %]</a> 
+        [% END %]
+      </div>
+    </div>
+    [% END %]
   </div>
-  <div class="col-lg-6">
+  <div class="col-lg-2">
+  </div>
+  <div class="col-lg-4">
     <img src="/images/single_kinase_trees/[% kinase %].svg">
   </div>
 </div>
