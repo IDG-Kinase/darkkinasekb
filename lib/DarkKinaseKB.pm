@@ -68,13 +68,16 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   my @kinase_info = @{var 'kinase_info'};
   
-  my $kinase = params->{kinase};
+  my %template_data;
+  $template_data{kinase} = params->{kinase};
+  $template_data{title} = params->{kinase};
   
-  my @this_kinase_info = grep $_->[1] eq $kinase, @kinase_info;
-  
+  my @this_kinase_info = grep $_->[1] eq $template_data{kinase}, @kinase_info;
+  $template_data{description} = $this_kinase_info[0][4]; 
+
   my $hgnc_num = "NA"; 
   if($this_kinase_info[0][0] =~ /(\d+)/) {
-    $hgnc_num = $1;
+    $template_data{hgnc_num} = $1;
   }
   
   #############################################################################
@@ -83,47 +86,62 @@ get '/kinase/:kinase' => sub {
   my $parser = Text::CSV::Simple->new;
   my @PRM_info = $parser->read_file('../data_sets/curve_info.csv') or die "$!";
   
-  my @this_PRM_info = grep $_->[0] eq $kinase, @PRM_info;
-  
-  my $include_PRM = 1;
+  my @this_PRM_info = grep $_->[0] eq $template_data{kinase}, @PRM_info;
+  $template_data{PRM_info} = \@this_PRM_info;
+
+  $template_data{include_PRM} = 1;
   if (scalar(@this_PRM_info) == 0) {
-    $include_PRM = 0;
+    $template_data{include_PRM} = 0;
   }
   
   #############################################################################
   # ReNcell Images
   #############################################################################
-  my @ReNcell_file_matches = grep $_ =~ /$kinase/, <'../public/images/ReNcell/*'>;
-  my $include_ReNcell = 1;
-  if (scalar(@ReNcell_file_matches) == 0) {
-    $include_ReNcell = 0;
+  my @ReNcell_file_matches = grep $_ =~ /$template_data{kinase}/, 
+    <'../public/images/ReNcell/*'>;
+
+  $template_data{include_ReNcell} = 0;
+  if (scalar(@ReNcell_file_matches) > 0) {
+    $template_data{include_ReNcell} = 1;
+  }
+  
+  #############################################################################
+  # KO Cell Line Data
+  #############################################################################
+  $parser = Text::CSV::Simple->new;
+  my @KO_info = $parser->read_file('../data_sets/horizon_DK_KO_full.csv') or die "$!";
+
+  @KO_info = grep $_->[2] eq $template_data{kinase}, @KO_info;
+  
+  debug(Dumper(\@KO_info));
+
+  $template_data{include_KO} = 0;
+  if (scalar(@KO_info) > 0) {
+    $template_data{include_KO} = 1;
+    $template_data{KO_info} = \@KO_info;
   }
   
   #############################################################################
   # Long Kinase Descriptions
   #############################################################################
-  my @kinase_description_file = grep $_ =~ /$kinase/, <'../data_sets/kinase_descriptions/*'>;
+  my @kinase_description_file = grep $_ =~ /$template_data{kinase}/, 
+    <'../data_sets/kinase_descriptions/*'>;
   
-  my $include_long_description = 1;
-  my @kinase_text;
-  if (scalar(@kinase_description_file) == 0) {
-    $include_long_description = 0;
-  } elsif (scalar(@kinase_description_file) == 1) {
+  $template_data{include_long_description} = 0;
+  if (scalar(@kinase_description_file) == 1) {
+    $template_data{include_long_description} = 1;
+
     open INPUT, "<$kinase_description_file[0]" or 
-      debug("Can't open, " . $kinase_description_file[0]);
-    @kinase_text = <INPUT>;
+    debug("Can't open, " . $kinase_description_file[0]);
+    my @kinase_text = <INPUT>;
     close INPUT;
-  }
+
+    $template_data{kinase_text} = $kinase_text[0];
+  } 
 
   #############################################################################
   # Template Passing
   #############################################################################
-  my %template_data = ('kinase' => $kinase, 'title' => $kinase, 
-    'hgnc_num' => $hgnc_num, 'description' => $this_kinase_info[0][4],
-    'include_long_description' => $include_long_description,
-    "kinase_text" => $kinase_text[0],
-    'include_ReNcell' => $include_ReNcell,
-    'include_PRM' => $include_PRM, 'PRM_info' => \@this_PRM_info);
 
   template 'kinase' => \%template_data;
 };
