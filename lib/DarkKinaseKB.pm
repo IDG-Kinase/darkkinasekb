@@ -113,12 +113,24 @@ get '/kinase/:kinase' => sub {
 
   @KO_info = grep $_->[2] eq $template_data{kinase}, @KO_info;
   
-  debug(Dumper(\@KO_info));
-
   $template_data{include_KO} = 0;
   if (scalar(@KO_info) > 0) {
     $template_data{include_KO} = 1;
     $template_data{KO_info} = \@KO_info;
+  }
+  
+  #############################################################################
+  # Recombinant Protein Data
+  #############################################################################
+  $parser = Text::CSV::Simple->new;
+  my @recomb_info = $parser->read_file('../data_sets/thermo_recomb_proteins.csv') or die "$!";
+
+  @recomb_info = grep $_->[0] eq $template_data{kinase}, @recomb_info;
+  
+  $template_data{include_recomb} = 0;
+  if (scalar(@recomb_info) > 0) {
+    $template_data{include_recomb} = 1;
+    $template_data{recomb_info} = \@recomb_info;
   }
   
   #############################################################################

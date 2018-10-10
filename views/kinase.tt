@@ -19,6 +19,7 @@
     </div>
     [% END %]
     [% IF include_KO == 1 %]
+    </br>
     <div class=card>
       <div class="card-header">
         Horizon KO HAP1 Cell Lines
@@ -26,6 +27,19 @@
       <div class="card-body">
         [% FOREACH line_info IN KO_info %]
           <a href="[% line_info.8 %]">[% line_info.0 %]</a> 
+        [% END %]
+      </div>
+    </div>
+    [% END %]
+    [% IF include_recomb == 1 %]
+    </br>
+    <div class=card>
+      <div class="card-header">
+        ThermoFisher Recombinant Protein
+      </div>
+      <div class="card-body">
+        [% FOREACH line_info IN recomb_info %]
+          <a href="[% line_info.2 %]">[% line_info.1 %]</a> 
         [% END %]
       </div>
     </div>
