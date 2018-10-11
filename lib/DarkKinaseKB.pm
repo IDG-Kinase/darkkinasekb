@@ -61,12 +61,11 @@ get '/' => sub {
 };
 
 get '/kinase/:kinase' => sub {
+  my @kinase_info = @{var 'kinase_info'};
   
-
   #############################################################################
   # General Kinase Infomation
   #############################################################################
-  my @kinase_info = @{var 'kinase_info'};
   
   my %template_data;
   $template_data{kinase} = params->{kinase};
@@ -131,6 +130,20 @@ get '/kinase/:kinase' => sub {
   if (scalar(@recomb_info) > 0) {
     $template_data{include_recomb} = 1;
     $template_data{recomb_info} = \@recomb_info;
+  }
+  
+  #############################################################################
+  # Mouse KO Data
+  #############################################################################
+  $parser = Text::CSV::Simple->new;
+  my @mouse_KO_info = $parser->read_file('../data_sets/IMPC_KO.csv') or die "$!";
+
+  @mouse_KO_info = grep $_->[0] eq $template_data{kinase}, @mouse_KO_info;
+  
+  $template_data{include_KO} = 0;
+  if (scalar(@KO_info) > 0) {
+    $template_data{include_KO} = 1;
+    $template_data{KO_info} = \@mouse_KO_info;
   }
   
   #############################################################################
