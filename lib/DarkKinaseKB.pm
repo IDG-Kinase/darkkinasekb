@@ -140,10 +140,10 @@ get '/kinase/:kinase' => sub {
 
   @mouse_KO_info = grep $_->[0] eq $template_data{kinase}, @mouse_KO_info;
   
-  $template_data{include_KO} = 0;
+  $template_data{include_mouse_KO} = 0;
   if (scalar(@KO_info) > 0) {
-    $template_data{include_KO} = 1;
-    $template_data{KO_info} = \@mouse_KO_info;
+    $template_data{include_mouse_KO} = 1;
+    $template_data{mouse_KO_info} = \@mouse_KO_info;
   }
   
   #############################################################################

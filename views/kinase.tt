@@ -26,7 +26,7 @@
       </div>
       <div class="card-body">
         [% FOREACH line_info IN KO_info %]
-          <a href="[% line_info.8 %]">[% line_info.0 %]</a> 
+          <a href="[% line_info.8 %]">[% line_info.2 %]</a> 
         [% END %]
       </div>
     </div>
@@ -44,14 +44,14 @@
       </div>
     </div>
     [% END %]
-    [% IF include_KO == 1 %]
+    [% IF include_mouse_KO == 1 %]
     </br>
     <div class=card>
       <div class="card-header">
         IMPC Mouse KO
       </div>
       <div class="card-body">
-        [% FOREACH line_info IN KO_info %]
+        [% FOREACH line_info IN mouse_KO_info %]
           <a href="[% line_info.2 %]">[% line_info.1 %]</a> 
         [% END %]
       </div>
