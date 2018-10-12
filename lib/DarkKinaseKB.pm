@@ -105,6 +105,42 @@ get '/kinase/:kinase' => sub {
   }
   
   #############################################################################
+  # INDRA Clustered Results
+  #############################################################################
+  my @INDRA_clustered_file_matches = grep $_ =~ /$template_data{kinase}/, 
+    <'../public/images/INDRA/clustered/*'>;
+  
+  $template_data{include_clustered_INDRA} = 0;
+  if (scalar(@INDRA_clustered_file_matches) > 0) {
+    $template_data{include_clustered_INDRA} = 1;
+
+    $parser = Text::CSV::Simple->new;
+    my @INDRA_clustered = $parser->read_file('../data_sets/INDRA_URL_clustered.csv') or die "$!";
+    
+    @INDRA_clustered = grep $_->[0] eq $template_data{kinase}, @INDRA_clustered;
+
+    $template_data{clustered_INDRA_URL} = $INDRA_clustered[0][1];
+  }
+  
+  #############################################################################
+  # INDRA Filtered Results
+  #############################################################################
+  my @INDRA_filtered_file_matches = grep $_ =~ /$template_data{kinase}/, 
+    <'../public/images/INDRA/filtered/*'>;
+  
+  $template_data{include_filtered_INDRA} = 0;
+  if (scalar(@INDRA_filtered_file_matches) > 0) {
+    $template_data{include_filtered_INDRA} = 1;
+
+    $parser = Text::CSV::Simple->new;
+    my @INDRA_filtered = $parser->read_file('../data_sets/INDRA_URL_filtered.csv') or die "$!";
+    
+    @INDRA_filtered = grep $_->[0] eq $template_data{kinase}, @INDRA_filtered;
+
+    $template_data{filtered_INDRA_URL} = $INDRA_filtered[0][1];
+  }
+  
+  #############################################################################
   # KO Cell Line Data
   #############################################################################
   $parser = Text::CSV::Simple->new;
@@ -141,7 +177,7 @@ get '/kinase/:kinase' => sub {
   @mouse_KO_info = grep $_->[0] eq $template_data{kinase}, @mouse_KO_info;
   
   $template_data{include_mouse_KO} = 0;
-  if (scalar(@KO_info) > 0) {
+  if (scalar(@mouse_KO_info) > 0) {
     $template_data{include_mouse_KO} = 1;
     $template_data{mouse_KO_info} = \@mouse_KO_info;
   }

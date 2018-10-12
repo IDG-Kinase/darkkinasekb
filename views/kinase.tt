@@ -78,6 +78,32 @@
   </div>
   [% END %]
 
+  [% IF include_filtered_INDRA == 1 %]
+  <div class=card>
+    <div class="card-header">
+      INDRA Filtered Network
+    </div>
+    <div class="card-body">
+      <a href="[% filtered_INDRA_URL %]">
+        <img height="400px" src="/images/INDRA/filtered/[% kinase %].png">
+      </a>
+    </div>
+  </div>
+  [% END %]
+  
+  [% IF include_clustered_INDRA == 1 %]
+  <div class=card>
+    <div class="card-header">
+      INDRA Network
+    </div>
+    <div class="card-body">
+      <a href="[% clustered_INDRA_URL %]">
+        <img height="400px" src="/images/INDRA/clustered/[% kinase %].png">
+      </a>
+    </div>
+  </div>
+  [% END %]
+
   [% IF include_PRM == 1 %]
   <div class=card>
     <div class="card-header">
