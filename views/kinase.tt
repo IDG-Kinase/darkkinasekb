@@ -73,7 +73,7 @@
       ReNcell Visualizations
     </div>
     <div class="card-body">
-      <img height="400px" src="/images/ReNcell/[% kinase %].svg">
+      <img src="/images/ReNcell/[% kinase %].svg">
     </div>
   </div>
   [% END %]
