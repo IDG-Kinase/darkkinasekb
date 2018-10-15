@@ -8,10 +8,10 @@
     <div class="alert alert-info" role="alert">
       <h4 class="alert-heading">Resources</h4>
       <hr>
-      <a href="https://pharos.nih.gov/idg/targets/[% kinase %]">Pharos</a> |
-      <a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=[% kinase %]">Gene Cards</a> |
-      <a href="https://www.gtexportal.org/home/gene/[% kinase %]">GTex</a> |
-      <a href="https://monarchinitiative.org/gene/HGNC%3A[% hgnc_num %]">Monarch Initiative</a> 
+      <a href="https://pharos.nih.gov/idg/targets/[% kinase %]" target="_blank">Pharos</a> |
+      <a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=[% kinase %]" target="_blank">Gene Cards</a> |
+      <a href="https://www.gtexportal.org/home/gene/[% kinase %]" target="_blank">GTex</a> |
+      <a href="https://monarchinitiative.org/gene/HGNC%3A[% hgnc_num %]" target="_blank">Monarch Initiative</a> 
     </div>
     [% IF include_long_description == 1 %]
     <div class=card>
@@ -26,7 +26,7 @@
       </div>
       <div class="card-body">
         [% FOREACH line_info IN KO_info %]
-          <a href="[% line_info.8 %]">[% line_info.2 %]</a> 
+          <a href="[% line_info.8 %]" target="_blank">[% line_info.2 %]</a> 
         [% END %]
       </div>
     </div>
@@ -39,7 +39,7 @@
       </div>
       <div class="card-body">
         [% FOREACH line_info IN recomb_info %]
-          <a href="[% line_info.2 %]">[% line_info.1 %]</a> 
+          <a href="[% line_info.2 %]" target="_blank">[% line_info.1 %]</a> 
         [% END %]
       </div>
     </div>
@@ -52,7 +52,7 @@
       </div>
       <div class="card-body">
         [% FOREACH line_info IN mouse_KO_info %]
-          <a href="[% line_info.2 %]">[% line_info.1 %]</a> 
+          <a href="[% line_info.2 %]" target="_blank">[% line_info.1 %]</a> 
         [% END %]
       </div>
     </div>
@@ -84,7 +84,7 @@
       INDRA Filtered Network
     </div>
     <div class="card-body">
-      <a href="[% filtered_INDRA_URL %]">
+      <a href="[% filtered_INDRA_URL %]" target="_blank">
         <img height="400px" src="/images/INDRA/filtered/[% kinase %].png">
       </a>
     </div>
@@ -97,7 +97,7 @@
       INDRA Network
     </div>
     <div class="card-body">
-      <a href="[% clustered_INDRA_URL %]">
+      <a href="[% clustered_INDRA_URL %]" target="_blank">
         <img height="400px" src="/images/INDRA/clustered/[% kinase %].png">
       </a>
     </div>
