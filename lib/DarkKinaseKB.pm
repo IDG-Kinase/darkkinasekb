@@ -30,7 +30,8 @@ get '/' => sub {
   my @kinase_info = @{var 'kinase_info'};
   
   my @kinase_list = @{var 'dark_kinase_info'};
-
+  
+  @kinase_list = map $_->[1], @kinase_list;
   @kinase_list = sort @kinase_list;
   
   my $kinase_list_length = ceil(scalar(@kinase_list)/10);
