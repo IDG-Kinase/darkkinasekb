@@ -6,6 +6,8 @@ use Data::Dumper;
 use Math::Round;
 use POSIX;
 use Text::Fuzzy;
+use List::MoreUtils qw(uniq);
+use File::Basename;
 
 our $VERSION = '0.1';
 
@@ -16,7 +18,7 @@ hook before => sub {
   my @dark_kinase_info;
   for (1..(scalar(@kinase_info) - 1)) {
     if ($kinase_info[$_][3] eq "Dark") {
-      push @dark_kinase_info, $kinase_info[$_][1];
+      push @dark_kinase_info, $kinase_info[$_];
     }
   }
 
@@ -96,7 +98,7 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   # ReNcell Images
   #############################################################################
-  my @ReNcell_file_matches = grep $_ =~ /$template_data{kinase}/, 
+  my @ReNcell_file_matches = grep basename($_) eq "$template_data{kinase}.svg", 
     <'../public/images/ReNcell/*'>;
 
   $template_data{include_ReNcell} = 0;
@@ -107,7 +109,7 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   # INDRA Clustered Results
   #############################################################################
-  my @INDRA_clustered_file_matches = grep $_ =~ /$template_data{kinase}/, 
+  my @INDRA_clustered_file_matches = grep basename($_) eq "$template_data{kinase}.png", 
     <'../public/images/INDRA/clustered/*'>;
   
   $template_data{include_clustered_INDRA} = 0;
@@ -125,7 +127,7 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   # INDRA Filtered Results
   #############################################################################
-  my @INDRA_filtered_file_matches = grep $_ =~ /$template_data{kinase}/, 
+  my @INDRA_filtered_file_matches = grep basename($_) eq "$template_data{kinase}.png", 
     <'../public/images/INDRA/filtered/*'>;
   
   $template_data{include_filtered_INDRA} = 0;
@@ -208,8 +210,8 @@ get '/kinase/:kinase' => sub {
 };
 
 get '/search' => sub {
-  my @kinase_info = @{var 'kinase_info'};
-  my @this_kinase_info = grep $_->[1] eq params->{kinase_text}, @kinase_info;
+  my @dark_kinase_info = @{var 'dark_kinase_info'};
+  my @this_kinase_info = grep $_->[1] eq params->{kinase_text}, @dark_kinase_info;
   
   # The search hit only one kinase, forward the user onto that kinase page
   if (scalar(@this_kinase_info) == 1) {
@@ -219,7 +221,7 @@ get '/search' => sub {
   my $search_text = params->{kinase_text};
 
   my $kinase_search = Text::Fuzzy->new($search_text);
-  my @kinase_list = map $_->[1], @kinase_info[1..$#kinase_info];
+  my @kinase_list = map $_->[1], @dark_kinase_info[1..$#dark_kinase_info];
   
   my @potential_matches = grep $_ =~ /$search_text/i, @kinase_list;
 
@@ -227,7 +229,9 @@ get '/search' => sub {
   
   push @potential_matches, @nearest;
 
-  @potential_matches = @potential_matches[0..9];
+  @potential_matches = uniq(@potential_matches);
+
+  # @potential_matches = @potential_matches[0..9];
   
   my %template_data =('potential_matches' => \@potential_matches);
 
