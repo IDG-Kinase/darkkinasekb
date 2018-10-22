@@ -200,7 +200,9 @@ get '/kinase/:kinase' => sub {
     my @kinase_text = <INPUT>;
     close INPUT;
 
-    $template_data{kinase_text} = $kinase_text[0];
+    my $kinase_text = join("",@kinase_text);
+
+    $template_data{kinase_text} = $kinase_text;
   } 
 
   #############################################################################
