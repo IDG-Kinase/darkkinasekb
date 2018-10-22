@@ -1,0 +1,35 @@
+<p>Tousled-like kinase 2 is a serine/threonine kinase and as of Oct. 9, 2018, 28 papers were found in a basic search of PubMed using &#8220;TLK2&#8221; as the search term.</p>
+
+<h2 id="describedfunctionsorroles">Described Functions or Roles</h2>
+
+<p>First described in <em>Arabidopsis thaliana</em>, with mutations leading to defects in flower development, Two members of this family exist in humans (TLK1 and TLK2).[1] Both TLK1 and TLK2 localize to the nucleus, with activity linked to DNA replication and maximal activity during the S phase. DNA double-strand breaks induce rapid inhibition of activity, suggesting a role in checkpoint regulation. Histone H3 along with H3-H4 chaperone Asf1A/B have been shown to be substrates of TLKs, establishing a link with chromatin assembly.[2-5] TLK2 activity has been specifically identified as being responsible for recovery from DNA damage checkpoint arrest during G2, with absence of TLK2 preventing recovery.[6] While there has been indications that TLK1 and TLK2 share functions, there has been more recent evidence that TLK2 performs unique functions after DNA damage, with both kinase performing similar functions in non-damaged cells.[6] TLK2 appears to be widely expressed in tissues, with the greatest expression in the testes.</p>
+
+<h2 id="physiologyphenotypesanddisease">Physiology, Phenotypes and Disease</h2>
+
+<h3 id="cancer">Cancer</h3>
+
+<p>From public TCGA data sets, a significant number of missense mutations have been observed in TLK2 for cholangiocarcinoma (bile duct cancer). In addition, high expression is observed in testicular germ cell tumors along with high copy number variation in kidney chromophobe (deletion) and kidney renal papillary cell carcinoma (amplification). [DKK] A related study of TCGA data has suggested that TLK2 is significantly over-expressed in 37% of luminal breast cancer tumors and associated with poor survival in these patients.(fn) The authors further hypothesize that TLK2 may act &#8220;as a context-dependent driver of ER-positive/luminal tumours in the absence of PIK3CA expression.&#8221;</p>
+
+<h3 id="neurodevelopment">Neurodevelopment</h3>
+
+<p>Inherited heterozygous mutations in TLK2 showed a consistent set of neruodevelopmental disorder phenotypes in affected individuals (40 total) including mild neurodevelopment delays, a variety of behavioral disorders, significant gastro-intestinal problems along with facial dysmorphism. Further analysis of cell lines from affected individuals indicated that at least two variants act through haploinsufficiency (heterozygous loss-of-function).[4]</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>TLK2-specific PRM peptides have been identified and are provided on the <a href="http://darkkinome.org/kinase/TLK2">DKK</a>.</p>
+
+<h2 id="references">References</h2>
+
+<p>[1] Sillj&#233; HH, Takahashi K, Tanaka K, Van Houwe G, Nigg EA. Mammalian homologues of the plant Tousled gene code for cell-cycle-regulated kinases with maximal activities linked to ongoing DNA replication. EMBO J. 1999;18: 5691&#8211;5702.</p>
+
+<p>[2] Carrera P, Moshkin YM, Gronke S, Sillje HHW, Nigg EA, Jackle H, et al. Tousled-like kinase functions with the chromatin assembly pathway regulating nuclear divisions. Genes Dev. 2003;17: 2578&#8211;2590.</p>
+
+<p>[3] Sillj&#233; HH, Nigg EA. Identification of human Asf1 chromatin assembly factors as substrates of Tousled-like kinases. Curr Biol. 2001;11: 1068&#8211;1073.</p>
+
+<p>[4] Reijnders MRF, Miller KA, Alvi M, Goos JAC, Lees MM, de Burca A, et al. De Novo and Inherited Loss-of-Function Variants in TLK2: Clinical and Genotype-Phenotype Evaluation of a Distinct Neurodevelopmental Disorder. Am J Hum Genet. 2018;102: 1195&#8211;1203.</p>
+
+<p>[5] Klimovskaia IM, Young C, Str&#248;mme CB, Menard P, Jasencakova Z, Mejlvang J, et al. Tousled-like kinases phosphorylate Asf1 to promote histone supply during DNA replication. Nat Commun. 2014;5: 3394.</p>
+
+<p>[6] Bruinsma W, van den Berg J, Aprelia M, Medema RH. Tousled-like kinase 2 regulates recovery from a DNA damage-induced G2 arrest. EMBO Rep. 2016;17: 659&#8211;670.</p>
+
+<p>[7] Srihari S, Singla J, Wong L, Ragan MA. Inferring synthetic lethal interactions from mutual exclusivity of genetic events in cancer. Biol Direct. 2015;10: 57.</p>
