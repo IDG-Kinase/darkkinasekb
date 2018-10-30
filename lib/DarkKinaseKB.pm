@@ -71,8 +71,8 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   
   my %template_data;
-  $template_data{kinase} = params->{kinase};
-  $template_data{title} = params->{kinase};
+  $template_data{kinase} = route_parameters->get('kinase');
+  $template_data{title} = $template_data{kinase};
   
   my @this_kinase_info = grep $_->[1] eq $template_data{kinase}, @kinase_info;
   $template_data{description} = $this_kinase_info[0][4]; 
@@ -208,8 +208,12 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   # Template Passing
   #############################################################################
-
-  template 'kinase' => \%template_data;
+  
+  if (query_parameters->get('alternative')) {
+    template 'kinase_alternative' => \%template_data;
+  } else {
+    template 'kinase' => \%template_data;
+  }
 };
 
 get '/search' => sub {
