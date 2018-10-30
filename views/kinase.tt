@@ -2,6 +2,18 @@
 
 <main role="main" class="container-fluid">
 
+  <script>
+    function change_collapse_icon(button_obj) {
+      button_val = button_obj.innerHTML;
+      if (button_val == "+") {
+        button_obj.innerHTML = "-";
+      } else {
+        button_obj.innerHTML = "+";
+      }
+    };
+  </script>
+
+
 <div class=row>
   <div class="col-lg-6">
     <h1>[% kinase %]</h1>
@@ -72,14 +84,17 @@
     <div class="card-header">
       <div class="row align-items-center">
         <div class="col-11">
-        ReNcell Visualizations
+          ReNcell Visualizations
         </div>
         <div class="col-1">
+          <button class="btn float-right" type="button" data-toggle="collapse" data-target="#ReNcellCollapse" aria-expanded="false" aria-controls="ReNcellCollapse" onclick="change_collapse_icon(this)">+</button>
         </div>
       </div>
     </div>
-    <div class="card-body">
-      <img src="/images/ReNcell/[% kinase %].svg">
+    <div id="ReNcellCollapse" class="collapse">
+      <div class="card-body">
+        <img src="/images/ReNcell/[% kinase %].svg">
+      </div>
     </div>
   </div>
   [% END %]
@@ -87,12 +102,21 @@
   [% IF include_filtered_INDRA == 1 %]
   <div class=card>
     <div class="card-header">
-      INDRA Filtered Network
+      <div class="row align-items-center">
+        <div class="col-11">
+          INDRA Filtered Network
+        </div>
+        <div class="col-1">
+          <button class="btn float-right" type="button" data-toggle="collapse" data-target="#INDRAFiltCollapse" aria-expanded="false" aria-controls="INDRAFiltCollapse" onclick="change_collapse_icon(this)">+</button>
+        </div>
+      </div>
     </div>
-    <div class="card-body">
-      <a href="[% filtered_INDRA_URL %]" target="_blank">
-        <img height="400px" src="/images/INDRA/filtered/[% kinase %].png">
-      </a>
+    <div id="INDRAFiltCollapse" class="collapse">
+      <div class="card-body">
+        <a href="[% filtered_INDRA_URL %]" target="_blank">
+          <img height="400px" src="/images/INDRA/filtered/[% kinase %].png">
+        </a>
+      </div>
     </div>
   </div>
   [% END %]
@@ -100,12 +124,21 @@
   [% IF include_clustered_INDRA == 1 %]
   <div class=card>
     <div class="card-header">
-      INDRA Network
+      <div class="row align-items-center">
+        <div class="col-11">
+          INDRA Network
+        </div>
+        <div class="col-1">
+          <button class="btn float-right" type="button" data-toggle="collapse" data-target="#INDRACollapse" aria-expanded="false" aria-controls="INDRACollapse" onclick="change_collapse_icon(this)">+</button>
+        </div>
+      </div>
     </div>
-    <div class="card-body">
-      <a href="[% clustered_INDRA_URL %]" target="_blank">
-        <img height="400px" src="/images/INDRA/clustered/[% kinase %].png">
-      </a>
+    <div id="INDRACollapse" class="collapse">
+      <div class="card-body">
+        <a href="[% clustered_INDRA_URL %]" target="_blank">
+          <img height="400px" src="/images/INDRA/clustered/[% kinase %].png">
+        </a>
+      </div>
     </div>
   </div>
   [% END %]
@@ -118,7 +151,7 @@
 				  PRM Peptides 
 			  </div>
 			  <div class="col-1">
-				  <button class="btn float-right" type="button" data-toggle="collapse" data-target="#PRMCollapse" aria-expanded="false" aria-controls="PRMCollapse" onclick="change_PRM_icon()" id="PRM_button">+</button>
+				  <button class="btn float-right" type="button" data-toggle="collapse" data-target="#PRMCollapse" aria-expanded="false" aria-controls="PRMCollapse" onclick="change_collapse_icon(this)">+</button>
 			  </div>
 		  </div>
 	  </div>
@@ -143,14 +176,6 @@
   </div>
 
   <script>
-	  function change_PRM_icon() {
-		  button_val = document.getElementById("PRM_button").innerHTML;
-		  if (button_val == "+") {
-		  	document.getElementById("PRM_button").innerHTML = "-";
-		  } else {
-		  	document.getElementById("PRM_button").innerHTML = "+";
-		  }
-	  };
 	  $('#PRMTab li:first-child a').tab('show')
   </script>
   [% END %]
@@ -162,13 +187,11 @@
           TCGA Data Summary
         </div>
         <div class="col-1">
-          <button class="btn float-right" type="button" data-toggle="collapse" data-target="#TCGACollapse" aria-expanded="false" aria-controls="TCGACollapse">
-            +
-          </button>
+          <button class="btn float-right" type="button" data-toggle="collapse" data-target="#TCGACollapse" aria-expanded="false" aria-controls="TCGACollapse" onclick="change_collapse_icon(this)">+</button>
         </div>
       </div>
     </div>
-    <div id="TCGACollapse">
+    <div id="TCGACollapse" class="collapse">
       <div class="card-body">
         <ul class="nav nav-tabs" id="TCGATabs" role="tablist">
           <li class="nav-item">
