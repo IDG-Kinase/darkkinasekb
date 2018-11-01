@@ -75,9 +75,12 @@
     [% content %]
   
     <footer class="footer">
-      <div class="container-fluid">
-        <span class="text-muted">Dark Kinase IDG</span>
-      </div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-11 text-muted float-left">Dark Kinase IDG</div>
+				<div class="col-1 text-right"><a href="https://github.com/IDG-Kinase/darkkinasekb"><img src="images/GitHub-Mark/PNG/GitHub-Mark-120px-plus.png" height=25></a>
+				</div>
+			</div>
     </footer>
     
   </body>
