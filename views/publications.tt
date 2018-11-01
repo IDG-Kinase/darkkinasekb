@@ -1,5 +1,15 @@
 <main role="main" class="container">
 
-<h1>Page Under Development</h1>
+<br/>
+<h1>List of Associated Publications</h1>
+<br/>
+<div class="row">
+<ul>
+	<li>Metz KS, Erika M.Deoudes EM, Berginski ME, Jimenez-Ruiz I, Aksoy BA, Hammerbacher J, Gomez SM, Phanstiel DH. Coral: Clear and Customizable Visualization of Human Kinome Data. Cell Systems. 2018 7(3 347-350). <a href="https://doi.org/10.1016/j.cels.2018.07.001">Available Here</a></li>
+	<li>Oprea TI, et al. Unexplored therapeutic opportunities in the human genome. Nature Reviews Drug Discovery. 2018 17(317-332). <a href="http://dx.doi.org/10.1038/nrd.2018.14">Availalble Here</a></li>
+	<li>Moret N, Clark N, Hafner M, Wang Y, Lounkine E, Medvedovic M, Wang J, Gray N, Jenkins J, Sorger P. Cheminformatics tools for analyzing and designing optimized small molecule libraries. bioRxiv 358978 (2018). <a href="https://doi.org/10.1101/358978">Available Here</a></li>
+	<li>Gyori BM, Bachman JA, Subramanian K, Muhlich JL, Galescu L, Sorger PK. From word models to executable models of signaling networks using automated assembly. Molecular Systems Biology. 2017 13(11):954. <a href="https://dx.doi.org/10.15252%2Fmsb.20177651">Available Here</a></li>
+</ul>
+</div>
 
 </main>
