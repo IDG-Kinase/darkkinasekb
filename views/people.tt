@@ -1,5 +1,92 @@
 <main role="main" class="container">
 
-<h1>Page Under Development</h1>
+<br/>
+<br/>
+
+<div class="row align-items-center">
+  <div class="col-3">
+    <img class="img-responsive" src="images/people/Matt.jpg" width=200>
+  </div>
+  <div class="col-1">
+  </div>
+  <div class="col-8">
+	<h3>Matthew Berginski</h3>
+	Matthew is a research scientist at the University of North Carolina in the
+	departments of Biomedical Engineering and Pharmacology. He works as a
+	bioinformatics specialist focusing on organizing and analyzing data related
+	to the dark kinases.
+  </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center">
+  <div class="col-3">
+    <img class="img-responsive" src="images/people/Nienke.jpg" width=200>
+  </div>
+  <div class="col-1">
+  </div>
+  <div class="col-8">
+	<h3>Nienke Moret</h3>
+    Nienke is a PhD candidate in Harvard's Chemical Biology program and the
+    Therapeutics Graduate Program of Harvard's Initiative in Therapeutic
+    Sciences.  She works in the Laboratory of Systems Pharmacology, mentored
+    primarily by Peter Sorger, where she studies functional polypharmacology --
+    the phenomenon that small molecule drugs derive efficacy from targeting
+    multiple proteins. 
+  </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center">
+  <div class="col-3">
+    <img class="img-responsive" src="images/people/Changchang.jpg" width=200>
+  </div>
+  <div class="col-1">
+  </div>
+  <div class="col-8">
+	<h3>Changchang Liu</h3>
+	Changchang is a PhD candidate in Harvard's Chemical Biology department. She
+	works in Peter Sorger's lab, part of the Laboratory of Systems Pharmacology.
+	Her project focuses on predicting binding affinities between small molecules
+	and kinases using machine learning methods.
+  </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center">
+  <div class="col-3">
+    <img class="img-responsive" src="images/people/Peter.jpg" width=200>
+  </div>
+  <div class="col-1">
+  </div>
+  <div class="col-8">
+	  <h3>Peter Sorger</h3>
+	  </p>Peter’s research focuses on the systems biology of signal transduction
+	  networks controlling cell proliferation and death, the dysregulation of
+	  these networks in cancer and inflammatory diseases and the mechanisms of
+	  action of therapeutic drugs targeting signaling proteins. His group uses
+	  mathematical and experimental approaches to construct and test
+	  computational models of signaling in human and murine cells as a means to
+	  understand and eventually predict the responses of cells and tumors to
+	  drugs applied individually and in combination. The Sorger group also
+	  develops open-source software for analyzing biological networks and it
+	  participates in multiple collaborative programs working to improve data
+	  reproducibility.
+
+	  </p>As founding head of the Harvard Program in Therapeutic Sciences
+	  (HiTS), Peter leads a university-wide effort to advance the basic and
+	  translational science used to develop new medicines, identify responsive
+	  patients and evaluate new drugs via precision clinical trials. He also
+	  directs the primary research program in HiTS, the Laboratory of Systems
+	  Pharmacology, which joins together faculty members from six institutions
+	  in a multi-disciplinary effort to develop and apply new concepts in drug
+	  discovery. Peter was co-founder of Merrimack Pharmaceuticals and Glencoe
+	  Software and is an adviser to multiple public and private companies and
+	  research institutes in the US, Europe and Japan.
+  </div>
+</div>
 
 </main>
