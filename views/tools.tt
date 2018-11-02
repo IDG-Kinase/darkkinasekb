@@ -1,8 +1,7 @@
-<main role="main" class="container-fluid">
+<main role="main" class="container">
 
-<div class=row>
-  </br>
-</div>
+</br>
+</br>
 
 <div class=row>
   <div class="col-lg-3">
@@ -55,15 +54,9 @@
     data-driven. The suite updates regularly to keep incorporating the latest
     published data.
     
-    </p>The Small Molecule Suite was developed by the Laboratory of Systems
-    Pharmacology and is freely available on the <a
-    href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">web</a>.
+	</p>The Small Molecule Suite was developed by the <a href="http://hits.harvard.edu/the-program/laboratory-of-systems-pharmacology/about/">Laboratory of Systems
+		Pharmacology</a> and the <a href="">Laboratory for Statistical Genomics and Systems Biology</a>. It is freely available on <a href="https://github.com/sorgerlab/smallmoleculesuite">github</a> and the <a href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">web</a>.
   </div>
-</div>
-
-<div class=row>
-  <br>
-  <br>
 </div>
 
 <!-- <div class=row> -->
