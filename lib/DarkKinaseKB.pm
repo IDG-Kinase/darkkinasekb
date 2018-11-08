@@ -209,11 +209,7 @@ get '/kinase/:kinase' => sub {
   # Template Passing
   #############################################################################
   
-  if (query_parameters->get('alternative')) {
-    template 'kinase_alternative' => \%template_data;
-  } else {
-    template 'kinase' => \%template_data;
-  }
+  template 'kinase' => \%template_data;
 };
 
 get '/search' => sub {
