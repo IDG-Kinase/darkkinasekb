@@ -92,7 +92,7 @@
   <div id="ReNcellCollapse" class="collapse">
 	  <div class="card-body">
 		  <div class="row align-items-center">
-			  <div class="col-6">
+			  <div class="col-6 text-center">
 				  <img src="/images/ReNcell/[% kinase %].svg">
 			  </div>
 			  <div class="col-1">
@@ -116,7 +116,7 @@
 <br/>
 [% END %]
 
-[% IF include_filtered_INDRA == 1 or include_clustered_INDRA == 1 %]
+[% IF include_clustered_INDRA == 1 %]
 <div class=card>
 	<div class="card-header">
 		<div class="row align-items-center">
@@ -132,22 +132,14 @@
 	<div id="NetworkCollapse" class="collapse">
 		<div class="card-body">
 			<div class="row align-items-center">
-				[% IF include_filtered_INDRA == 1 %]
-				<div class="col-4 text-center">
-					<a href="[% filtered_INDRA_URL %]" target="_blank">
-						<img height="400px" src="/images/INDRA/filtered/[% kinase %].png">
-					</a>
-				</div>
-				[% END %]
-				[% IF include_clustered_INDRA == 1 %]
-				<div class="col-4 text-center">
+				<div class="col-6 text-center">
 					<a href="[% clustered_INDRA_URL %]" target="_blank">
-						<img height="400px" src="/images/INDRA/clustered/[% kinase %].png">
+						<img height="500px" src="/images/INDRA/clustered/[% kinase %].png">
 					</a>
 				</div>
-				[% END %]
-				<div class="col-4">
-					<h5>
+				<div class="col-1"></div>
+				<div class="col-5">
+					<h4>
 					INDRA (Integrated Network and Dynamical Reasoning Assembler)
 					is an automated model assembly system drawing from natural
 					language processing systems and structured databases. It
@@ -155,7 +147,7 @@
 					in a standardized form (INDRA Statements), and assembles
 					them into various modeling formalisms including causal
 					graphs and dynamical models. More information on this work
-					can be found on https://indralab.github.io/.  In this
+					can be found on <a href="https://indralab.github.io/">Github</a>.  In this
 					particular figure, several interaction-types are depicted;
 					physical complexes (blue), phosphorylation (black), and
 					general up- or downregulation (green and red, respectively).
@@ -163,7 +155,7 @@
 					as circles, and biological processes and diamonds. The
 					thickness of each line reflects a confidence score, with
 					thicker lines higher in confidence.
-					</h5>
+					</h4>
 				</div>
 			</div>
 		</div>
@@ -172,8 +164,8 @@
 <br/>
 [% END %]
 
-<!-- PRM Data -->
 [% IF include_PRM == 1 %]
+<!-- PRM Data -->
 <div class=card>
   <div class="card-header">
     <div class="row align-items-center">
