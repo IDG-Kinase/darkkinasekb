@@ -1,0 +1,201 @@
+{"name": "viz", "children": [
+{
+"name": "a", "children": [
+{
+"name": "CAMK1G", "label": "CaMK1g", "desc": "calcium/calmodulin dependent protein kinase IG", "size": 33}, 
+ {"name": "CDC42BPB", "label": "MRCKb", "desc": "CDC42 binding protein kinase beta", "size": 29}, 
+ {"name": "CLK3", "label": "CLK3", "desc": "CDC like kinase 3", "size": 13}, 
+ {"name": "COQ8A", "label": "ADCK3", "desc": "coenzyme Q8A", "size": 9}, 
+ {"name": "ERN2", "label": "IRE2", "desc": "endoplasmic reticulum to nucleus signaling 2", "size": 37}, 
+ {"name": "HIPK3", "label": "HIPK3", "desc": "homeodomain interacting protein kinase 3", "size": 7}, 
+ {"name": "LMTK2", "label": "LMR2", "desc": "lemur tyrosine kinase 2", "size": 6}, 
+ {"name": "NRBP2", "label": "NRBP2", "desc": "nuclear receptor binding protein 2", "size": 21}, 
+ {"name": "PHKG1", "label": "PHKg1", "desc": "phosphorylase kinase catalytic subunit gamma 1", "size": 15}, 
+ {"name": "PHKG2", "label": "PHKg2", "desc": "phosphorylase kinase catalytic subunit gamma 2", "size": 14}, 
+ {"name": "PRKCQ", "label": "PKCt", "desc": "protein kinase C theta", "size": 39}, 
+ {"name": "PSKH2", "label": "PSKH2", "desc": "protein serine kinase H2", "size": 28}, 
+ {"name": "VRK3", "label": "VRK3", "desc": "vaccinia related kinase 3", "size": 15}]}
+,
+ 
+ {"name": "b", "children": [
+{
+"name": "ALPK2", "label": "AlphaK2", "desc": "alpha kinase 2", "size": 6}, 
+ {"name": "BCKDK", "label": "BCKDK", "desc": "branched chain ketoacid dehydrogenase kinase", "size": 30}, 
+ {"name": "CAMKK2", "label": "CaMKK2", "desc": "calcium/calmodulin dependent protein kinase kinase 2", "size": 17}, 
+ {"name": "CAMKV", "label": "VACAMKL", "desc": "CaM kinase like vesicle associated", "size": 12}, 
+ {"name": "CLK4", "label": "CLK4", "desc": "CDC like kinase 4", "size": 9}, 
+ {"name": "CSNK1G1", "label": "CK1g1", "desc": "casein kinase 1 gamma 1", "size": 27}, 
+ {"name": "HIPK1", "label": "HIPK1", "desc": "homeodomain interacting protein kinase 1", "size": 27}, 
+ {"name": "NEK10", "label": "NEK10", "desc": "NIMA related kinase 10", "size": 10}, 
+ {"name": "PIP5K1B", "label": "nan", "desc": "phosphatidylinositol-4-phosphate 5-kinase type 1 beta", "size": 36}, 
+ {"name": "STK36", "label": "Fused", "desc": "serine/threonine kinase 36", "size": 14}, 
+ {"name": "TLK1", "label": "TLK1", "desc": "tousled like kinase 1", "size": 18}, 
+ {"name": "TSSK2", "label": "TSSK2", "desc": "testis specific serine kinase 2", "size": 5}, 
+ {"name": "TSSK4", "label": "TSSK4", "desc": "testis specific serine kinase 4", "size": 20}]}
+,
+ 
+ {"name": "c", "children": [
+{
+"name": "CDK11B", "label": "nan", "desc": "cyclin dependent kinase 11B", "size": 27}, 
+ {"name": "EEF2K", "label": "eEF2K", "desc": "eukaryotic elongation factor 2 kinase", "size": 36}, 
+ {"name": "MAPK4", "label": "Erk4", "desc": "mitogen-activated protein kinase 4", "size": 23}, 
+ {"name": "MARK1", "label": "MARK1", "desc": "microtubule affinity regulating kinase 1", "size": 14}, 
+ {"name": "MAST4", "label": "MAST4", "desc": "microtubule associated serine/threonine kinase family member 4", "size": 16}, 
+ {"name": "MKNK1", "label": "MNK1", "desc": "MAP kinase interacting serine/threonine kinase 1", "size": 19}, 
+ {"name": "NEK3", "label": "NEK3", "desc": "NIMA related kinase 3", "size": 18}, 
+ {"name": "NEK6", "label": "NEK6", "desc": "NIMA related kinase 6", "size": 8}, 
+ {"name": "NUAK2", "label": "NuaK2", "desc": "NUAK family kinase 2", "size": 12}, 
+ {"name": "PIK3C2G", "label": "nan", "desc": "phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 gamma", "size": 15}, 
+ {"name": "RIOK1", "label": "RIOK1", "desc": "RIO kinase 1", "size": 16}, 
+ {"name": "SBK1", "label": "SBK", "desc": "SH3 domain binding kinase 1", "size": 28}, 
+ {"name": "SBK3", "label": "SgK110", "desc": "SH3 domain binding kinase family member 3", "size": 9}, 
+ {"name": "STK17A", "label": "DRAK1", "desc": "serine/threonine kinase 17a", "size": 29}, 
+ {"name": "STK32A", "label": "YANK1", "desc": "serine/threonine kinase 32A", "size": 41}, 
+ {"name": "STK33", "label": "STK33", "desc": "serine/threonine kinase 33", "size": 19}]}
+,
+ 
+ {"name": "d", "children": [
+{
+"name": "CAMK1D", "label": "CaMK1d", "desc": "calcium/calmodulin dependent protein kinase ID", "size": 21}, 
+ {"name": "CDC42BPA", "label": "MRCKa", "desc": "CDC42 binding protein kinase alpha", "size": 25}, 
+ {"name": "DSTYK", "label": "SgK496", "desc": "dual serine/threonine and tyrosine protein kinase", "size": 20}, 
+ {"name": "NEK4", "label": "NEK4", "desc": "NIMA related kinase 4", "size": 23}, 
+ {"name": "NEK9", "label": "NEK9", "desc": "NIMA related kinase 9", "size": 32}, 
+ {"name": "SRPK3", "label": "MSSK1", "desc": "SRSF protein kinase 3", "size": 25}, 
+ {"name": "STK3", "label": "MST2", "desc": "serine/threonine kinase 3", "size": 20}, 
+ {"name": "STK38L", "label": "NDR2", "desc": "serine/threonine kinase 38 like", "size": 52}, 
+ {"name": "STK40", "label": "SgK495", "desc": "serine/threonine kinase 40", "size": 8}, 
+ {"name": "TAOK2", "label": "TAO2", "desc": "TAO kinase 2", "size": 28}, 
+ {"name": "WEE2", "label": "Wee1B", "desc": "WEE1 homolog 2", "size": 15}, 
+ {"name": "WNK2", "label": "Wnk2", "desc": "WNK lysine deficient protein kinase 2", "size": 34}]}
+,
+ 
+ {"name": "e", "children": [
+{
+"name": "ADCK2", "label": "ADCK2", "desc": "aarF domain containing kinase 2", "size": 41}, 
+ {"name": "CDK15", "label": "PFTAIRE2", "desc": "cyclin dependent kinase 15", "size": 32}, 
+ {"name": "CDKL1", "label": "CDKL1", "desc": "cyclin dependent kinase like 1", "size": 25}, 
+ {"name": "CDKL4", "label": "CDKL4", "desc": "cyclin dependent kinase like 4", "size": 24}, 
+ {"name": "COQ8B", "label": "ADCK4", "desc": "coenzyme Q8B", "size": 24}, 
+ {"name": "DYRK2", "label": "DYRK2", "desc": "dual specificity tyrosine phosphorylation regulated kinase 2", "size": 14}, 
+ {"name": "MAP3K10", "label": "MLK2", "desc": "mitogen-activated protein kinase kinase kinase 10", "size": 37}, 
+ {"name": "PRPF4B", "label": "PRP4", "desc": "pre-mRNA processing factor 4B", "size": 26}, 
+ {"name": "PSKH1", "label": "PSKH1", "desc": "protein serine kinase H1", "size": 15}, 
+ {"name": "STK17B", "label": "DRAK2", "desc": "serine/threonine kinase 17b", "size": 13}, 
+ {"name": "STKLD1", "label": "SgK071", "desc": "serine/threonine kinase like domain containing 1", "size": 22}, 
+ {"name": "TBCK", "label": "TBCK", "desc": "TBC1 domain containing kinase", "size": 10}, 
+ {"name": "TSSK6", "label": "SSTK", "desc": "testis specific serine kinase 6", "size": 7}]}
+,
+ 
+ {"name": "f", "children": [
+{
+"name": "CAMKK1", "label": "CaMKK1", "desc": "calcium/calmodulin dependent protein kinase kinase 1", "size": 19}, 
+ {"name": "CDK10", "label": "CDK10", "desc": "cyclin dependent kinase 10", "size": 7}, 
+ {"name": "CDK12", "label": "CRK7", "desc": "cyclin dependent kinase 12", "size": 28}, 
+ {"name": "CDK13", "label": "CHED", "desc": "cyclin dependent kinase 13", "size": 20}, 
+ {"name": "CDKL2", "label": "CDKL2", "desc": "cyclin dependent kinase like 2", "size": 9}, 
+ {"name": "CDKL3", "label": "CDKL3", "desc": "cyclin dependent kinase like 3", "size": 16}, 
+ {"name": "DYRK4", "label": "DYRK4", "desc": "dual specificity tyrosine phosphorylation regulated kinase 4", "size": 17}, 
+ {"name": "HIPK4", "label": "HIPK4", "desc": "homeodomain interacting protein kinase 4", "size": 25}, 
+ {"name": "LMTK3", "label": "LMR3", "desc": "lemur tyrosine kinase 3", "size": 15}, 
+ {"name": "MARK3", "label": "MARK3", "desc": "microtubule affinity regulating kinase 3", "size": 5}, 
+ {"name": "MAST2", "label": "MAST2", "desc": "microtubule associated serine/threonine kinase 2", "size": 46}, 
+ {"name": "NEK11", "label": "NEK11", "desc": "NIMA related kinase 11", "size": 9}, 
+ {"name": "PAK3", "label": "PAK3", "desc": "p21 (RAC1) activated kinase 3", "size": 23}, 
+ {"name": "PKN3", "label": "PKN3", "desc": "protein kinase N3", "size": 33}, 
+ {"name": "PXK", "label": "Slob", "desc": "PX domain containing serine/threonine kinase like", "size": 10}, 
+ {"name": "RNASEL", "label": "RNAseL", "desc": "ribonuclease L", "size": 21}, 
+ {"name": "SCYL2", "label": "SCYL2", "desc": "SCY1 like pseudokinase 2", "size": 17}, 
+ {"name": "STK19", "label": "G11", "desc": "serine/threonine kinase 19", "size": 11}, 
+ {"name": "STK32B", "label": "YANK2", "desc": "serine/threonine kinase 32B", "size": 13}, 
+ {"name": "STK32C", "label": "YANK3", "desc": "serine/threonine kinase 32C", "size": 49}, 
+ {"name": "TAOK1", "label": "TAO1", "desc": "TAO kinase 1", "size": 16}, 
+ {"name": "TP53RK", "label": "PRPK", "desc": "TP53 regulating kinase", "size": 13}, 
+ {"name": "TSSK3", "label": "TSSK3", "desc": "testis specific serine kinase 3", "size": 21}]}
+,
+ 
+ {"name": "g", "children": [
+{
+"name": "CSNK1G3", "label": "CK1g3", "desc": "casein kinase 1 gamma 3", "size": 8}, 
+ {"name": "DYRK3", "label": "DYRK3", "desc": "dual specificity tyrosine phosphorylation regulated kinase 3", "size": 18}, 
+ {"name": "MKNK2", "label": "MNK2", "desc": "MAP kinase interacting serine/threonine kinase 2", "size": 9}, 
+ {"name": "NEK7", "label": "NEK7", "desc": "NIMA related kinase 7", "size": 23}, 
+ {"name": "NIM1K", "label": "NIM1", "desc": "NIM1 serine/threonine protein kinase", "size": 5}, 
+ {"name": "NRK", "label": "NRK", "desc": "Nik related kinase", "size": 11}, 
+ {"name": "PI4KA", "label": "nan", "desc": "phosphatidylinositol 4-kinase alpha", "size": 6}, 
+ {"name": "PKMYT1", "label": "MYT1", "desc": "protein kinase, membrane associated tyrosine/threonine 1", "size": 11}, 
+ {"name": "PRAG1", "label": "SgK223", "desc": "PEAK1 related, kinase-activating pseudokinase 1", "size": 7}, 
+ {"name": "TSSK1B", "label": "TSSK1", "desc": "testis specific serine kinase 1B", "size": 11}, 
+ {"name": "VRK2", "label": "VRK2", "desc": "vaccinia related kinase 2", "size": 36}]}
+,
+ 
+ {"name": "h", "children": [
+{
+"name": "ADCK5", "label": "ADCK5", "desc": "aarF domain containing kinase 5", "size": 12}, 
+ {"name": "ALPK3", "label": "AlphaK1", "desc": "alpha kinase 3", "size": 21}, 
+ {"name": "BRSK2", "label": "BRSK2", "desc": "BR serine/threonine kinase 2", "size": 20}, 
+ {"name": "CDK11A", "label": "PITSLRE", "desc": "cyclin dependent kinase 11A", "size": 9}, 
+ {"name": "CDK17", "label": "PCTAIRE2", "desc": "cyclin dependent kinase 17", "size": 27}, 
+ {"name": "CDK19", "label": "CDK11", "desc": "cyclin dependent kinase 19", "size": 27}, 
+ {"name": "CSNK1A1L", "label": "CK1a2", "desc": "casein kinase 1 alpha 1 like", "size": 27}, 
+ {"name": "CSNK2A2", "label": "CK2a2", "desc": "casein kinase 2 alpha 2", "size": 36}, 
+ {"name": "LTK", "label": "LTK", "desc": "leukocyte receptor tyrosine kinase", "size": 29}, 
+ {"name": "MAP3K14", "label": "NIK", "desc": "mitogen-activated protein kinase kinase kinase 14", "size": 22}, 
+ {"name": "MAP3K21", "label": "MLK4", "desc": "mitogen-activated protein kinase kinase kinase 21", "size": 46}, 
+ {"name": "MAPK15", "label": "Erk7", "desc": "mitogen-activated protein kinase 15", "size": 22}, 
+ {"name": "MARK4", "label": "MARK4", "desc": "microtubule affinity regulating kinase 4", "size": 5}, 
+ {"name": "MAST3", "label": "MAST3", "desc": "microtubule associated serine/threonine kinase 3", "size": 44}, 
+ {"name": "PAK5", "label": "PAK5", "desc": "p21 (RAC1) activated kinase 5", "size": 51}, 
+ {"name": "PIK3C2B", "label": "nan", "desc": "phosphatidylinositol-4-phosphate 3-kinase catalytic subunit type 2 beta", "size": 40}, 
+ {"name": "PIP4K2C", "label": "nan", "desc": "phosphatidylinositol-5-phosphate 4-kinase type 2 gamma", "size": 5}, 
+ {"name": "PNCK", "label": "CaMK1b", "desc": "pregnancy up-regulated nonubiquitous CaM kinase", "size": 49}, 
+ {"name": "PRKACB", "label": "PKACb", "desc": "protein kinase cAMP-activated catalytic subunit beta", "size": 24}, 
+ {"name": "RPS6KL1", "label": "RSKL2", "desc": "ribosomal protein S6 kinase like 1", "size": 15}, 
+ {"name": "SBK2", "label": "SgK069", "desc": "SH3 domain binding kinase family member 2", "size": 27}, 
+ {"name": "SCYL1", "label": "SCYL1", "desc": "SCY1 like pseudokinase 1", "size": 18}, 
+ {"name": "TESK2", "label": "TESK2", "desc": "testis associated actin remodelling kinase 2", "size": 22}, 
+ {"name": "TTBK1", "label": "TTBK1", "desc": "tau tubulin kinase 1", "size": 17}, 
+ {"name": "WNK3", "label": "Wnk3", "desc": "WNK lysine deficient protein kinase 3", "size": 10}]}
+,
+ 
+ {"name": "i", "children": [
+{
+"name": "ADCK1", "label": "ADCK1", "desc": "aarF domain containing kinase 1", "size": 16}, 
+ {"name": "CDC42BPG", "label": "DMPK2", "desc": "CDC42 binding protein kinase gamma", "size": 11}, 
+ {"name": "CDKL5", "label": "CDKL5", "desc": "cyclin dependent kinase like 5", "size": 17}, 
+ {"name": "CSNK1G2", "label": "CK1g2", "desc": "casein kinase 1 gamma 2", "size": 9}, 
+ {"name": "MAP3K15", "label": "MAP3K7", "desc": "mitogen-activated protein kinase kinase kinase 15", "size": 9}, 
+ {"name": "NEK1", "label": "NEK1", "desc": "NIMA related kinase 1", "size": 12}, 
+ {"name": "NEK5", "label": "NEK5", "desc": "NIMA related kinase 5", "size": 15}, 
+ {"name": "PIP5K1C", "label": "nan", "desc": "phosphatidylinositol-4-phosphate 5-kinase type 1 gamma", "size": 35}, 
+ {"name": "PRKACG", "label": "PKACg", "desc": "protein kinase cAMP-activated catalytic subunit gamma", "size": 14}, 
+ {"name": "RIOK2", "label": "RIOK2", "desc": "RIO kinase 2", "size": 29}, 
+ {"name": "RIOK3", "label": "RIOK3", "desc": "RIO kinase 3", "size": 13}, 
+ {"name": "RPS6KC1", "label": "RSKL1", "desc": "ribosomal protein S6 kinase C1", "size": 10}, 
+ {"name": "SCYL3", "label": "SCYL3", "desc": "SCY1 like pseudokinase 3", "size": 30}, 
+ {"name": "TESK1", "label": "TESK1", "desc": "testis associated actin remodelling kinase 1", "size": 12}, 
+ {"name": "TTBK2", "label": "TTBK2", "desc": "tau tubulin kinase 2", "size": 10}]}
+,
+ 
+ {"name": "j", "children": [
+{
+"name": "BRSK1", "label": "BRSK1", "desc": "BR serine/threonine kinase 1", "size": 6}, 
+ {"name": "CDK14", "label": "PFTAIRE1", "desc": "cyclin dependent kinase 14", "size": 21}, 
+ {"name": "CDK16", "label": "PCTAIRE1", "desc": "cyclin dependent kinase 16", "size": 37}, 
+ {"name": "CDK18", "label": "PCTAIRE3", "desc": "cyclin dependent kinase 18", "size": 29}, 
+ {"name": "CDK20", "label": "CCRK", "desc": "cyclin dependent kinase 20", "size": 9}, 
+ {"name": "CSNK2A3", "label": "nan", "desc": "casein kinase 2 alpha 3", "size": 25}, 
+ {"name": "DCLK3", "label": "DCLK3", "desc": "doublecortin like kinase 3", "size": 18}, 
+ {"name": "DYRK1B", "label": "DYRK1B", "desc": "dual specificity tyrosine phosphorylation regulated kinase 1B", "size": 6}, 
+ {"name": "ICK", "label": "ICK", "desc": "intestinal cell kinase", "size": 25}, 
+ {"name": "LRRK1", "label": "LRRK1", "desc": "leucine rich repeat kinase 1", "size": 16}, 
+ {"name": "NEK8", "label": "NEK8", "desc": "NIMA related kinase 8", "size": 27}, 
+ {"name": "OBSCN", "label": "Obscn", "desc": "obscurin, cytoskeletal calmodulin and titin-interacting RhoGEF", "size": 29}, 
+ {"name": "PAK6", "label": "PAK6", "desc": "p21 (RAC1) activated kinase 6", "size": 6}, 
+ {"name": "PAN3", "label": "nan", "desc": "PAN3 poly(A) specific ribonuclease subunit", "size": 5}, 
+ {"name": "PDIK1L", "label": "CLIK1L", "desc": "PDLIM1 interacting kinase 1 like", "size": 14}, 
+ {"name": "PIP5K1A", "label": "nan", "desc": "phosphatidylinositol-4-phosphate 5-kinase type 1 alpha", "size": 27}, 
+ {"name": "POMK", "label": "SgK196", "desc": "protein-O-mannose kinase", "size": 9}, 
+ {"name": "STK31", "label": "SgK396", "desc": "serine/threonine kinase 31", "size": 14}, 
+ {"name": "TLK2", "label": "TLK2", "desc": "tousled like kinase 2", "size": 8}, 
+ {"name": "ULK4", "label": "ULK4", "desc": "unc-51 like kinase 4", "size": 14}]}]}
