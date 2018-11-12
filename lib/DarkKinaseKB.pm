@@ -60,6 +60,7 @@ get '/' => sub {
                         'kinase_8' => $split_kinase_lists{8},
                         'kinase_9' => $split_kinase_lists{9},
                         'kinase_10' => $split_kinase_lists{10},
+						'kinase_all' => @kinase_list,
                       };
 };
 
@@ -246,7 +247,14 @@ get '/about' => sub {
 };
 
 get '/data' => sub {
-  template 'data';
+  my @kinase_list = @{var 'dark_kinase_info'};
+  
+  @kinase_list = map $_->[1], @kinase_list;
+  @kinase_list = sort @kinase_list;
+
+  template 'data' => { 'title' => 'DarkKinaseKB', 
+	  'all_kinases' => \@kinase_list,
+  };
 };
 
 get '/tools' => sub {

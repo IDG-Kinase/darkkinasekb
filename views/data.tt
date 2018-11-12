@@ -1,5 +1,30 @@
 <main role="main" class="container">
 
-<h1>Page Under Development</h1>
+<br/>
+<br/>
+
+<h1>Data Sources and Repositories</h1>
+
+The data produced in association with the Kinase IDG will be deposited in
+appropriate repositories as data is collected and quality controlled. The
+computer code produced will also be made available through our github <a
+href="https://github.com/IDG-Kinase">page</a>. In addition, for data types
+without repositories, we will use our synapse <a href="https://www.synapse.org/#!Synapse:syn16984714/wiki/">group page</a> to distribute data.
+
+<hr>
+
+For reference, a complete list of the dark kinases follows, with corresponding
+links to information about each kinase:
+
+<br/>
+<br/>
+
+<ul class="list-unstyled row list-group-flush">
+	[% FOREACH kinase IN all_kinases %]
+	<li class="col-sm-2">
+		<a href="/kinase/[% kinase %]">[% kinase %]</a>
+	</li>
+	[% END %]
+</ul>
 
 </main>
