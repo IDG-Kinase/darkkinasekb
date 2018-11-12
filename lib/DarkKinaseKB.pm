@@ -269,4 +269,8 @@ get '/people' => sub {
   template 'people';
 };
 
+get '/kinase_bubbles' => sub {
+  template 'kinase_bubbles';
+};
+
 true;
