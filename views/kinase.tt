@@ -46,34 +46,43 @@
       </div>
     </div>
   </div>
-  <div class="col-6">
-    <div id="TCGACollapse" class="collapse">
-      <div class="card-body">
-        <ul class="nav nav-tabs" id="TCGATabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">Mutations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="CNV-tab" data-toggle="tab" href="#CNV" role="tab" aria-controls="CNV" aria-selected="false">Copy Number Variation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="mRNA-tab" data-toggle="tab" href="#mRNA" role="tab" aria-controls="mRNA" aria-selected="false">mRNA Expression</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="TCGATabs">
-          <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
-            <img src="/images/mutation_heatmaps/[% kinase %].svg">
-          </div>
-          <div class="tab-pane fade" id="CNV" role="tabpanel" aria-labelledby="CNV-tab">
-            <img src="/images/CNV_heatmaps/[% kinase %].svg">
-          </div>
-          <div class="tab-pane fade" id="mRNA" role="tabpanel" aria-labelledby="mRNA-tab">
-            <img src="/images/mRNA_heatmaps/[% kinase %].svg">
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="TCGACollapse" class="collapse">
+	  <div class="card-body">
+		  <div class="row align-items-center">
+			  <div class="col-6">
+				  <ul class="nav nav-tabs" id="TCGATabs" role="tablist">
+					  <li class="nav-item">
+						  <a class="nav-link active" id="mutation-tab" data-toggle="tab" href="#mutation" role="tab" aria-controls="mutation" aria-selected="true">Mutations</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" id="CNV-tab" data-toggle="tab" href="#CNV" role="tab" aria-controls="CNV" aria-selected="false">Copy Number Variation</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" id="mRNA-tab" data-toggle="tab" href="#mRNA" role="tab" aria-controls="mRNA" aria-selected="false">mRNA Expression</a>
+					  </li>
+				  </ul>
+				  <div class="tab-content" id="TCGATabs">
+					  <div class="tab-pane fade show active" id="mutation" role="tabpanel" aria-labelledby="mutation-tab">
+						  <img src="/images/mutation_heatmaps/[% kinase %].svg">
+					  </div>
+					  <div class="tab-pane fade" id="CNV" role="tabpanel" aria-labelledby="CNV-tab">
+						  <img src="/images/CNV_heatmaps/[% kinase %].svg">
+					  </div>
+					  <div class="tab-pane fade" id="mRNA" role="tabpanel" aria-labelledby="mRNA-tab">
+						  <img src="/images/mRNA_heatmaps/[% kinase %].svg">
+					  </div>
+				  </div>
+			  </div>
+			  <div class="col-1">
+			  </div>
+			  <div class="col-5">
+				  <h4>These summary figures show a summary of data collected by the cancer genome atlas for [% kinase %]. 
+				  This summary of the cancer genome atlas (TCGA) was collated from <a href="http://firebrowse.org/">firebrowse</a> based the Broad Institute.</h4>
+			  </div>
+		  </div>
+	  </div>
   </div>
+</div>
 </div>
 <br/>
 
