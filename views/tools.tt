@@ -3,7 +3,7 @@
 </br>
 </br>
 
-<div class=row>
+<div class="row align-items-center">
   <div class="col-lg-3">
     <a href="http://phanstiel-lab.med.unc.edu/CORAL/">
       <img class="img-fluid" src="images/coral-logo.png">
@@ -35,7 +35,7 @@
   <br>
 </div>
 
-<div class=row>
+<div class="row align-items-center">
   <div class="col-lg-3">
     <a href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">
       <img class="img-fluid" src="images/small-molecule-logo.png">
@@ -56,6 +56,34 @@
     
 	</p>The Small Molecule Suite was developed by the <a href="http://hits.harvard.edu/the-program/laboratory-of-systems-pharmacology/about/">Laboratory of Systems
 		Pharmacology</a> and the <a href="">Laboratory for Statistical Genomics and Systems Biology</a>. It is freely available on <a href="https://github.com/sorgerlab/smallmoleculesuite">github</a> and the <a href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">web</a>.
+  </div>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class="row align-items-center">
+  <div class="col-lg-3">
+    <a href="https://indralab.github.io/">
+      <img class="img-fluid" src="images/indra_logo.png">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>INDRA</h4>
+	</p>INDRA (Integrated Network and Dynamical Reasoning Assembler) is an
+	automated model assembly system, originally developed for molecular systems
+	biology and currently being generalized to other domains. INDRA draws on
+	natural language processing systems and structured databases to collect
+	mechanistic and causal assertions, represents them in a standardized form
+	(INDRA Statements), and assembles them into various modeling formalisms
+	including causal graphs and dynamical models. INDRA also provides knowledge
+	assembly procedures that operate on INDRA Statements and correct certain
+	errors, find and resolve redundancies, infer missing information, filter to
+	a scope of interest and assess belief.
   </div>
 </div>
 
