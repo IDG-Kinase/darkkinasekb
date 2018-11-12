@@ -273,4 +273,8 @@ get '/kinase_bubbles' => sub {
   template 'kinase_bubbles';
 };
 
+get '/home_alternative' => sub {
+  template 'home_alternative';
+};
+
 true;

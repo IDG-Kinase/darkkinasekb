@@ -1,0 +1,37 @@
+<main role="main" class="container-fluid">
+
+<br/>
+<br/>
+
+<div class="row align-items-center">
+	<div class="col-6">
+		<img src="images/dark_tree.svg" width=700>
+	</div>
+	<div class="col-1"></div>
+	<div class="col-5">
+		<p/>Hello and welcome to the Dark Kinase Knowledge Base
+		Prototype. This website will serve as a test bed for ideas concerning how
+		to display and collate information concerning understudied kinases.
+
+		<p/>This website focuses on the work associated with the Kinase IDG
+		based at the University of North Carolina, Washington University at St
+		Louis and Harvard. This consortium is focused on developing a better
+		understanding of the approximately 160 kinases where their function in
+		human biology is poorly understood. During the first stages of this
+		project, we are focusing on five kinases.
+		
+		<h4>Focus Kinases</h4>
+		<ul>
+			<li><a href="/kinase/PKMYT1">PKMYT1</a></li>
+			<li><a href="/kinase/TLK2">TLK2</a></li>
+			<li><a href="/kinase/BRSK2">BRSK2</a></li>
+			<li><a href="/kinase/CDK12">CDK12</a></li>
+			<li><a href="/kinase/CDK13">CDK13</a></li>
+		</ul>
+
+		<p/>In addition to this website, there are also several stand-alone <a
+		  href="/tools">tools</a> associated with this project.
+	</div>
+</div>
+
+</main>
