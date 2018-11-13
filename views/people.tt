@@ -5,6 +5,8 @@
 
 <h1>Dark Kinase Knowledgebase Development Team</h1>
 
+<br/>
+
 <div class="row align-items-center">
   <div class="col-3">
     <img class="img-responsive" src="images/people/Matt.jpg" width=200>
@@ -53,6 +55,40 @@
 	works in Peter Sorger's lab, part of the Laboratory of Systems Pharmacology.
 	Her project focuses on predicting binding affinities between small molecules
 	and kinases using machine learning methods.
+  </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center">
+  <div class="col-3">
+    <img class="img-responsive" src="images/people/Shawn.jpg" width=200>
+  </div>
+  <div class="col-1">
+  </div>
+  <div class="col-8">
+	  <h3>Shawn Gomez</h3>
+	  </p>Shawn’s research is in the area of systems biology, with a particular
+	  emphasis on understanding the architecture and dynamics of gene-regulatory
+	  and signal transduction networks. With an emphasis on the protein kinome
+	  in cancer and infectious disease, a significant portion of the lab’s work
+	  centers on the analysis and modeling of biomolecular systems at multiple
+	  scales - spanning statistical and machine learning techniques to more
+	  classical systems modeling approaches. This work is paired with
+	  experimental efforts that focus on improving our understanding of network-
+	  and systems-level principles of cellular behavior.
+
+	  <p/>As Director of the FastTraCS program, Shawn further leads a
+	  multidisciplinary effort to more rapidly translate basic science research
+	  into tangible solutions that improve patient outcomes. A component of
+	  UNC’s NCTraCS Institute and funded as part of UNC’s Clinical and
+	  Translational Sciences Award (CTSA) through NCATS, FastTraCS efforts span
+	  the range of drug, device and diagnostics development, with a strong focus
+	  on the identification of high potential unmet clinical needs and emerging
+	  healthcare opportunities within the UNC Healthcare System. The program has
+	  a strong focus on derisking technologies for commercial development
+	  through internal rapid prototyping and development or in collaboration
+	  with academic and industry partners.
   </div>
 </div>
 
