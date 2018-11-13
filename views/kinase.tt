@@ -76,8 +76,18 @@
 			  <div class="col-1">
 			  </div>
 			  <div class="col-5">
-				  <h4>These summary figures show a summary of data collected by the cancer genome atlas for [% kinase %]. 
-				  This summary of the cancer genome atlas (TCGA) was collated from <a href="http://firebrowse.org/">firebrowse</a> based the Broad Institute.</h4>
+				  <h4>
+					  These figures show a summary of data collected by the
+					  cancer genome atlas for [% kinase %]. The mutations
+					  heatmaps shows the fraction samples with each type of
+					  genetic mutation, while the copy number variation shows
+					  the percentage of samples where a deletion or amplication was
+					  dectected. Finally, the mRNA expression tab shows the amount of mRNA
+					  detected on a log-2 scale for each cancer type. The X-axis cancer type
+					  abbreviations are <a href="https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/tcga-study-abbreviations" target="_blank">described here</a>. This summary of the cancer genome
+					  atlas (TCGA) was collated from <a href="http://firebrowse.org/">firebrowse</a> developed by the Broad Institute. The code used to produce these figures is
+					  available through <a href="https://github.com/IDG-Kinase/TCGA_Kinase_Analysis">github</a>
+				  </h4>
 			  </div>
 		  </div>
 	  </div>
