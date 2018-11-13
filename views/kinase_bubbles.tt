@@ -2,12 +2,15 @@
 
 <div id="bubble_vis"></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 <script>
 
-var diameter = 960,
+var diameter = 840,
     format = d3.format(",d"),
-    color = d3.scaleOrdinal(d3.schemeCategory20c);
+    color = {"Tdark":"#3792EC", "Tbio":"#389732", "Tchem":"#F0F37F"}; // create a duct if cikirubg
+    //d3.scaleOrdinal(d3.schemeCategory20c) // original coloring
+
+console.log(color[0])
 
 var bubble = d3.pack()
     .size([diameter, diameter])
@@ -35,10 +38,15 @@ d3.json("javascripts/viz.json", function(error, data) {
   node.append("title")
       .text(function(d) { return d.data.className + ": " + format(d.value); });
 
-  node.append("circle")
+  node.append("a")
+      .attr("xlink:href", function(d){
+        return "http://darkkinome.org/kinase/"+d.data.className.substring(0, d.r / 3);
+      })
+      .append("svg:circle")
       .attr("r", function(d) { return d.r; })
       .style("fill", function(d) {
-        return color(d.data.packageName);
+        console.log(d.data.packageName);
+        return color[d.data.packageName];
       });
 
   node.append("text")
@@ -60,7 +68,8 @@ function classes(root) {
   return {children: classes};
 }
 
-</script>
+d3.select(self.frameElement).style("height", diameter + "px");
 
+</script>
 
 </main>
