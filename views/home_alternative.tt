@@ -5,7 +5,8 @@
 
 <div class="row align-items-center">
 	<div class="col-6">
-		<img src="images/dark_tree.svg" class="img-fluid" alt="Dark Kinase phylogenetic tree">
+		<!-- <img src="images/dark_tree.svg" class="img-fluid" alt="Dark Kinase phylogenetic tree"> -->
+		<div id="bubble_vis"></div>
 	</div>
 	<div class="col-1"></div>
 	<div class="col-5">
@@ -33,12 +34,6 @@
 		  href="/tools">tools</a> associated with this project.
 	</div>
 </div>
-
-<hr/>
-<br/>
-<br/>
-
-<div id="bubble_vis"></div>
 
 <script src="https://d3js.org/d3.v4.js"></script>
 <script>
