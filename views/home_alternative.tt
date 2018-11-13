@@ -81,14 +81,34 @@ d3.json("javascripts/viz.json", function(error, data) {
       .append("svg:circle")
       .attr("r", function(d) { return d.r; })
       .style("fill", function(d) {
-        console.log(d.data.packageName);
         return color[d.data.packageName];
+      })
+      .style("stroke", "#000")
+      .style("stroke-width", .2);
+
+  d3.selection.prototype.moveToFront = function() {
+      return this.each(function(){
+        this.parentNode.appendChild(this);
       });
+    };
 
   node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
       .text(function(d) { return d.data.className.substring(0, d.r / 3); });
+
+  node.on("mouseover", function (d) {
+        d3.select(this).select("text")
+            .style("font-size", "15px");
+        d3.select(this).select("a")
+            .attr("transform", "scale(1.2,1.2)");
+        d3.select(this).moveToFront() });
+
+  node.on("mouseout", function (d) {
+        d3.select(this).select("text")
+            .style("font-size", "10px");
+        d3.select(this).select("a")
+            .attr("transform", "scale(1.0,1.0)"); });
 });
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
