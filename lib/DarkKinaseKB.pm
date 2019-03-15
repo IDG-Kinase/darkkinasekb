@@ -9,6 +9,8 @@ use Text::Fuzzy;
 use List::MoreUtils qw(uniq);
 use File::Basename;
 
+use static_pages
+
 our $VERSION = '0.1';
 
 hook before => sub {
