@@ -89,9 +89,10 @@ get '/kinase/:kinase' => sub {
   # PRM Images
   #############################################################################
   my $parser = Text::CSV::Simple->new;
-  my @PRM_info = $parser->read_file('../data_sets/curve_info.csv') or die "$!";
+  my @PRM_info = $parser->read_file('../data_sets/PRM_curve_data.csv') or die "$!";
   
   my @this_PRM_info = grep $_->[0] eq $template_data{kinase}, @PRM_info;
+  debug(\@this_PRM_info);
   $template_data{PRM_info} = \@this_PRM_info;
 
   $template_data{include_PRM} = 1;
