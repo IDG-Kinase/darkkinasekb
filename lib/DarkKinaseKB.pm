@@ -9,7 +9,8 @@ use Text::Fuzzy;
 use List::MoreUtils qw(uniq);
 use File::Basename;
 
-use static_pages
+use static_pages;
+use compounds;
 
 our $VERSION = '0.1';
 
@@ -245,10 +246,6 @@ get '/search' => sub {
   template 'search' => \%template_data;
 };
 
-get '/about' => sub {
-  template 'about';
-};
-
 get '/data' => sub {
   my @kinase_list = @{var 'dark_kinase_info'};
   
@@ -258,26 +255,6 @@ get '/data' => sub {
   template 'data' => { 'title' => 'DarkKinaseKB', 
 	  'all_kinases' => \@kinase_list,
   };
-};
-
-get '/tools' => sub {
-  template 'tools';
-};
-
-get '/publications' => sub {
-  template 'publications';
-};
-
-get '/people' => sub {
-  template 'people';
-};
-
-get '/kinase_bubbles' => sub {
-  template 'kinase_bubbles';
-};
-
-get '/home_alternative' => sub {
-  template 'home_alternative';
 };
 
 true;
