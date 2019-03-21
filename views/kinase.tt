@@ -116,7 +116,7 @@
 					<img src="/images/compounds/[% compound.name %]-structure.png"style='height: 100%; width: 100%; object-fit: contain'>
 				</div>
 				<div class="col-6">
-					<p><b>Compound Name</b>: [% compound.name %]</p>
+					<p><b>Compound Name</b>: <a href="/compounds/[% compound.name %]" target="_blank">[% compound.name %]</a></p>
 					<p><b>Chemical Name</b>: [% compound.chemical_name %]</p>
 					<p><b>CHEBI</b>: [% compound.CHEBI %]</p>
 					<p><b>Smile String</b>: [% compound.smiles %]</p>
