@@ -1,0 +1,40 @@
+<main role="main" class="container">
+
+<br/>
+<br/>
+
+<h1>IDG Kinase - Tool Compound - [% name %]  </h1>
+
+<hr/>
+
+<div class="row">
+    <div class="col-6">
+<img src="/images/compounds/[% name %]-structure.png"style='height: 100%; width: 100%; object-fit: contain'>
+    </div>
+	<div class="col-6">
+		<p><b>Kinase Target</b>: <a href="/kinase/[% kinase %]" target="_blank">[% kinase %]</a></p>
+		<p><b>Chemical Name</b>: [% chemical_name %]</p>
+		<p><b>CHEBI</b>: [% CHEBI %]</p>
+		<p><b>Smile String</b>: [% smiles %]</p>
+		<p><b>Chemical Formula</b>: [% chemical_formula %]</p>
+		<p><b>Molecular Weight</b>: [% molecular_weight %]</p>
+		<p><b>cLogP</b>: [% cLogP %]</p>
+		<p><b>Source</b>: [% source %]</p>
+	</div>
+</div>
+
+<hr/>
+
+<div class="row">
+	[% IF from_SGC %]
+	<p>This compound is available through special request from the <a href="[% acquire_link %]" target="_blank">[% source %]</a>.</p>
+	[% ELSE %]
+	<p>This compound is available through <a href="[% acquire_link %]" target="_blank">[% source %]</a>.</p>
+	[% END %]
+</div>
+<div class="row">
+	<p>Additional data concerning this compound can be found <a href="/compound_data_sheets/[% kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.</p>
+
+</div>
+
+</main>
