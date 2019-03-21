@@ -87,13 +87,32 @@ get '/kinase/:kinase' => sub {
   }
   
   #############################################################################
+  # Long Kinase Descriptions
+  #############################################################################
+  my @kinase_description_file = grep $_ =~ /$template_data{kinase}/, 
+    <'../data_sets/kinase_descriptions/*'>;
+  
+  $template_data{include_long_description} = 0;
+  if (scalar(@kinase_description_file) == 1) {
+    $template_data{include_long_description} = 1;
+
+    open INPUT, "<$kinase_description_file[0]" or 
+    debug("Can't open, " . $kinase_description_file[0]);
+    my @kinase_text = <INPUT>;
+    close INPUT;
+
+    my $kinase_text = join("",@kinase_text);
+
+    $template_data{kinase_text} = $kinase_text;
+  } 
+  
+  #############################################################################
   # PRM Images
   #############################################################################
   my $parser = Text::CSV::Simple->new;
   my @PRM_info = $parser->read_file('../data_sets/PRM_curve_data.csv') or die "$!";
   
   my @this_PRM_info = grep $_->[0] eq $template_data{kinase}, @PRM_info;
-  debug(\@this_PRM_info);
   $template_data{PRM_info} = \@this_PRM_info;
 
   $template_data{include_PRM} = 1;
@@ -177,6 +196,39 @@ get '/kinase/:kinase' => sub {
   }
   
   #############################################################################
+  # Compound Data
+  #############################################################################
+  
+  my $compound_parser = Text::CSV::Simple->new;
+  my @compounds = $compound_parser->read_file('../data_sets/compounds.csv') or die "$!";
+
+  my %kinase_name_rows;
+  for (1..$#compounds) {
+	  if ($compounds[$_][1] eq '') {
+		  next;
+	  } else {
+		  $kinase_name_rows{$compounds[$_][1]} = $_;
+	  }
+  }
+  
+  if (! defined $kinase_name_rows{$template_data{kinase}}) {
+	  $template_data{compound}{include} = 0;
+  } else {
+	  $template_data{compound}{include} = 1;
+	  my $kinase_row = $kinase_name_rows{$template_data{kinase}};
+	  for (0..scalar(@{$compounds[0]})) {
+		  my $header = $compounds[0][$_];
+		  $template_data{compound}{$header} = $compounds[$kinase_row][$_];
+	  }
+
+	  if ($template_data{source} eq "SGC-UNC") {
+		  $template_data{from_SGC} = 1;
+	  } else {
+		  $template_data{from_SGC} = 0;
+	  }
+  }
+
+  #############################################################################
   # Mouse KO Data
   #############################################################################
   $parser = Text::CSV::Simple->new;
@@ -189,26 +241,6 @@ get '/kinase/:kinase' => sub {
     $template_data{include_mouse_KO} = 1;
     $template_data{mouse_KO_info} = \@mouse_KO_info;
   }
-  
-  #############################################################################
-  # Long Kinase Descriptions
-  #############################################################################
-  my @kinase_description_file = grep $_ =~ /$template_data{kinase}/, 
-    <'../data_sets/kinase_descriptions/*'>;
-  
-  $template_data{include_long_description} = 0;
-  if (scalar(@kinase_description_file) == 1) {
-    $template_data{include_long_description} = 1;
-
-    open INPUT, "<$kinase_description_file[0]" or 
-    debug("Can't open, " . $kinase_description_file[0]);
-    my @kinase_text = <INPUT>;
-    close INPUT;
-
-    my $kinase_text = join("",@kinase_text);
-
-    $template_data{kinase_text} = $kinase_text;
-  } 
 
   #############################################################################
   # Template Passing
