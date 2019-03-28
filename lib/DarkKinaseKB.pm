@@ -150,7 +150,7 @@ get '/kinase/:kinase' => sub {
   # APMS Results
   #############################################################################
   open(FILE, "../public/javascripts/PPI/ppi.json");
-  $template_data{include_APMS} = grep{/id\": \"$template_data{kinase}\"/} <FILE>;
+  $template_data{include_APMS} = grep{/\"$template_data{kinase}\"/} <FILE>;
   close FILE;
 
   #############################################################################
