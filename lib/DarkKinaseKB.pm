@@ -113,7 +113,7 @@ get '/kinase/:kinase' => sub {
   #############################################################################
   # INDRA Clustered Results
   #############################################################################
-  my @INDRA_clustered_file_matches = grep basename($_) eq "$template_data{kinase}.png", 
+  my @INDRA_clustered_file_matches = grep basename($_) eq "$template_data{kinase}.png",
     <'../public/images/INDRA/clustered/*'>;
   
   $template_data{include_clustered_INDRA} = 0;
@@ -145,7 +145,14 @@ get '/kinase/:kinase' => sub {
 
     $template_data{filtered_INDRA_URL} = $INDRA_filtered[0][1];
   }
-  
+
+  #############################################################################
+  # APMS Results
+  #############################################################################
+  open(FILE, "../public/javascripts/PPI/ppi.json");
+  $template_data{include_APMS} = grep{/id\": \"$template_data{kinase}\"/} <FILE>;
+  close FILE;
+
   #############################################################################
   # KO Cell Line Data
   #############################################################################

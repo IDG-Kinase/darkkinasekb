@@ -136,6 +136,7 @@
 <br/>
 [% END %]
 
+[% IF include_clustered_INDRA == 1 || include_APMS == 1%]
 <div class=card>
 	<div class="card-header">
 		<div class="row align-items-center">
@@ -182,6 +183,7 @@
 			[% END %]
 
 			<!-- APMS -->
+			[% IF include_APMS == 1 %]
 			<div class="row align-items-center">
 			    <p class="cy-header">Affinity Purification - Mass Spectrometry</p>
 			    <div class="cy-container">
@@ -189,10 +191,12 @@
                     <div id="cy-control"></div>
                 </div>
             </div>
+            [% END %]
 		</div>
 	</div>
 </div>
 <br/>
+[% END %]
 
 
 [% IF include_PRM == 1 %]
