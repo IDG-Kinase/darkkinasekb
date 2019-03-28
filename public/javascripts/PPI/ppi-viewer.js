@@ -333,7 +333,7 @@ $(function() {
         $legendRow1.appendChild(h('img', {'class':'cy-legend-img', 'src': '../images/PPI/apms-icon.png'}, []));
         $legendRow1.appendChild(h('span', {'class':'cy-legend-col2'}, [t("Co-complexed")]));
 
-        $legendRow1.appendChild(h('img', {'class':'cy-legend-img','src': '../images/PPI/bait-icon.png'}, []));
+        $legendRow1.appendChild(h('img', {'class':'cy-legend-img','src': '../images/PPI/Bait-icon.png'}, []));
         $legendRow1.appendChild(h('span', {'class':'cy-legend-col4'}, [t("Bait")]));
 
         $legendRow1.appendChild(h('img', {'class':'cy-legend-img','src': '../images/PPI/kinase-icon.png'}, []));
