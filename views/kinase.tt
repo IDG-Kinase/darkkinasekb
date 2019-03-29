@@ -13,6 +13,7 @@
     };
   </script>
 
+
 <!-- Kinase Name/CORAL Vis -->
 <div class=row>
   <div class="col-lg-6">
@@ -185,7 +186,7 @@
 <br/>
 [% END %]
 
-[% IF include_clustered_INDRA == 1 %]
+[% IF include_clustered_INDRA == 1 || include_APMS == 1%]
 <div class=card>
 	<div class="card-header">
 		<div class="row align-items-center">
@@ -200,6 +201,8 @@
 
 	<div id="NetworkCollapse" class="collapse">
 		<div class="card-body">
+		    <!-- INDRA -->
+		    [% IF include_clustered_INDRA == 1 %]
 			<div class="row align-items-center">
 				<div class="col-6 text-center">
 					<a href="[% clustered_INDRA_URL %]" target="_blank">
@@ -227,11 +230,24 @@
 					</h4>
 				</div>
 			</div>
+			[% END %]
+
+			<!-- APMS -->
+			[% IF include_APMS == 1 %]
+			<div class="row align-items-center">
+			    <p class="cy-header">Affinity Purification - Mass Spectrometry</p>
+			    <div class="cy-container">
+                    <div id="cy"></div>
+                    <div id="cy-control"></div>
+                </div>
+            </div>
+            [% END %]
 		</div>
 	</div>
 </div>
 <br/>
 [% END %]
+
 
 [% IF include_PRM == 1 %]
 <!-- PRM Data -->
@@ -351,3 +367,6 @@
 </div>
 
 </main>
+
+<script src="../javascripts/PPI/findAllShortestPathsBetweenSourceTarget.js"></script>
+<script src="../javascripts/PPI/ppi-viewer.js"></script>
