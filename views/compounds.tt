@@ -12,7 +12,11 @@
 <img src="/images/compounds/[% name %]-structure.png"style='height: 100%; width: 100%; object-fit: contain'>
     </div>
 	<div class="col-6">
-		<p><b>Kinase Target</b>: <a href="/kinase/[% kinase %]" target="_blank">[% kinase %]</a></p>
+		<p><b>Kinase Target</b>: 
+		[% FOREACH this_kinase = kinase %]
+			<a href="/kinase/[% this_kinase %]" target="_blank">[% this_kinase %]</a>
+		[% END %]
+		</p>
 		<p><b>Chemical Name</b>: [% chemical_name %]</p>
 		<p><b>CHEBI</b>: [% CHEBI %]</p>
 		<p><b>Smile String</b>: [% smiles %]</p>
