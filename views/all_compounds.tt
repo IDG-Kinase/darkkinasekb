@@ -1,0 +1,29 @@
+<main role="main" class="container">
+
+<br/>
+<br/>
+
+<h1>IDG Kinase - Tool Compounds</h1>
+
+<div class="row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">Compound</th>
+				<th scope="col">Kinase</th>
+			</tr>
+		</thead>
+		<tbody>
+			[% FOREACH this_compound = compounds %]
+			<tr>
+				<td><img src="/images/compounds/[% this_compound.name %]-structure.png" style='height: 50px;'></td>
+				<td><a href="/compounds/[% this_compound.name %]">[% this_compound.name %]</a></td>
+				<td><a href="/kinase/[% this_compound.kinase %]">[% this_compound.kinase %]</a></td>
+			</tr>
+			[% END %]
+		</tbody>
+	</table>
+</div>
+
+</main>

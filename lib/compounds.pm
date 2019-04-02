@@ -1,5 +1,6 @@
 package DarkKinaseKB;
 use Text::CSV::Simple;
+use Text::CSV qw( csv );
 use Data::Dumper;
 use strict;
 
@@ -63,5 +64,15 @@ get '/compounds/:compound' => sub {
 	  template 'compounds' => \%template_data;
   }
 };
+
+get '/compounds' => sub {
+  my %template_data;
+  $template_data{compounds} = csv(
+	  in => '../data_sets/compounds.csv',
+	  headers => 'auto');
+  
+  template 'all_compounds' => \%template_data;
+};
+
 
 true;
