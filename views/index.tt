@@ -8,8 +8,7 @@
 		<!-- <img src="images/dark_tree.svg" class="img-fluid" alt="Dark Kinase phylogenetic tree"> -->
 		<div id="bubble_vis"></div>
 	</div>
-	<div class="col-1"></div>
-	<div class="col-5">
+	<div class="col-6">
 		<p/>Hello and welcome to the Dark Kinase Knowledge Base
 		Prototype. This website will serve as a test bed for ideas concerning how
 		to display and collate information concerning understudied kinases.
@@ -38,7 +37,9 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 <script>
 
-var diameter = 840,
+var bubbleDiv = document.getElementById("bubble_vis");
+
+var diameter = bubbleDiv.clientWidth,
     format = d3.format(",d"),
     color = {"Tdark":"#3792EC", "Tbio":"#389732", "Tchem":"#F0F37F"}; // create a duct if cikirubg
     //d3.scaleOrdinal(d3.schemeCategory20c) // original coloring
@@ -48,8 +49,8 @@ var bubble = d3.pack()
     .padding(1.5);
 
 var svg = d3.select("#bubble_vis").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
+    .attr("width", bubbleDiv.clientWidth)
+    .attr("height", bubbleDiv.clientWidth)
     .attr("class", "bubble");
 
 d3.json("javascripts/viz.json", function(error, data) {
