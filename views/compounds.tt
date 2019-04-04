@@ -37,7 +37,11 @@
 	[% END %]
 </div>
 <div class="row">
-	<p>Additional data concerning this compound can be found <a href="/compound_data_sheets/[% kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.</p>
+	<p>Additional data concerning this compound can be found 
+		[% FOREACH this_kinase = kinase %]
+		<a href="/compound_data_sheets/[% this_kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a> 
+		[% END %]
+	.</p>
 
 </div>
 
