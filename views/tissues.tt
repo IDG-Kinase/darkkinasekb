@@ -1,0 +1,58 @@
+<main role="main" class="container">
+
+<br/>
+<br/>
+
+<script>
+	function change_collapse_icon(button_obj) {
+		button_val = button_obj.innerHTML;
+		if (button_val == "+") {
+			button_obj.innerHTML = "-";
+		} else {
+			button_obj.innerHTML = "+";
+		}
+	};
+</script>
+
+[% USE Dumper %]
+
+
+[% FOREACH tissue_type IN tissues(0) %]
+<div class="card">
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				[% tissue_type.key %]
+			</div>
+			<div class="col-1">
+				<!-- <button class="btn float-right" type="button" data-toggle="collapse" data-target="#[% tissue_type.key %]" aria-expanded="true" aria-controls="[% tissue_type.key %]" onclick="change_collapse_icon(this)">+</button> -->
+			</div>
+		</div>
+	</div>
+	<div id="[% tissue_type.key %]">
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Dark Kinase</th>
+						<th scope="col">TPM</th>
+						<th scope="col">Kinase Percentile Expression</th>
+					</tr>
+				</thead>
+				<tbody>
+					[% FOREACH i in tissue_type.value %]
+					<tr>
+						<td>[% i.symbol %]</td>
+						<td>[% i.TPM %]</td>
+						<td>[% i.kinase_percentile %]</td>
+					</tr>
+					[% END %]
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<br/>
+[% END %]
+
+</main>
