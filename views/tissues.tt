@@ -42,7 +42,7 @@
 				<tbody>
 					[% FOREACH i in tissue_type.value %]
 					<tr>
-						<td>[% i.symbol %]</td>
+						<td><a href="/kinase/[% i.symbol %]">[% i.symbol %]</a></td>
 						<td>[% i.TPM %]</td>
 						<td>[% i.kinase_percentile %]</td>
 					</tr>
