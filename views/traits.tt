@@ -1,0 +1,57 @@
+<main role="main" class="container">
+
+<br/>
+<br/>
+
+<script>
+	function change_collapse_icon(button_obj) {
+		button_val = button_obj.innerHTML;
+		if (button_val == "+") {
+			button_obj.innerHTML = "-";
+		} else {
+			button_obj.innerHTML = "+";
+		}
+	};
+</script>
+
+[% USE Dumper %]
+<div class="row">
+	<h2>Dark Kinase Trait Associations</h2>
+	
+	<p>Hello, this website prototype is a first pass at gathering and displaying
+	data collected by the <a href="https://www.ebi.ac.uk/gwas/">GWAS
+	catalog</a>. I've done a search for every instance of a dark kinase in the
+database and collected all the hits here. The links out from each trait leads
+back to the GWAS catalog search function.</p>
+</div>
+
+<hr>
+
+[% FOREACH this_kinase IN traits %]
+<div class="row">
+	<div class="card">
+		<div class="card-header">
+			<div class="row align-items-center">
+				<div class="col-11">
+					<a href="/kinase/[% this_kinase.key %]">[% this_kinase.key %]</a>
+				</div>
+				<div class="col-1">
+					<!-- <button class="btn float-right" type="button" data-toggle="collapse" data-target="#[% tissue_type.key %]" aria-expanded="true" aria-controls="[% tissue_type.key %]" onclick="change_collapse_icon(this)">+</button> -->
+				</div>
+			</div>
+		</div>
+		<div id="[% tissue_type.key %]">
+			<div class="card-body">
+				<ul class="list-group">
+				[% FOREACH i in this_kinase.value %]
+				<li class="list-group-item"><a href="https://www.ebi.ac.uk/gwas/search?query=[% i.Disease_Trait %]">[% i.Disease_Trait %]</a></li>
+				[% END %]
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+[% END %]
+
+</main>

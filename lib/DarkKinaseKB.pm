@@ -12,6 +12,7 @@ use File::Basename;
 use static_pages;
 use compounds;
 use tissues;
+use traits;
 
 our $VERSION = '0.1';
 
