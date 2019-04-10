@@ -15,7 +15,8 @@ get '/tissues' => sub {
   my @GTEx_csv_files = <'../data_sets/GTEx_highly_expressed_kinases/*'>;
 
   for (@GTEx_csv_files) {
-	  $template_data{tissues}{basename($_)} = csv(
+	  my ($tissue_name,$dir,$ext) = fileparse(basename($_),'.csv');
+	  $template_data{tissues}{$tissue_name} = csv(
 		  in => $_, 
 		  headers => 'auto');
   }
