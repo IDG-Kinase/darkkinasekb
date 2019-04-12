@@ -33,7 +33,7 @@
 	[% IF from_SGC %]
 	<p>This compound is available through special request from the <a href="[% acquire_link %]" target="_blank">[% source %]</a>.</p>
 	[% ELSE %]
-	<p>This compound is available through <a href="[% acquire_link %]" onclick="captureOutboundLink('[% acquire_link %]');" target = "_blank">[% source %]</a>.</p>
+	<p>This compound is available through <a href="[% acquire_link %]" onclick="getOutboundLink('[% acquire_link %]'); return false;" target = "_blank">[% source %]</a>.</p>
 	[% END %]
 </div>
 <div class="row">
