@@ -87,7 +87,7 @@
 					  detected on a log-2 scale for each cancer type. The X-axis cancer type
 					  abbreviations are <a href="https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/tcga-study-abbreviations" target="_blank">described here</a>. This summary of the cancer genome
 					  atlas (TCGA) was collated from <a href="http://firebrowse.org/">firebrowse</a> developed by the Broad Institute. The code used to produce these figures is
-					  available through <a href="https://github.com/IDG-Kinase/TCGA_Kinase_Analysis">github</a>
+					  available through <a href="https://github.com/IDG-Kinase/TCGA_Kinase_Analysis">github</a>.
 				  </h4>
 			  </div>
 		  </div>
@@ -252,48 +252,46 @@
 [% IF include_PRM == 1 %]
 <!-- PRM Data -->
 <div class=card>
-  <div class="card-header">
-    <div class="row align-items-center">
-      <div class="col-11">
-        PRM Peptides 
-      </div>
-      <div class="col-1">
-        <button class="btn float-right" type="button" data-toggle="collapse" data-target="#PRMCollapse" aria-expanded="false" aria-controls="PRMCollapse" onclick="change_collapse_icon(this)">+</button>
-      </div>
-    </div>
-  </div>
-  <div class="col-11">
-    <div id="PRMCollapse" class="collapse">
-      <div class="card-body">
-        <ul class="nav nav-tabs" id="PRMTab" role="tablist">
-          [% FOREACH peptide_info IN PRM_info %]
-          <li class="nav-item">
-            <a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]">[% peptide_info.1 %]</a>
-          </li>
-          [% END %]
-        </ul>
-        <div class="tab-content" id="PRMTabContent">
-          [% FOREACH peptide_info IN PRM_info %]
-          <div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
-			  <div class="row align-items-center">
-				  <div class="col-5">
-					  <img src="/images/PRM_standard_curves/[% peptide_info.2 %]">
-				  </div>
-				  <div class="col-5">
-					  <img src="/images/PRM_standard_curves/[% peptide_info.3 %]">
-				  </div>
-				  <div class="col-2">
-					  <p><a href="/documents/RESP-CURV-LEG.docx">Legend</a></p>
-					  <p><a href="/documents/PARM TABLE.xlsx">Peptide Parameters</a></p>
-					  <p><a href="/documents/PEP-SEQ-TAB.xlsx">Peptide Transitions</a></p>
-				  </div>
-			  </div>
-          </div>
-          [% END %]
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				PRM Peptides 
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" type="button" data-toggle="collapse" data-target="#PRMCollapse" aria-expanded="false" aria-controls="PRMCollapse" onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+	<div id="PRMCollapse" class="collapse">
+		<div class="card-body">
+			<ul class="nav nav-tabs" id="PRMTab" role="tablist">
+				[% FOREACH peptide_info IN PRM_info %]
+				<li class="nav-item">
+					<a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]">[% peptide_info.1 %]</a>
+				</li>
+				[% END %]
+			</ul>
+			<div class="tab-content" id="PRMTabContent">
+				[% FOREACH peptide_info IN PRM_info %]
+				<div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
+					<div class="row align-items-center">
+						<div class="col-5">
+							<img src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+						</div>
+						<div class="col-5">
+							<img src="/images/PRM_standard_curves/[% peptide_info.3 %]">
+						</div>
+						<div class="col-2">
+							<p><a href="/documents/RESP-CURV-LEG.docx">Legend</a></p>
+							<p><a href="/documents/PARM TABLE.xlsx">Peptide Parameters</a></p>
+							<p><a href="/documents/PEP-SEQ-TAB.xlsx">Peptide Transitions</a></p>
+						</div>
+					</div>
+				</div>
+				[% END %]
+			</div>
+		</div>
+	</div>
 </div>
 
 <script>
