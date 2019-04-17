@@ -2,7 +2,6 @@
 
 <main role="main" class="container-fluid">
 
-  <script src="https://unpkg.com/ngl"></script>
   <script>
     function change_collapse_icon(button_obj) {
       button_val = button_obj.innerHTML;
@@ -14,16 +13,6 @@
     };
   </script>
 	
-  <script>
-	  function stage_PDB(PDB_id) {
-		  if (document.getElementById(PDB_id + "-data").innerHTML == "") {
-			  setTimeout(function() {
-				  var stage = new NGL.Stage(PDB_id + "-data");
-				  stage.loadFile("rcsb://" + PDB_id, {defaultRepresentation: true});
-			  }, 250);
-		  }
-	  }
-  </script>
 
 <!-- Kinase Name/CORAL Vis -->
 <div class=row>
@@ -109,6 +98,24 @@
 <br/>
 
 [% IF pdb_domain.include == 1 %]
+<script src="https://unpkg.com/ngl"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
+<script>
+	function stage_PDB(PDB_id) {
+		if (document.getElementById(PDB_id + "-data").innerHTML == "") {
+			var PDBTabContent = document.getElementById("PDBTabContent");
+			document.getElementById(PDB_id + "-data").style.width = PDBTabContent.clientWidth*3/4 + "px";
+			document.getElementById(PDB_id + "-data").style.height = PDBTabContent.clientWidth*3/4*3/4 + "px";
+			setTimeout(function() {
+				var stage = new NGL.Stage(PDB_id + "-data", {backgroundColor:'white'});
+				stage.viewer.scene.background = new THREE.Color( 0xffffff );
+				stage.loadFile("rcsb://" + PDB_id, {defaultRepresentation: true}).then(function (component) {
+					component.autoView();
+				});
+			}, 250);
+		}
+	}
+</script>
 <div class=card>
 	<div class="card-header">
 		<div class="row align-items-center">
@@ -155,9 +162,6 @@
 	</div>
 </div>
 
-<script>
-  /* $('#PDBTab li:first-child a').tab('show') */
-</script>
 <br/>
 [% END %]
 
