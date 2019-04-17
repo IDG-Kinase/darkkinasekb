@@ -2,6 +2,7 @@
 
 <main role="main" class="container-fluid">
 
+  <script src="https://unpkg.com/ngl"></script>
   <script>
     function change_collapse_icon(button_obj) {
       button_val = button_obj.innerHTML;
@@ -12,7 +13,17 @@
       }
     };
   </script>
-
+	
+  <script>
+	  function stage_PDB(PDB_id) {
+		  if (document.getElementById(PDB_id + "-data").innerHTML == "") {
+			  setTimeout(function() {
+				  var stage = new NGL.Stage(PDB_id + "-data");
+				  stage.loadFile("rcsb://" + PDB_id, {defaultRepresentation: true});
+			  }, 250);
+		  }
+	  }
+  </script>
 
 <!-- Kinase Name/CORAL Vis -->
 <div class=row>
@@ -97,6 +108,59 @@
 </div>
 <br/>
 
+[% IF pdb_domain.include == 1 %]
+<div class=card>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				PDB Kinase Domains	
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" 
+						type="button" 
+	  					data-toggle="collapse" 
+						data-target="#PDBCollapse" 
+						aria-expanded="false" 
+						aria-controls="NetworkCollapse" 
+						onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="PDBCollapse" class="collapse">
+		<div class="card-body">
+			<ul class="nav nav-tabs" id="PDBTab" role="tablist">
+				[% FOREACH entry in pdb_domain.data %]
+				<li class="nav-item">
+					<a class="nav-link" 
+					   id="abc[% entry.pdb_id %]-tab" 
+					   data-toggle="tab" 
+					   href="#abc[% entry.pdb_id %]" 
+					   role="tab" 
+					   aria-controls="abc[% entry.pdb_id %]" 
+					   aria-selected="true" 
+					   onclick="stage_PDB('[% entry.pdb_id %]')">[% entry.pdb_id %]</a>
+				</li>
+				[% END %]
+			</ul>
+			<br/>
+			<div class="tab-content" id="PDBTabContent">
+				[% FOREACH entry in pdb_domain.data %]
+				<div class="tab-pane fade" id="abc[% entry.pdb_id %]" role="tabpanel" aria-labelledby="abc[% entry.pdb_id %]-tab">
+					<div id="[% entry.pdb_id %]-data" style="width:400px; height:300px;"></div>
+				</div>
+				[% END %]
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+  /* $('#PDBTab li:first-child a').tab('show') */
+</script>
+<br/>
+[% END %]
+
 [% IF compound.include == 1 %]
 <div class=card>
 	<div class="card-header">
@@ -146,6 +210,7 @@
 </div>
 <br/>
 [% END %]
+
 
 [% IF include_ReNcell == 1 %]
 <div class=card>
@@ -299,6 +364,7 @@
 <script>
   $('#PRMTab li:first-child a').tab('show')
 </script>
+
 <br/>
 [% END %]
 

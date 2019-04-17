@@ -1,0 +1,5 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+6788,STK3,serine/threonine kinase 3,TRUE,TRUE,TRUE,TRUE,69,Tchem,6AO5
+6788,STK3,serine/threonine kinase 3,TRUE,TRUE,TRUE,TRUE,69,Tchem,5DH3
+6788,STK3,serine/threonine kinase 3,TRUE,TRUE,TRUE,TRUE,69,Tchem,4LG4
+6788,STK3,serine/threonine kinase 3,TRUE,TRUE,TRUE,TRUE,69,Tchem,4LGD

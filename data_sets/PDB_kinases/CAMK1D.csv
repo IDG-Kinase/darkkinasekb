@@ -1,0 +1,2 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+57118,CAMK1D,calcium/calmodulin dependent protein kinase ID,TRUE,TRUE,TRUE,TRUE,27,Tchem,2JC6

@@ -1,0 +1,6 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+84630,TTBK1,tau tubulin kinase 1,TRUE,TRUE,TRUE,TRUE,14,Tbio,4NFM
+84630,TTBK1,tau tubulin kinase 1,TRUE,TRUE,TRUE,TRUE,14,Tbio,4NFN
+84630,TTBK1,tau tubulin kinase 1,TRUE,TRUE,TRUE,TRUE,14,Tbio,4BTM
+84630,TTBK1,tau tubulin kinase 1,TRUE,TRUE,TRUE,TRUE,14,Tbio,4BTJ
+84630,TTBK1,tau tubulin kinase 1,TRUE,TRUE,TRUE,TRUE,14,Tbio,4BTK

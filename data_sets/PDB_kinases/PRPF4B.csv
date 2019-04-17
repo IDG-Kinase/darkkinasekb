@@ -1,0 +1,6 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+8899,PRPF4B,pre-mRNA processing factor 4B,TRUE,TRUE,TRUE,TRUE,8,Tchem,4IAN
+8899,PRPF4B,pre-mRNA processing factor 4B,TRUE,TRUE,TRUE,TRUE,8,Tchem,4IIR
+8899,PRPF4B,pre-mRNA processing factor 4B,TRUE,TRUE,TRUE,TRUE,8,Tchem,4IJP
+8899,PRPF4B,pre-mRNA processing factor 4B,TRUE,TRUE,TRUE,TRUE,8,Tchem,4IFC
+8899,PRPF4B,pre-mRNA processing factor 4B,TRUE,TRUE,TRUE,TRUE,8,Tchem,6CNH

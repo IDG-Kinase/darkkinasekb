@@ -1,0 +1,5 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+9020,MAP3K14,mitogen-activated protein kinase kinase kinase 14,TRUE,TRUE,TRUE,TRUE,39,Tchem,4IDT
+9020,MAP3K14,mitogen-activated protein kinase kinase kinase 14,TRUE,TRUE,TRUE,TRUE,39,Tchem,4DN5
+9020,MAP3K14,mitogen-activated protein kinase kinase kinase 14,TRUE,TRUE,TRUE,TRUE,39,Tchem,4G3D
+9020,MAP3K14,mitogen-activated protein kinase kinase kinase 14,TRUE,TRUE,TRUE,TRUE,39,Tchem,4IDV

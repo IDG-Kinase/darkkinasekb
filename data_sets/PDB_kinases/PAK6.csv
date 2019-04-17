@@ -1,0 +1,4 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+56924,PAK6,p21 (RAC1) activated kinase 6,TRUE,TRUE,TRUE,TRUE,44,Tchem,2C30
+56924,PAK6,p21 (RAC1) activated kinase 6,TRUE,TRUE,TRUE,TRUE,44,Tchem,4KS7
+56924,PAK6,p21 (RAC1) activated kinase 6,TRUE,TRUE,TRUE,TRUE,44,Tchem,4KS8

@@ -1,0 +1,3 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+7444,VRK2,vaccinia related kinase 2,TRUE,TRUE,TRUE,TRUE,29,Tbio,5UU1
+7444,VRK2,vaccinia related kinase 2,TRUE,TRUE,TRUE,TRUE,29,Tbio,2V62

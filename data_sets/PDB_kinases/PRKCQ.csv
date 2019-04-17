@@ -1,0 +1,6 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+5588,PRKCQ,protein kinase C theta,TRUE,TRUE,TRUE,TRUE,152,Tchem,4RA5
+5588,PRKCQ,protein kinase C theta,TRUE,TRUE,TRUE,TRUE,152,Tchem,1XJD
+5588,PRKCQ,protein kinase C theta,TRUE,TRUE,TRUE,TRUE,152,Tchem,2JED
+5588,PRKCQ,protein kinase C theta,TRUE,TRUE,TRUE,TRUE,152,Tchem,4Q9Z
+5588,PRKCQ,protein kinase C theta,TRUE,TRUE,TRUE,TRUE,152,Tchem,5F9E

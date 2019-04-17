@@ -1,0 +1,2 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
+51265,CDKL3,cyclin dependent kinase like 3,TRUE,TRUE,TRUE,TRUE,6,Tchem,3ZDU

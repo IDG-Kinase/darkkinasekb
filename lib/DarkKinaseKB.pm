@@ -236,7 +236,21 @@ get '/kinase/:kinase' => sub {
 		  $template_data{from_SGC} = 0;
 	  }
   }
+  
+  #############################################################################
+  # PDB Kinase Domain Data
+  #############################################################################
+  $template_data{pdb_domain}{include} = 0;
 
+  debug("../data_sets/PDB_kinases/$template_data{kinase}.csv");
+  if (-e "../data_sets/PDB_kinases/$template_data{kinase}.csv") {
+	  debug('found file');
+	  $template_data{pdb_domain}{include} = 1;
+	  $template_data{pdb_domain}{data} = csv(
+		  in => "../data_sets/PDB_kinases/$template_data{kinase}.csv", 
+		  headers => 'auto');
+  }
+ 
   #############################################################################
   # Mouse KO Data
   #############################################################################
