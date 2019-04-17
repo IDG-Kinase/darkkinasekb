@@ -104,8 +104,8 @@
 	function stage_PDB(PDB_id) {
 		if (document.getElementById(PDB_id + "-data").innerHTML == "") {
 			var PDBTabContent = document.getElementById("PDBTabContent");
-			document.getElementById(PDB_id + "-data").style.width = PDBTabContent.clientWidth*3/4 + "px";
-			document.getElementById(PDB_id + "-data").style.height = PDBTabContent.clientWidth*3/4*3/4 + "px";
+			document.getElementById(PDB_id + "-data").style.width = PDBTabContent.clientWidth*1/2 + "px";
+			document.getElementById(PDB_id + "-data").style.height = PDBTabContent.clientWidth*1/2*3/4 + "px";
 			setTimeout(function() {
 				var stage = new NGL.Stage(PDB_id + "-data", {backgroundColor:'white'});
 				stage.viewer.scene.background = new THREE.Color( 0xffffff );
