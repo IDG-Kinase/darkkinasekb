@@ -1,2 +1,2 @@
-gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
-157285,PRAG1,"PEAK1 related, kinase-activating pseudokinase 1",TRUE,TRUE,TRUE,TRUE,1,Tbio,5VE6
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,PDB,title,expMethod,deposition_date,last_modification_date,resolution,InChI,InChIKey,chemicalName,smiles,formula,molecularWeight
+157285,PRAG1,"PEAK1 related, kinase-activating pseudokinase 1",1,1,1,1,1,Tbio,5VE6,Crystal structure of Sugen kinase 223,X-RAY DIFFRACTION,2017-04-03,2017-11-08,2.95,NA,NA,NA,NA,NA,NA

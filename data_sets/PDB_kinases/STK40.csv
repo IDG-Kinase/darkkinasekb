@@ -1,2 +1,2 @@
-gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,pdb_id
-83931,STK40,serine/threonine kinase 40,TRUE,TRUE,TRUE,TRUE,18,Tbio,5L2Q
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,PDB,title,expMethod,deposition_date,last_modification_date,resolution,InChI,InChIKey,chemicalName,smiles,formula,molecularWeight
+83931,STK40,serine/threonine kinase 40,1,1,1,1,18,Tbio,5L2Q,Serine/threonine-protein kinase 40 (STK40) kinase homology domain,X-RAY DIFFRACTION,2016-08-02,2017-11-01,2.53,NA,NA,NA,NA,NA,NA

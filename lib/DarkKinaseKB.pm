@@ -246,9 +246,24 @@ get '/kinase/:kinase' => sub {
   if (-e "../data_sets/PDB_kinases/$template_data{kinase}.csv") {
 	  debug('found file');
 	  $template_data{pdb_domain}{include} = 1;
-	  $template_data{pdb_domain}{data} = csv(
-		  in => "../data_sets/PDB_kinases/$template_data{kinase}.csv", 
-		  headers => 'auto');
+	  # $template_data{pdb_domain}{data} = csv(
+		  # in => "../data_sets/PDB_kinases/$template_data{kinase}.csv", 
+          # headers => 'auto');
+
+        my $data = csv(
+          in => "../data_sets/PDB_kinases/$template_data{kinase}.csv", 
+          headers => 'auto');
+
+        debug(Dumper(scalar(@$data)));
+
+        for my $entry_num (0..scalar(@$data) - 1) {
+          my @split_smiles = split(";",$data->[$entry_num]{smiles}); 
+          $data->[$entry_num]{smiles} = \@split_smiles; 
+          
+          my @split_chemicalName = split(";",$data->[$entry_num]{chemicalName}); 
+          $data->[$entry_num]{chemicalName} = \@split_chemicalName; 
+        }
+	  $template_data{pdb_domain}{data} = $data;
   }
  
   #############################################################################
