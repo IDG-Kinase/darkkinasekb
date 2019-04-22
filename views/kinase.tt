@@ -99,7 +99,6 @@
 
 [% IF pdb_domain.include == 1 %]
 [% USE Dumper %]
-<!-- [% Dumper.dump_html(pdb_domain.data) %] -->
 <script src="https://unpkg.com/ngl"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
 <script>
@@ -172,7 +171,9 @@
                       [% FOREACH compound in entry.chemicalName %]
                         <li>[% compound %]</li>
                       [% END %]
-                      <ul>
+                      </ul>
+                      <hr>
+                      <a href="https://www.rcsb.org/structure/[% entry.PDB %]">View This Structure on RCSB PDB</a>
                     </div>
                   </div>
 				</div>
