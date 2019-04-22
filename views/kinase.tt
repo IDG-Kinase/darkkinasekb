@@ -98,6 +98,7 @@
 <br/>
 
 [% IF pdb_domain.include == 1 %]
+[% USE Dumper %]
 <script src="https://unpkg.com/ngl"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
 <script>
@@ -140,21 +141,41 @@
 				[% FOREACH entry in pdb_domain.data %]
 				<li class="nav-item">
 					<a class="nav-link" 
-					   id="abc[% entry.pdb_id %]-tab" 
+					   id="abc[% entry.PDB %]-tab" 
 					   data-toggle="tab" 
-					   href="#abc[% entry.pdb_id %]" 
+					   href="#abc[% entry.PDB %]" 
 					   role="tab" 
-					   aria-controls="abc[% entry.pdb_id %]" 
+					   aria-controls="abc[% entry.PDB%]" 
 					   aria-selected="true" 
-					   onclick="stage_PDB('[% entry.pdb_id %]')">[% entry.pdb_id %]</a>
+					   onclick="stage_PDB('[% entry.PDB %]')">[% entry.PDB %]</a>
 				</li>
 				[% END %]
 			</ul>
 			<br/>
 			<div class="tab-content" id="PDBTabContent">
 				[% FOREACH entry in pdb_domain.data %]
-				<div class="tab-pane fade" id="abc[% entry.pdb_id %]" role="tabpanel" aria-labelledby="abc[% entry.pdb_id %]-tab">
-					<div id="[% entry.pdb_id %]-data" style="width:400px; height:300px;"></div>
+				<div class="tab-pane fade" id="abc[% entry.PDB %]" role="tabpanel" aria-labelledby="abc[% entry.PDB %]-tab">
+                  <div class="row">
+                    <div class="col-6">
+					<div id="[% entry.PDB %]-data" style="width:400px; height:300px;"></div>
+                    </div>
+                    <div class="col-6">
+                      <h3>Kinase Domain Structure:</h3>
+                      <ul>
+                        <li><b>Title:</b> [% entry.title %]</li>
+                        <li><b>Resolution:</b> [% entry.resolution %]</li>
+                      </ul>
+
+                      <h3>Associated Compounds:</h3>
+                      <ul>
+                      [% FOREACH compound in entry.chemicalName %]
+                        <li>[% compound %]</li>
+                      [% END %]
+                      </ul>
+                      <hr>
+                      <a href="https://www.rcsb.org/structure/[% entry.PDB %]">View This Structure on RCSB PDB</a>
+                    </div>
+                  </div>
 				</div>
 				[% END %]
 			</div>
