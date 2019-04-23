@@ -316,6 +316,8 @@
 								<li>“Algorithms, Routines and S Functions for Robust Statistics” (CRC Press, Boca Raton, Florida, USA, 1993)</li>
 							</ol>
 
+							<p>View <a href="/PRM_params" target="_blank">Peptide Parameters</a></p>
+
 						</div>
 						<div class="col-6">
 							<br/>
@@ -334,14 +336,15 @@
 							<ol>
 								<li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855883/</li>
 							</ol>
+							<p>View <a href="/PRM_params#pep_seq" target="_blank">Peptide Transistions</a></p>
 						</div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="btn-toolbar text-center">
-							<a class="btn btn-primary mx-2" href="/documents/PARM TABLE.xlsx" role="button">Download Peptide Parameters</a>
-							<a class="btn btn-primary mx-2" href="/documents/PEP-SEQ-TAB.xlsx" role="button">Download Peptide Transistions</a>
-						</div>
-					</div>
+					<!-- <div class="row justify-content-center"> -->
+					<!-- 	<div class="btn-toolbar text-center"> -->
+					<!-- 		<a class="btn btn-primary mx-2" href="/documents/PARM TABLE.xlsx" role="button">Download Peptide Parameters</a> -->
+					<!-- 		<a class="btn btn-primary mx-2" href="/documents/PEP-SEQ-TAB.xlsx" role="button">Download Peptide Transistions</a> -->
+					<!-- 	</div> -->
+					<!-- </div> -->
 				</div>
 				[% END %]
 			</div>

@@ -1,0 +1,10 @@
+Gene Symbol,Protein Name,Peptide Sequence,LOD (fmol)<sup>2</sup>,LOQ (fmol)<sup>3</sup>,Calibration Curve Equation,Standard Response Curve Equation
+CDK12,Cyclin Dependent Kinase 12,DTGELVAL<b>K</b><sup>1</sup>,0.05,0.15,y=1.01x-0.16,y=0.04x+0.004
+CDK12,Cyclin Dependent Kinase 12,LCGSPCPAVWPDVI<b>K</b>,2.4,7.2,y=1.10x-1.28,y=0.04x-0.01
+CDK13,Cyclin Dependent Kinase 13,ICGSPCPAVWPDVI<b>K</b>,2.4,7.2,y=1.106-0.66,y=0.04x+0.006
+CDK13,Cyclin Dependent Kinase 13,VENNLIVD<b>K</b>,0.08,0.24,y=1.03-0.21,y=0.04x+0.006
+PKMYT1,"Protein Kinase, Membrane Associated Tyrosine/Threonine 1",ATAEALLALPVL<b>R</b>,0.04,0.12,y=1.09-0.16,y=0.04x+0.000
+PKMYT1,"Protein Kinase, Membrane Associated Tyrosine/Threonine 1",GSFPSFEP<b>R</b>,0.14,0.42,y=1.01x-0.15,y=0.04x-0.004
+PKMYT1,"Protein Kinase, Membrane Associated Tyrosine/Threonine 1",SLPPPPPA<b>K</b>,0.35,1.05,y=1.13x-0.41,y=0.03x-0.008
+TLK2,Tousled Like Kinase 2,AEPYETSQG<b>K</b>,0.2,0.6,y=1.36x-0.05,y=0.03x-0.007
+TLK2,Tousled Like Kinase 2,ISALENS<b>K</b>,0.17,0.51,y=1.05-0.30,y=0.04x-0.01

@@ -1,0 +1,66 @@
+<main role="main" class="container-fluid">
+
+<br/>
+<br/>
+
+<div class="row" id="prm_params">
+	<div class="col">
+		<p>Peptide Performance Parameters and Robust Linear Regression Analysis of Peptide Calibration (Reverse) and Response (Forward) Curves for the Dark Kinases</p>
+		<table class="table">
+			<thead>
+				<tr>
+					[% FOREACH header in prm_params_headers.0 %]
+					<th scope="col">[% header %]</th>
+					[% END %]
+				</tr>
+			</thead>
+			<tbody>
+				[% FOREACH data_line in prm_params_data %]
+				<tr>
+					[% FOREACH data_val in data_line %]
+					<td>[% data_val %]</td>
+					[% END %]
+				</tr>
+				[% END %]
+			</tbody>
+		</table>
+
+		<ol>
+		<li>Emboldened amino acid indicates stable isotope labeled residue with either Lys -[13C6] [15N2]  or Arg -[13C6] [15N4]. Cys residues are carbamidomethylated.</li>
+		<li>The LOD was determined using a non-parametric method with eight LC-MS analyses without added analyte ((http://clinchem.aaccjnls.org/content/50/4/732).</li>
+		<li>The LOQ was generated from the LOD (“Algorithms, Routines and S Functions for Robust Statistics” (CRC Press, Boca Raton, Florida, USA, 1993)).</li>
+		</ol>
+	</div>
+</div>
+
+<hr/>
+
+<div class="row" id="pep_seq">
+	<div class="col">
+		<p>Deep Dive Kinome Kinases and their Signature Peptides</p>
+		<table class="table">
+			<thead>
+				<tr>
+					[% FOREACH header in peptide_seq_headers.0 %]
+					<th scope="col">[% header %]</th>
+					[% END %]
+				</tr>
+			</thead>
+			<tbody>
+				[% FOREACH data_line in peptide_seq_data %]
+				<tr>
+					[% FOREACH data_val in data_line %]
+					<td>[% data_val %]</td>
+					[% END %]
+				</tr>
+				[% END %]
+			</tbody>
+		</table>
+
+		<ol>
+			<li>Emboldened amino acid indicates stable isotope labeled residue with either Lys -[13C6] [15N2] or Arg -[13C6] [15N4]. Cys residues are carbamidomethylated.</li>
+		</ol>
+	</div>
+</div>
+
+</main>

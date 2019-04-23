@@ -298,4 +298,27 @@ get '/data' => sub {
 	};
 };
 
+get '/PRM_params' => sub {
+	my %template_data;
+	$template_data{prm_params_headers} = csv(
+		in => '../data_sets/param_table.csv'
+	);
+
+	$template_data{prm_params_data} = csv(
+		in => '../data_sets/param_table.csv',
+		headers => "skip"
+	);
+	
+	$template_data{peptide_seq_headers} = csv(
+		in => '../data_sets/pep_seq_table.csv'
+	);
+
+	$template_data{peptide_seq_data} = csv(
+		in => '../data_sets/pep_seq_table.csv',
+		headers => "skip"
+	);
+
+	template 'prm_params' => \%template_data;
+};
+
 true;
