@@ -29,7 +29,8 @@
     <!-- cytoscape -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.5.0/cytoscape.min.js"></script>
     <script src="https://unpkg.com/b64-to-blob"></script>
-    <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+    <!-- <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
     <!--<script src="/javascripts/PPI/cerebral-ext.js"></script>-->
     <script src="https://unpkg.com/webcola@3.3.8/WebCola/cola.min.js"></script>
     <script src="https://unpkg.com/cytoscape-cola@2.2.3/cytoscape-cola.js"></script>
