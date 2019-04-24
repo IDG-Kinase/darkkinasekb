@@ -40,9 +40,15 @@
 	<p>Additional data concerning this compound can be found 
 		[% FOREACH this_kinase = kinase %]
 		<a href="/compound_data_sheets/[% this_kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a> 
-		[% END %]
-	.</p>
-
+		[% END %].</p>
 </div>
+<div class="row">
+	<p>A list of all of the identifed compounds can be found <a href="/compounds" target="_blank">here</a>.</p>
+</div>
+
+<div class="row">
+</div>
+
+
 
 </main>
