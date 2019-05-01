@@ -189,6 +189,20 @@ get '/kinase/:kinase' => sub {
 		$template_data{include_KO} = 1;
 		$template_data{KO_info} = \@KO_info;
 	}
+	
+	#############################################################################
+	# Mouse KO Data
+	#############################################################################
+	$parser = Text::CSV::Simple->new;
+	my @mouse_KO_info = $parser->read_file('../data_sets/IMPC_KO.csv') or die "$!";
+
+	@mouse_KO_info = grep $_->[0] eq $template_data{kinase}, @mouse_KO_info;
+
+	$template_data{include_mouse_KO} = 0;
+	if (scalar(@mouse_KO_info) > 0) {
+		$template_data{include_mouse_KO} = 1;
+		$template_data{mouse_KO_info} = \@mouse_KO_info;
+	}
 
 	#############################################################################
 	# Recombinant Protein Data
@@ -202,6 +216,23 @@ get '/kinase/:kinase' => sub {
 	if (scalar(@recomb_info) > 0) {
 		$template_data{include_recomb} = 1;
 		$template_data{recomb_info} = \@recomb_info;
+	}
+	
+	#############################################################################
+	# NanoBRET Data
+	#############################################################################
+	$parser = Text::CSV::Simple->new;
+	my $NanoBRET_info = csv(in => '../data_sets/dark_NanoBRET_promega.csv',
+		headers => 'auto') or die "$!";
+
+	my @NanoBRET_hits = grep $_->{'symbol'} eq $template_data{kinase}, @{$NanoBRET_info};
+	
+	debug(@NanoBRET_hits);
+
+	$template_data{include_NanoBRET} = 0;
+	if (scalar(@NanoBRET_hits) > 0) {
+		$template_data{include_NanoBRET} = 1;
+		$template_data{NanoBRET_info} = $NanoBRET_hits[0];
 	}
 
 	#############################################################################
@@ -237,19 +268,6 @@ get '/kinase/:kinase' => sub {
 		}
 	}
 
-	#############################################################################
-	# Mouse KO Data
-	#############################################################################
-	$parser = Text::CSV::Simple->new;
-	my @mouse_KO_info = $parser->read_file('../data_sets/IMPC_KO.csv') or die "$!";
-
-	@mouse_KO_info = grep $_->[0] eq $template_data{kinase}, @mouse_KO_info;
-
-	$template_data{include_mouse_KO} = 0;
-	if (scalar(@mouse_KO_info) > 0) {
-		$template_data{include_mouse_KO} = 1;
-		$template_data{mouse_KO_info} = \@mouse_KO_info;
-	}
 
 	#############################################################################
 	# Template Passing
@@ -292,10 +310,18 @@ get '/data' => sub {
 
 	@kinase_list = map $_->[1], @kinase_list;
 	@kinase_list = sort @kinase_list;
+	
+	my %template_data;
+	$template_data{title} = 'DKK - Data Sources and Repositories';
+	$template_data{all_kinases} = \@kinase_list;
 
-	template 'data' => { 'title' => 'DarkKinaseKB', 
-		'all_kinases' => \@kinase_list,
-	};
+	$template_data{compounds} = csv(
+		in => '../data_sets/compounds.csv',
+		headers => 'auto');
+
+	# template 'all_compounds' => \%template_data;
+
+	template 'data' => \%template_data;
 };
 
 get '/PRM_params' => sub {

@@ -1,6 +1,5 @@
-<main role="main" class="container">
+<main role="main" class="container-fluid">
 
-<br/>
 <br/>
 
 <h1>Data Sources and Repositories</h1>
@@ -21,8 +20,23 @@ links to information about each kinase:
 
 <ul class="list-unstyled row list-group-flush">
 	[% FOREACH kinase IN all_kinases %]
-	<li class="col-sm-2">
+	<li class="col-sm-1">
 		<a href="/kinase/[% kinase %]">[% kinase %]</a>
+	</li>
+	[% END %]
+</ul>
+
+<hr>
+
+We have also compiled a set of compounds that can be used to assay the function of some of the understudied kinases:
+
+<br/>
+<br/>
+
+<ul class="list-unstyled row list-group-flush">
+	[% FOREACH this_compound IN compounds %]
+	<li class="col-sm-2">
+		<a href="/compounds/[% this_compound.name %]">[% this_compound.name %]</a>
 	</li>
 	[% END %]
 </ul>
