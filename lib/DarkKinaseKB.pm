@@ -227,8 +227,6 @@ get '/kinase/:kinase' => sub {
 
 	my @NanoBRET_hits = grep $_->{'symbol'} eq $template_data{kinase}, @{$NanoBRET_info};
 	
-	debug(@NanoBRET_hits);
-
 	$template_data{include_NanoBRET} = 0;
 	if (scalar(@NanoBRET_hits) > 0) {
 		$template_data{include_NanoBRET} = 1;
