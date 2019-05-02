@@ -1,0 +1,106 @@
+<!-- PRM Data -->
+<div class=card>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				PRM Peptides 
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" type="button" data-toggle="collapse" data-target="#PRMCollapse" aria-expanded="false" aria-controls="PRMCollapse" onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+	<div id="PRMCollapse" class="collapse">
+		<div class="card-body">
+			<ul class="nav nav-tabs" id="PRMTab" role="tablist">
+				[% FOREACH peptide_info IN PRM_info %]
+				<li class="nav-item">
+					<a class="nav-link" id="[% peptide_info.1 %]-tab" data-toggle="tab" href="#[% peptide_info.1 %]" role="tab" aria-controls="[% peptide_info.1 %]">[% peptide_info.1 %]</a>
+				</li>
+				[% END %]
+			</ul>
+			<div class="tab-content" id="PRMTabContent">
+				[% FOREACH peptide_info IN PRM_info %]
+				<div class="tab-pane fade show" id="[% peptide_info.1 %]" role="tabpanel" aria-labelledby="[% peptide_info.1 %]-tab">
+					<div class="row align-items-center">
+						<div class="col-6">
+							<img src="/images/PRM_standard_curves/[% peptide_info.2 %]">
+						</div>
+						<div class="col-6">
+							<img src="/images/PRM_standard_curves/[% peptide_info.3 %]">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<br/>
+							<br/>
+							<p>The calibration reverse curve plot with linear
+							robust regression analysis is shown [1].
+							The observed concentrations of the stable
+							isotopically labeled peptide surrogate was obtained
+							for each peptide using LC-MS in parallel reaction
+							mode with a constant quantity of  natural isotope
+							abundance peptide as the internal standard (25
+							fmol/µL) [2].
+							The analyte matrix was a tryptic digest of pooled
+							patient derived xenografts (1 µg/µL) that was
+							prepared according to CPTAC-SOP. Each of the three
+							most intense peptide fragment ions is depicted as a
+							different symbol. The measurements from replicate
+							LC-MS analyses are depicted as the same symbol [3]
+							The LOD was determined using a non-parametric method
+							with eight LC-MS analyses without added analyte [4].
+							The LOQ was generated from the LOD [5]. The plots
+							are dimensioned such that the theoretical line is at
+							a 45° angle to facilitate assessment of peptide
+							recovery and performance. The LOD, LOQ, and
+							regression parameters are summarize in the
+							Table.</p>
+							<ol>
+								<li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855883/</li>
+								<li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3494192/</li>
+								<li>https://proteomics.cancer.gov/sites/default/files/assay-characterization-guidance-document.pdf</li>
+								<li>http://clinchem.aaccjnls.org/content/50/4/732</li>
+								<li>“Algorithms, Routines and S Functions for Robust Statistics” (CRC Press, Boca Raton, Florida, USA, 1993)</li>
+							</ol>
+
+							<p>View <a href="/PRM_params" target="_blank">Peptide Parameters</a></p>
+
+						</div>
+						<div class="col-6">
+							<br/>
+							<br/>
+
+							<p>The robust linear regression analysis of peak area ratios from admixtures of the
+							indicated concentration of the synthetic natural abundance peptide and a
+							constant quantity of the stable isotope labeled peptide (25 fmol) is shown [1]. The sample matrix was a
+							tryptic digest of bovine serum albumin (100 ng/µL). The three most intense
+							fragment ion ions from three LC-MS analyses were used to generate the robust
+							linear regression line equation (nine independent measurements at each
+							concentration). The mean of the nine measurements and standard deviations are
+							shown. Only measurements with concentrations greater than the LOD that was
+							determined in the tumor matrix was used for the standard curve (see legend for
+							the calibration curve for this peptide).</p>
+							<ol>
+								<li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855883/</li>
+							</ol>
+							<p>View <a href="/PRM_params#pep_seq" target="_blank">Peptide Transistions</a></p>
+						</div>
+					</div>
+					<!-- <div class="row justify-content-center"> -->
+					<!-- 	<div class="btn-toolbar text-center"> -->
+					<!-- 		<a class="btn btn-primary mx-2" href="/documents/PARM TABLE.xlsx" role="button">Download Peptide Parameters</a> -->
+					<!-- 		<a class="btn btn-primary mx-2" href="/documents/PEP-SEQ-TAB.xlsx" role="button">Download Peptide Transistions</a> -->
+					<!-- 	</div> -->
+					<!-- </div> -->
+				</div>
+				[% END %]
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+  $('#PRMTab li:first-child a').tab('show')
+</script>
+<br/>

@@ -1,0 +1,36 @@
+<div class=card>
+  <div class="card-header">
+    <div class="row align-items-center">
+      <div class="col-11">
+        ReNcell Visualizations
+      </div>
+      <div class="col-1">
+        <button class="btn float-right" type="button" data-toggle="collapse" data-target="#ReNcellCollapse" aria-expanded="false" aria-controls="ReNcellCollapse" onclick="change_collapse_icon(this)">+</button>
+      </div>
+    </div>
+  </div>
+  <div id="ReNcellCollapse" class="collapse">
+	  <div class="card-body">
+		  <div class="row align-items-center">
+			  <div class="col-6 text-center">
+				  <img src="/images/ReNcell/[% kinase %].svg">
+			  </div>
+			  <div class="col-1">
+			  </div>
+			  <div class="col-5">
+				  <h4>
+				  This data stems from the differentiation of neural stem cells into fully
+				  functional neurons and glia, which requires precise regulation of diverse
+				  molecular pathways over time and space. As part of the Harvard Medical
+				  School Library of Integrated Network-based Cellular Signatures (LINCS)
+				  Program (NIH grant U54 HL127365, <a href="http://lincs.hms.harvard.edu/">lincs.hms.harvard.edu</a>), we used
+				  phospho-proteomics to assess changes during ReN VM cell differentiation.
+				  Depicted is the dark kinase of interest (black) and two reference kinases
+				  (blue and green) to aid interpretation of the values. More information on
+				  this work can be found on <a href="https://www.synapse.org/#!Synapse:syn11667815/wiki/506265">Synapse</a>.</h4>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div>
+<br/>

@@ -1,0 +1,84 @@
+<!-- Outside Materials -->
+<div class="card">
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				Available Assays, Cell Lines and Animal Models	
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" type="button" data-toggle="collapse" data-target="#CellAnimalCollapse" aria-expanded="false" aria-controls="CellAnimalCollapse" onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+	<div id="CellAnimalCollapse" class="collapse">
+		<div class="card-body">
+			<div class="row">
+				[% IF include_KO == 1 %]
+				<div class="col-sm-3">
+					<div class=card>
+						<div class="card-header">
+							Horizon KO HAP1 Cell Lines
+						</div>
+						<div class="card-body">
+							[% FOREACH line_info IN KO_info %]
+							<a href="[% line_info.8 %]" target="_blank">[% line_info.2 %]</a> 
+							[% END %]
+						</div>
+					</div>
+				</div>
+				[% END %]
+				[% IF include_recomb == 1 %]
+				<div class="col-sm-3">
+					<div class=card>
+						<div class="card-header">
+							ThermoFisher Recombinant Protein
+						</div>
+						<div class="card-body">
+							[% FOREACH line_info IN recomb_info %]
+							<a href="[% line_info.2 %]" target="_blank">[% line_info.1 %]</a> 
+							[% END %]
+						</div>
+					</div>
+				</div>
+				[% END %]
+				[% IF include_mouse_KO == 1 %]
+				<div class="col-sm-3">
+					<div class=card>
+						<div class="card-header">
+							IMPC Mouse KO
+						</div>
+						<div class="card-body">
+							[% FOREACH line_info IN mouse_KO_info %]
+							<a href="[% line_info.2 %]" target="_blank">[% line_info.1 %]</a> 
+							[% END %]
+						</div>
+					</div>
+				</div>
+				[% END %]
+				[% IF include_NanoBRET == 1 %]
+				<div class="col-sm-3">
+					<div class=card>
+						<div class="card-header">
+							NanoBRET Assay
+						</div>
+						<div class="card-body">
+							[% NanoBRET_info.symbol %] has a NanoBRET Assay available from Promega.
+
+							[% IF NanoBRET_info.vector_catalog_number == "Special Request" %]
+							It available by <a href="[% NanoBRET_info.vector_url %]" 
+								onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;" 
+								target="_blank">special request</a>.
+							[% ELSE %] 
+							It is available under catalog number: <a href="[% NanoBRET_info.vector_url %]" 
+								onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;" 
+								target="_blank">[% NanoBRET_info.vector_catalog_number %]</a>.
+							[% END %]
+						</div>
+					</div>
+				</div>
+				[% END %]
+			</div>
+		</div>
+	</div>
+</div>
+<br/>

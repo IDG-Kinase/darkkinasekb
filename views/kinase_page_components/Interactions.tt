@@ -1,0 +1,59 @@
+<div class=card>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				Interaction Networks
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" type="button" data-toggle="collapse" data-target="#NetworkCollapse" aria-expanded="false" aria-controls="NetworkCollapse" onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="NetworkCollapse" class="collapse">
+		<div class="card-body">
+		    <!-- INDRA -->
+		    [% IF include_clustered_INDRA == 1 %]
+			<div class="row align-items-center">
+				<div class="col-6 text-center">
+					<a href="[% clustered_INDRA_URL %]" target="_blank">
+						<img height="500px" src="/images/INDRA/clustered/[% kinase %].png">
+					</a>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-5">
+					<h4>
+					INDRA (Integrated Network and Dynamical Reasoning Assembler)
+					is an automated model assembly system drawing from natural
+					language processing systems and structured databases. It
+					collects mechanistic and causal assertions, represents them
+					in a standardized form (INDRA Statements), and assembles
+					them into various modeling formalisms including causal
+					graphs and dynamical models. More information on this work
+					can be found on <a href="https://indralab.github.io/">Github</a>.  In this
+					particular figure, several interaction-types are depicted;
+					physical complexes (blue), phosphorylation (black), and
+					general up- or downregulation (green and red, respectively).
+					Biomacromolecules are represented as squares, small molecule
+					as circles, and biological processes and diamonds. The
+					thickness of each line reflects a confidence score, with
+					thicker lines higher in confidence.
+					</h4>
+				</div>
+			</div>
+			[% END %]
+
+			<!-- APMS -->
+			[% IF include_APMS == 1 %]
+			<div class="row align-items-center">
+			    <p class="cy-header">Affinity Purification - Mass Spectrometry</p>
+			    <div class="cy-container">
+                    <div id="cy"></div>
+                    <div id="cy-control"></div>
+                </div>
+            </div>
+            [% END %]
+		</div>
+	</div>
+</div>
+<br/>

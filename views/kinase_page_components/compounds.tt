@@ -1,0 +1,47 @@
+<div class=card>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				IDG Compound
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" type="button" data-toggle="collapse" data-target="#CompoundCollapse" aria-expanded="false" aria-controls="NetworkCollapse" onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="CompoundCollapse" class="collapse">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-6">
+					<img src="/images/compounds/[% compound.name %]-structure.png"style='height: 100%; width: 100%; object-fit: contain'>
+				</div>
+				<div class="col-6">
+					<p><b>Compound Name</b>: <a href="/compounds/[% compound.name %]" target="_blank">[% compound.name %]</a></p>
+					<p><b>Chemical Name</b>: [% compound.chemical_name %]</p>
+					<p><b>CHEBI</b>: [% compound.CHEBI %]</p>
+					<p><b>Smile String</b>: [% compound.smiles %]</p>
+					<p><b>Chemical Formula</b>: [% compound.chemical_formula %]</p>
+					<p><b>Molecular Weight</b>: [% compound.molecular_weight %]</p>
+					<p><b>cLogP</b>: [% compound.cLogP %]</p>
+					<p><b>Source</b>: [% compound.source %]</p>
+				</div>
+			</div>
+
+			<hr/>
+
+			<div class="row">
+				[% IF from_SGC %]
+				<p>This compound is available through special request from the <a href="[% compound.acquire_link %]" target="_blank">[% compound.source %]</a>.</p>
+				[% ELSE %]
+				<p>This compound is available through <a href="[% compound.acquire_link %]" target="_blank">[% compound.source %]</a>.</p>
+				[% END %]
+			</div>
+			<div class="row">
+				<p>Additional data concerning this compound can be found <a href="/compound_data_sheets/[% compound.kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
