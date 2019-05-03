@@ -62,16 +62,48 @@
 							NanoBRET Assay
 						</div>
 						<div class="card-body">
-							[% NanoBRET_info.symbol %] has a NanoBRET Assay available from Promega.
+							[% IF NanoBRET_info.validated == 1 && NanoBRET_info.vector_catalog_number == "Special Request" %]
 
-							[% IF NanoBRET_info.vector_catalog_number == "Special Request" %]
-							It available by <a href="[% NanoBRET_info.vector_url %]" 
-								onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;" 
-								target="_blank">special request</a>.
-							[% ELSE %] 
-							It is available under catalog number: <a href="[% NanoBRET_info.vector_url %]" 
-								onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;" 
-								target="_blank">[% NanoBRET_info.vector_catalog_number %]</a>.
+							A [% NanoBRET_info.symbol %] NanoBRET Assay has been developed and
+							validated. [% NanoBRET_info.fusion_name %] is available from Promega
+							by 
+							<a href="https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0" 
+							   target="_blank"
+							   onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;">specia request</a>. 
+						   Additional information about this assay is available <a href="/compound_data_sheets/[% NanoBRET_info.symbol %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.
+
+							[% END %]
+							
+							[% IF NanoBRET_info.validated == 1 && NanoBRET_info.vector_catalog_number != "Special Request" %]
+							
+							A [% NanoBRET_info.symbol %] NanoBRET Assay has been developed and
+							validated. [% NanoBRET_info.fusion_name %] is available from Promega
+							under catalog number: 
+							<a href="https://www.promega.com/catalogredirection.aspx?partno=[% NanoBRET_info.vector_catalog_number %]" 
+							   target="_blank"
+		  					   onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;">
+								[% NanoBRET_info.vector_catalog_number %]</a>. Additional information
+							about this assay is available <a href="/compound_data_sheets/[% NanoBRET_info.symbol %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.
+
+							[% END %]
+
+							[% IF NanoBRET_info.validated != 1 && NanoBRET_info.vector_catalog_number == "Special Request" %]
+
+							[% NanoBRET_info.fusion_name %] is available from Promega by 
+							<a href="[% NanoBRET_info.vector_url %]" 
+							onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;" 
+	   						target="_blank">special request</a>.
+
+							[% END %]
+							
+							[% IF NanoBRET_info.validated != 1 && NanoBRET_info.vector_catalog_number != "Special Request" %]
+							
+							[% NanoBRET_info.fusion_name %] is available from Promega under catalog number: 
+							<a href="https://www.promega.com/catalogredirection.aspx?partno=[% NanoBRET_info.vector_catalog_number %]" 
+							   target="_blank"
+		  					   onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;">
+								[% NanoBRET_info.vector_catalog_number %]</a>. 
+
 							[% END %]
 						</div>
 					</div>
