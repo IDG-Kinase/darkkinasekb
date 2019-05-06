@@ -13,6 +13,7 @@ use static_pages;
 use compounds;
 use tissues;
 use traits;
+use NanoBRET;
 
 our $VERSION = '0.1';
 
