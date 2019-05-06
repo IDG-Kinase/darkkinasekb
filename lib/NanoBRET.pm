@@ -1,4 +1,5 @@
 package DarkKinaseKB;
+
 use Dancer2;
 use Text::CSV;
 use Cwd;
@@ -22,7 +23,7 @@ get '/NanoBRET' => sub {
 
 	$template_data{NanoBRET_info} = $NanoBRET_info;
 
-	template 'NanoBRET' => \%template_data;
+	template 'NanoBRET/NanoBRET' => \%template_data;
 };
 
 

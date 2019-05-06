@@ -1,0 +1,105 @@
+<h3>NanoBRET transient transfection</h3>
+
+<p>For cellular NanoBRET Target Engagement experiments, the NL-kinase fusion
+construct was diluted with carrier DNA - pGEM-3Zf(-) (Promega, Madison, WI, USA)
+at a mass ratio of 1:10 (mass/mass), prior to adding FuGENE HD (Promega,
+Madison, WI, USA). DNA:FuGENE complexes were formed at a ratio of 1:3 (mg DNA/mL
+FuGENE HD) according to the manufacturer’s protocol (Promega, Madison, WI, USA).
+The resulting transfection complex (1 part, volume) was then gently mixed with
+20 parts (v/v) of HEK-293 cells (ATCC) suspended at a density of 2 x 105
+cells/mL in DMEM (Gibco) + 10% FBS (Seradigm/VWR). The cells were then plated
+into Tissue Culture Treated, 96-well plates (Corning) followed by incubation (37
+°C/ 5 % CO2) for 24 hours. After 24 hours the medium was removed and to each
+well was added 85 μL of Opti-MEM media (Gibco).</p>
+
+<h3>NanoBRET transient transfection (CDK10-CDK20)</h3>
+
+<p>For cellular NanoBRET Target Engagement experiments, the NL-kinase fusion
+construct was diluted with appropriate cyclin DNA - pGEM-3Zf(-) (Promega,
+Madison, WI, USA) at a mass ratio of 1:10 (mass/mass), prior to adding FuGENE HD
+(Promega, Madison, WI, USA). DNA:FuGENE complexes were formed at a ratio of 1:3
+(mg DNA/mL FuGENE HD) according to the manufacturer’s protocol (Promega,
+Madison, WI, USA). The resulting transfection complex (1 part, volume) was then
+gently mixed with 20 parts (v/v) of HEK-293 cells (ATCC) suspended at a density
+of 2 x 105 cells/mL in DMEM (Gibco) + 10% FBS (Seradigm/VWR). The cells were
+then plated into Tissue Culture Treated, 96-well plates (Corning) followed by
+incubation (37 °C/ 5 % CO2) for 24 hours. After 24 hours the medium was removed
+and to each well was added 85 μL of Opti-MEM media (Gibco).</p>
+
+<h3>NanoBRET assay protocol</h3>
+
+<p>Utilizing the provided recommended Tracer concentration (see tracer titration
+sheets) add 5 μLof 20x working stock of NanoBRET Tracer to all wells, except the
+“no tracer” control wells. All inhibitors were prepared initially as
+concentrated stock solutions in 100% DMSO (Sigma). A total of 10 μL/well of the
+10x chemical inhibitor stock solutions (final assay concentration 1 % DMSO) were
+added. For “no compound” and “no tracer” control wells, a total of 10 μL/well of
+Opti-MEM plus DMSO (9 μL was added (final concentration 1 % DMSO)). 96 well
+plates containing cells with the appropriate nanoBRET Tracer and inhibitors (100
+μL total volume per well) were equilibrated (37 °C/ 5 % CO2) for 2 hours. To
+measure nanoBRET signal, nanoBRET NanoGlo substrate at a ratio of 1:166 to
+Opti-MEM media in combination with extracellular NanoLuc Inhibitor diluted 1:500
+(10 μL [30 mM stock] per 5 mL Opti-MEM plus substrate) were combined to create a
+3x stock. A total of 50 μL of the 3x substrate/extracellular NanoLuc inhibitor
+were added to each well. The plates were read within 15 minutes (GloMax Discover
+luminometer, Promega, Madison, WI, USA) equipped with 450 nM BP filter (donor)
+and 600 nM LP filter (acceptor), using 0.3 s integration time instrument
+utilizing the “nanoBRET 618” protocol.</p>
+
+<p>Prior to curve fitting, the average BRET ratio for “no tracer” (Opti-MEM +
+DMSO only) wells was subtracted from all experimental inhibitor well BRET ratio
+values and converted to mBRET units (x1000). Additional normalization of the
+NanoBRET assay data was performed by converting experimental values for
+respective concentrations of experimental inhibitors to relative percent control
+values (no compound [Opti-MEM + DMSO + Tracer 5 only] wells = 100 % Control, no
+tracer [Opti-MEM + DMSO] wells = 0 % Control). The data was normalized to 0 %
+and 100 % inhibition control values and fitted to a four parameter dose-response
+binding curve in GraphPad Software (version 7, La Jolla, CA, USA).</p>
+
+<h3>NanoBRET tracer competition in transiently transfected cells</h3>
+
+<p>HEK293 cells transiently expressing kinase-NanoLuc fusion protein were
+resuspended in assay Medium, seeded into 96-well plates and mixed with various
+concentrations of the appropriate NanoBRET Tracer. Cells were treated with
+varying concentrations of unlabeled compound as a competitive inhibitor for 2
+hours before adding 3X Complete Substrate plus Inhibitor Solution. BRET was
+measured using a GloMax Discover System equipped with NanoBRET 618 filters
+(donor 450nm/8nm BP and acceptor 600nm LP). Raw BRET ratios were then converted
+to milliBRET units (mBU) and plotted vs. unmodified test compound concentration
+to determine apparent intracellular affinity of the unmodified test compound at
+each concentration of tracer.</p>
+
+<p>*Note that lower tracer concentrations result in more accurate estimation of
+intracellular compound affinity but a lower assay window. The use of a lower
+concentration of tracer may be more accurate when quantifying intracellular
+compound affinity.</p>
+
+<h3>NanoBRET target engagement assay in transiently transfected cells</h3>
+
+<p>HEK293 cells expressing kinase-NanoLuc fusion protein were resuspended in
+assay Medium, seeded into 96-well plates and mixed with various concentrations
+of the appropriate NanoBRET Tracer. Cells were treated with tracer only or an
+excess of unlabeled compound (10 μM) as a competitive inhibitor for 2 hours
+before adding 3X Complete Substrate plus Inhibitor Solution. BRET was measured
+using a GloMax Discover System equipped with NanoBRET 618 filters (donor
+450nm/8nm BP and acceptor 600nm LP). Raw BRET ratios were then converted to
+milliBRET units (mBU) and plotted vs. unmodified test compound concentration to
+determine apparent intracellular affinity of the unmodified test compound at
+each concentration of tracer.</p>
+
+<ol> 
+	<li>Vasta, J. D.; Corona, C. R.; Wilkinson, J.; Zimprich, C. A.; Hartnett,
+		J. R.; Ingold, M. R.; Zimmerman, K.; Machleidt, T.; Kirkland, T. A.;
+		Huwiler, K. G.; Ohana, R. F.; Slater, M.; Otto, P.; Cong, M.; Wells, C.
+		I.; Berger, B. T.; Hanke, T.; Glas, C.; Ding, K.; Drewry, D. H.; Huber, K.
+		V. M.; Willson, T. M.; Knapp, S.; Muller, S.; Meisenheimer, P. L.; Fan, F.;
+		Wood, K. V.; Robers, M. B., Quantitative, Wide-Spectrum Kinase Profiling in Live
+		Cells for Assessing the Effect of Cellular ATP on Target Engagement. Cell Chem
+		Biol 2018, 25 (2), 206-214 e11.</li> 
+</ol>
+
+<img src="images/NanoBRET_assay_details.png" style='max-width: 100%'></img>
+
+<p>* Please inquire about this material by emailing Promega at CAS@promega.com.</p>
+
+<p>* Additional inquires can be to CAS@promega.com or techserv@promega.com</p>
