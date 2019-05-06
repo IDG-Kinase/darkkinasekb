@@ -69,6 +69,7 @@
 							<th scope="col">Kinase</th>
 							<th scope="col">Kinase Fusion Name</th>
 							<th scope="col">Catalog Number</th>
+							<th scope="col">Additional Tracer Information</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -77,6 +78,11 @@
 							<td><a href="/kinase/[% this_NanoBRET.symbol %]">[% this_NanoBRET.symbol %]</a></td>
 							<td>[% this_NanoBRET.fusion_name %]</td>
 							<td><a href="[% this_NanoBRET.vector_url %]" target="_blank">[% this_NanoBRET.vector_catalog_number %]</a></td>
+							[% IF this_NanoBRET.tracer_sheet_file != "NA" %]
+							<td><a href="tracer_sheets/[% this_NanoBRET.tracer_sheet_file %]" target="_blank">Here</a></td>
+							[% ELSE %]
+							<td>NA</td>
+							[% END %]
 						</tr>
 						[% END %]
 					</tbody>
