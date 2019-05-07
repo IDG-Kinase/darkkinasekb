@@ -1,4 +1,4 @@
-<main role="main" class="container">
+<main role="main" class="container-fluid">
 
 <br/>
 <br/>
@@ -68,7 +68,10 @@
 						<tr>
 							<th scope="col">Kinase</th>
 							<th scope="col">Kinase Fusion Name</th>
-							<th scope="col">Catalog Number</th>
+							<th scope="col">Kinase Fusion Catalog Number</th>
+							<th scope="col">Tracer Name</th>
+							<th scope="col">Tracer Catalog Number</th>
+							<th scope="col">Tracer Concentration</th>
 							<th scope="col">Additional Tracer Information</th>
 						</tr>
 					</thead>
@@ -78,6 +81,9 @@
 							<td><a href="/kinase/[% this_NanoBRET.symbol %]">[% this_NanoBRET.symbol %]</a></td>
 							<td>[% this_NanoBRET.fusion_name %]</td>
 							<td><a href="[% this_NanoBRET.vector_url %]" target="_blank">[% this_NanoBRET.vector_catalog_number %]</a></td>
+							<td>[% this_NanoBRET.tracer_id %]</td>
+							<td>[% this_NanoBRET.tracer_catalog_number %]</td>
+							<td>[% this_NanoBRET.concentration %]</td>
 							[% IF this_NanoBRET.tracer_sheet_file != "NA" %]
 							<td><a href="tracer_sheets/[% this_NanoBRET.tracer_sheet_file %]" target="_blank">Here</a></td>
 							[% ELSE %]
