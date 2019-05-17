@@ -28,7 +28,7 @@ links to information about each kinase:
 
 <hr>
 
-We have also compiled a set of compounds that can be used to assay the function of some of the understudied kinases:
+We have also compiled a set of <a href="/compounds">compounds</a> that can be used to assay the function of some of the understudied kinases:
 
 <br/>
 <br/>
@@ -37,6 +37,21 @@ We have also compiled a set of compounds that can be used to assay the function 
 	[% FOREACH this_compound IN compounds %]
 	<li class="col-sm-2">
 		<a href="/compounds/[% this_compound.name %]">[% this_compound.name %]</a>
+	</li>
+	[% END %]
+</ul>
+
+<hr>
+
+We have also developed or cataloged <a href="/NanoBRET/">NanoBRET</a> assays for a wide range of the understudied kinases:
+
+<br/>
+<br/>
+
+<ul class="list-unstyled row list-group-flush">
+	[% FOREACH this_NanoBRET IN NanoBRET %]
+	<li class="col-sm-1">
+		<a href="/NanoBRET">[% this_NanoBRET.symbol %]</a>
 	</li>
 	[% END %]
 </ul>

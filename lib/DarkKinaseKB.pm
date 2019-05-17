@@ -328,7 +328,9 @@ get '/data' => sub {
 		in => '../data_sets/compounds.csv',
 		headers => 'auto');
 
-	# template 'all_compounds' => \%template_data;
+	$template_data{NanoBRET} = csv(
+		in => '../data_sets/dark_NanoBRET_promega.csv',
+		headers => 'auto');
 
 	template 'data' => \%template_data;
 };
