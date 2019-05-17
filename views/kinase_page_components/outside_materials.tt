@@ -69,7 +69,7 @@
 							by 
 							<a href="https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0" 
 							   target="_blank"
-							   onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;">specia request</a>. 
+							   onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;">special request</a>. 
 						   Additional information about this assay is available <a href="/compound_data_sheets/[% NanoBRET_info.symbol %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.
 
 							[% END %]
@@ -83,7 +83,7 @@
 							   target="_blank"
 		  					   onclick="getOutboundLink('[% NanoBRET_info.vector_url %]'); return false;">
 								[% NanoBRET_info.vector_catalog_number %]</a>. Additional information
-							about this assay is available <a href="/compound_data_sheets/[% NanoBRET_info.symbol %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.
+							about this assay is available <a href="/tracer_sheets/[% NanoBRET_info.tracer_sheet_file %]" target="_blank">here</a>.
 
 							[% END %]
 
