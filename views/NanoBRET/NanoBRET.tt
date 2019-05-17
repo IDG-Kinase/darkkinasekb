@@ -82,13 +82,21 @@
 							<td>[% this_NanoBRET.fusion_name %]</td>
 							<td><a href="[% this_NanoBRET.vector_url %]" target="_blank">[% this_NanoBRET.vector_catalog_number %]</a></td>
 							<td>[% this_NanoBRET.tracer_id %]</td>
+
+
+							[% IF this_NanoBRET.tracer_catalog_number != "NA" %]
+							<td><a href="[% this_NanoBRET.tracer_catalog_URL %]">[% this_NanoBRET.tracer_catalog_number %]</a></td>
+							[% ELSE %]
 							<td>[% this_NanoBRET.tracer_catalog_number %]</td>
+							[% END %]
 							<td>[% this_NanoBRET.concentration %]</td>
+
 							[% IF this_NanoBRET.tracer_sheet_file != "NA" %]
 							<td><a href="tracer_sheets/[% this_NanoBRET.tracer_sheet_file %]" target="_blank">Here</a></td>
 							[% ELSE %]
 							<td>NA</td>
 							[% END %]
+
 						</tr>
 						[% END %]
 					</tbody>
