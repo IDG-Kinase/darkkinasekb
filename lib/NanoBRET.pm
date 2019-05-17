@@ -26,7 +26,8 @@ get '/NanoBRET' => sub {
 	my @tracer_sheets = <"../public/tracer_sheets/*">;
 	foreach my $index (0..$#{$template_data{NanoBRET_info}}) {
 		my $this_kinase = $template_data{NanoBRET_info}[$index]{symbol};
-		my @tracer_sheet_hits = grep $_ =~ /NL-$this_kinase / | $_ =~ /$this_kinase-NL /, @tracer_sheets;
+		my @tracer_sheet_hits = grep $_ =~ /NL-$this_kinase(-Cyclin)? / | 
+									 $_ =~ /$this_kinase-NL(-Cyclin)? /, @tracer_sheets;
 		if (scalar(@tracer_sheet_hits) > 0) {
 			$template_data{NanoBRET_info}[$index]{tracer_sheet_file} = basename($tracer_sheet_hits[0]);
 		} else {
@@ -36,6 +37,5 @@ get '/NanoBRET' => sub {
 	
 	template 'NanoBRET/NanoBRET' => \%template_data;
 };
-
 
 true;

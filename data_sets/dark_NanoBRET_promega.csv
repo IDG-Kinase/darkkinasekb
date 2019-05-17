@@ -1,56 +1,74 @@
-symbol,vector_catalog_number,fusion_name,vector_url,tracer_id,concentration,tracer_catalog_number
-BRSK2,NV1111,NanoLuc®-BRSK2,https://www.promega.com/catalogredirection.aspx?partno=NV1111,K-5,1 µM,N248A
-CLK4,NV1151,CLK4-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1151,K-5,0.5 µM,N248A
-CSNK1G2,NV1181,NanoLuc®-CSNK1G2,https://www.promega.com/catalogredirection.aspx?partno=NV1181,K-5,1 µM,N248A
-CSNK2A2,NV1191,CSNK2A2-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1191,K-5,1 µM,N248A
-DYRK1B,NV1211,NanoLuc®-DYRK1B,https://www.promega.com/catalogredirection.aspx?partno=NV1211,K-5,1 µM,N248A
-LTK,NV1541,LTK-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1541,K-5,1 µM,N248A
-MAP3K10,NV1561,NanoLuc®-MAP3K10,https://www.promega.com/catalogredirection.aspx?partno=NV1561,NA,NA,NA
-MAPK4,NV1681,NanoLuc®-MAPK4,https://www.promega.com/catalogredirection.aspx?partno=NV1681,NA,NA,NA
-MARK4,NV1731,NanoLuc®-MARK4,https://www.promega.com/catalogredirection.aspx?partno=NV1731,NA,NA,NA
-NEK3,NV1791,NanoLuc®-NEK3,https://www.promega.com/catalogredirection.aspx?partno=NV1791,K-5,1 µM,N248A
-NEK9,NV1801,NanoLuc®-NEK9,https://www.promega.com/catalogredirection.aspx?partno=NV1801,K-5,1 µM,N248A
-PHKG1,NV1861,NanoLuc®-PHKG1,https://www.promega.com/catalogredirection.aspx?partno=NV1861,NA,NA,NA
-PKMYT1,NV1871,PKMYT1-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1871,NA,NA,NA
-RIOK2,NV1961,NanoLuc®-RIOK2,https://www.promega.com/catalogredirection.aspx?partno=NV1961,K-5,1 µM,N248A
-STK32B,NV2101,NanoLuc®-STK32B,https://www.promega.com/catalogredirection.aspx?partno=NV2101,NA,NA,NA
-STK33,NV2111,NanoLuc®-STK33,https://www.promega.com/catalogredirection.aspx?partno=NV2111,K-5,1 µM,N248A
-TESK1,NV2161,NanoLuc®-TESK1,https://www.promega.com/catalogredirection.aspx?partno=NV2161,NA,NA,NA
-BRSK1,Special Request,NanoLuc®-fused BRSK1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-CAMK1D,Special Request,NanoLuc®-fused CAMK1D,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-CAMK1G,Special Request,NanoLuc®-fused CAMK1G,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-COQ8B,Special Request,NanoLuc®-fused COQ8B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-CSNK1A1L,Special Request,NanoLuc®-fused CSNK1A1L,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-DCLK3,Special Request,NanoLuc®-fused DCLK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-ERN2,Special Request,NanoLuc®-fused ERN2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-HIPK3,Special Request,NanoLuc®-fused HIPK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-HIPK4,Special Request,NanoLuc®-fused HIPK4,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-ICK,Special Request,NanoLuc®-fused ICK,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-MAP3K21,Special Request,NanoLuc®-fused MAP3K21,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-MARK3,Special Request,NanoLuc®-fused MARK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-MAST3,Special Request,NanoLuc®-fused MAST3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-MAST4,Special Request,NanoLuc®-fused MAST4,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-MKNK2,Special Request,NanoLuc®-fused MKNK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,K-10 7600,0.5 µM,"NA"
-NEK1,Special Request,NanoLuc®-fused NEK1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NEK11,Special Request,NanoLuc®-fused NEK11,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NEK4,Special Request,NanoLuc®-fused NEK4,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NEK5,Special Request,NanoLuc®-fused NEK5,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NEK6,Special Request,NanoLuc®-fused NEK6,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NIM1K,Special Request,NanoLuc®-fused NIM1K,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NRK,Special Request,NanoLuc®-fused NRK,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-NUAK2,Special Request,NanoLuc®-fused NUAK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-PAK6,Special Request,NanoLuc®-fused PAK6,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-PHKG2,Special Request,NanoLuc®-fused PHKG2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-PIP4K2C,Special Request,NanoLuc®-fused PIP4K2C,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-PIP5K1B,Special Request,NanoLuc®-fused PIP5K1B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-PRKACB,Special Request,NanoLuc®-fused PRKACB,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-SBK3,Special Request,NanoLuc®-fused SBK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-STK17B,Special Request,NanoLuc®-fused STK17B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7227,0.25 µM,"NA"
-STK3,Special Request,NanoLuc®-fused STK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-STK32A,Special Request,NanoLuc®-fused STK32A,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-STK36,Special Request,NanoLuc®-fused STK36,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-STK38L,Special Request,NanoLuc®-fused STK38L,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-TLK1,Special Request,NanoLuc®-fused TLK1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-TLK2,Special Request,NanoLuc®-fused TLK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-TSSK1B,Special Request,NanoLuc®-fused TSSK1B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
-WEE2,Special Request,NanoLuc®-fused WEE2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA
+symbol,vector_catalog_number,fusion_name,vector_url,tracer_id,concentration,tracer_catalog_number,tracer_catalog_URL
+BRSK2,NV1111,NanoLuc®-BRSK2,https://www.promega.com/catalogredirection.aspx?partno=NV1111,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+CLK4,NV1151,CLK4-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1151,K-5,0.5 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+CSNK1G2,NV1181,NanoLuc®-CSNK1G2,https://www.promega.com/catalogredirection.aspx?partno=NV1181,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+CSNK2A2,NV1191,CSNK2A2-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1191,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+DYRK1B,NV1211,NanoLuc®-DYRK1B,https://www.promega.com/catalogredirection.aspx?partno=NV1211,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+LTK,NV1541,LTK-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1541,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+MAP3K10,NV1561,NanoLuc®-MAP3K10,https://www.promega.com/catalogredirection.aspx?partno=NV1561,NA,NA,NA,NA
+MAPK4,NV1681,NanoLuc®-MAPK4,https://www.promega.com/catalogredirection.aspx?partno=NV1681,NA,NA,NA,NA
+MARK4,NV1731,NanoLuc®-MARK4,https://www.promega.com/catalogredirection.aspx?partno=NV1731,NA,NA,NA,NA
+NEK3,NV1791,NanoLuc®-NEK3,https://www.promega.com/catalogredirection.aspx?partno=NV1791,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+NEK9,NV1801,NanoLuc®-NEK9,https://www.promega.com/catalogredirection.aspx?partno=NV1801,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+PHKG1,NV1861,NanoLuc®-PHKG1,https://www.promega.com/catalogredirection.aspx?partno=NV1861,NA,NA,NA,NA
+PKMYT1,NV1871,PKMYT1-NanoLuc®,https://www.promega.com/catalogredirection.aspx?partno=NV1871,NA,NA,NA,NA
+RIOK2,NV1961,NanoLuc®-RIOK2,https://www.promega.com/catalogredirection.aspx?partno=NV1961,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+STK32B,NV2101,NanoLuc®-STK32B,https://www.promega.com/catalogredirection.aspx?partno=NV2101,NA,NA,NA,NA
+STK33,NV2111,NanoLuc®-STK33,https://www.promega.com/catalogredirection.aspx?partno=NV2111,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+TESK1,NV2161,NanoLuc®-TESK1,https://www.promega.com/catalogredirection.aspx?partno=NV2161,NA,NA,NA,NA
+BRSK1,Special Request,NanoLuc®-fused BRSK1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+CAMK1D,Special Request,NanoLuc®-fused CAMK1D,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+CAMK1G,Special Request,NanoLuc®-fused CAMK1G,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+COQ8B,Special Request,NanoLuc®-fused COQ8B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+CSNK1A1L,Special Request,NanoLuc®-fused CSNK1A1L,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+DCLK3,Special Request,NanoLuc®-fused DCLK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+ERN2,Special Request,NanoLuc®-fused ERN2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+HIPK3,Special Request,NanoLuc®-fused HIPK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+HIPK4,Special Request,NanoLuc®-fused HIPK4,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+ICK,Special Request,NanoLuc®-fused ICK,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+MAP3K21,Special Request,NanoLuc®-fused MAP3K21,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+MARK3,Special Request,NanoLuc®-fused MARK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+MAST3,Special Request,NanoLuc®-fused MAST3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+MAST4,Special Request,NanoLuc®-fused MAST4,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+MKNK2,Special Request,NanoLuc®-fused MKNK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,K-10 7600,0.5 µM,"NA","NA"
+NEK1,Special Request,NanoLuc®-fused NEK1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NEK11,Special Request,NanoLuc®-fused NEK11,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NEK4,Special Request,NanoLuc®-fused NEK4,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NEK5,Special Request,NanoLuc®-fused NEK5,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NEK6,Special Request,NanoLuc®-fused NEK6,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NIM1K,Special Request,NanoLuc®-fused NIM1K,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NRK,Special Request,NanoLuc®-fused NRK,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+NUAK2,Special Request,NanoLuc®-fused NUAK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+PAK6,Special Request,NanoLuc®-fused PAK6,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+PHKG2,Special Request,NanoLuc®-fused PHKG2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+PIP4K2C,Special Request,NanoLuc®-fused PIP4K2C,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+PIP5K1B,Special Request,NanoLuc®-fused PIP5K1B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+PRKACB,Special Request,NanoLuc®-fused PRKACB,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+SBK3,Special Request,NanoLuc®-fused SBK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+STK17B,Special Request,NanoLuc®-fused STK17B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7227,0.25 µM,"NA","NA"
+STK3,Special Request,NanoLuc®-fused STK3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+STK32A,Special Request,NanoLuc®-fused STK32A,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+STK36,Special Request,NanoLuc®-fused STK36,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+STK38L,Special Request,NanoLuc®-fused STK38L,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+TLK1,Special Request,NanoLuc®-fused TLK1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+TLK2,Special Request,NanoLuc®-fused TLK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+TSSK1B,Special Request,NanoLuc®-fused TSSK1B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+WEE2,Special Request,NanoLuc®-fused WEE2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,NA,NA,NA,NA
+CDK10,Special Request,NanoLuc®-fused CDK10,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.25 µM,"NA","NA"
+CDK11a,Special Request,NanoLuc®-fused CDK11a,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.125 µM,"NA","NA"
+CDK11B,Special Request,NanoLuc®-fused CDK11B,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.125 µM,"NA","NA"
+CDK12,Special Request,NanoLuc®-fused CDK12,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.5 µM,"NA","NA"
+CDK13,Special Request,NanoLuc®-fused CDK13,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.5 µM,"NA","NA"
+CDK14,Special Request,NanoLuc®-fused CDK14,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.125 µM,"NA","NA"
+CDK16,Special Request,NanoLuc®-fused CDK16,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.125 µM,"NA","NA"
+CDK17,Special Request,NanoLuc®-fused CDK17,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.125 µM,"NA","NA"
+CDK18,Special Request,NanoLuc®-fused CDK18,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.125 µM,"NA","NA"
+DYRK2,Special Request,NanoLuc®-fused DYRK2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+CDK15,Special Request,NanoLuc®-fused CDK15,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,7281,0.063 µM,"NA","NA"
+CDK20,Special Request,NanoLuc®-fused CDK20,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,K-9/7520,0.5 µM,"NA","NA"
+CDKL1,Special Request,NanoLuc®-fused CDKL1,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,6908,0.25 µM,"NA","NA"
+CDKL2,Special Request,NanoLuc®-fused CDKL2,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,6908,0.25 µM,"NA","NA"
+CDKL3,Special Request,NanoLuc®-fused CDKL3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,6908,0.25 µM,"NA","NA"
+CDKL5,Special Request,NanoLuc®-fused CDKL5,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,6908,0.25 µM,"NA","NA"
+PAK7,Special Request,NanoLuc®-fused PAK7,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500
+PKN3,Special Request,NanoLuc®-fused PKN3,https://www.promega.com/products/cell-signaling/kinase-target-engagement/nanobret-te-intracellular-kinase-assay/?catNum=N2520&accordion1=0,K-5,1 µM,N248A,https://www.promega.com/catalogredirection.aspx?partno=N2500

@@ -232,18 +232,16 @@ get '/kinase/:kinase' => sub {
 	if (scalar(@NanoBRET_hits) > 0) {
 		$template_data{include_NanoBRET} = 1;
 		$template_data{NanoBRET_info} = $NanoBRET_hits[0];
-
-		#search the compound sheets for this kinase, if present mark as
-		#validated
+		
+		#search the tracer sheets for this kinase, if present mark as validated
 		$template_data{NanoBRET_info}{validated} = 0;
-		my $compound_data = csv(in => '../data_sets/compounds.csv',
-			headers => 'auto');
-		my @compound_hits = grep $_->{'kinase'} eq $template_data{kinase}, @{$compound_data};
-		if (scalar(@compound_hits) > 0) {
+		my @tracer_sheets = <"../public/tracer_sheets/*">;
+		my @tracer_sheet_hits = grep $_ =~ /NL-$template_data{kinase}(-Cyclin)? / | 
+									 $_ =~ /$template_data{kinase}-NL(-Cyclin)? /, @tracer_sheets;
+		if (scalar(@tracer_sheet_hits) > 0) {
 			$template_data{NanoBRET_info}{validated} = 1;
+			$template_data{NanoBRET_info}{tracer_sheet_file} = basename($tracer_sheet_hits[0]);
 		}
-		debug(scalar(@compound_hits));
-		debug($template_data{NanoBRET_info});
 	}
 
 	#############################################################################
