@@ -331,6 +331,27 @@ get '/data' => sub {
 	$template_data{NanoBRET} = csv(
 		in => '../data_sets/dark_NanoBRET_promega.csv',
 		headers => 'auto');
+    
+	my @tracer_sheets = <"../public/tracer_sheets/*">;
+	foreach my $index (0..$#{$template_data{NanoBRET}}) {
+		my $this_kinase = $template_data{NanoBRET}[$index]{symbol};
+		my @tracer_sheet_hits = grep $_ =~ /NL-$this_kinase(-Cyclin)? / | 
+									 $_ =~ /$this_kinase-NL(-Cyclin)? /, @tracer_sheets;
+		if (scalar(@tracer_sheet_hits) > 0) {
+			$template_data{NanoBRET}[$index]{tracer_sheet_file} = basename($tracer_sheet_hits[0]);
+		} else {
+			$template_data{NanoBRET}[$index]{tracer_sheet_file} = "NA";
+		}
+	}
+
+    my @NanoBRET_keep;
+    for (@{$template_data{NanoBRET}}) {
+        if($_->{tracer_sheet_file} ne "NA") {
+          push @NanoBRET_keep, $_;
+        }
+    }
+    
+    $template_data{NanoBRET} = \@NanoBRET_keep;
 
 	template 'data' => \%template_data;
 };
