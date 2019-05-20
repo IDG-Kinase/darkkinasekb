@@ -159,7 +159,7 @@ $(function() {
         var $exportButton = h('button', { 'class': 'cy-button' }, [ t("Export PNG") ]);
         $exportButton.addEventListener('click', function(){
             var b64key = 'base64,';
-            var pngData = cy.png({full:true});
+            var pngData = cy.png({full:true, scale:cy.zoom()});
             var b64 = pngData.substring( pngData.indexOf(b64key) + b64key.length );
             var imgBlob = b64toBlob( b64, 'image/png' );
 
