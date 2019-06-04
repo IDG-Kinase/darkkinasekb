@@ -277,6 +277,27 @@ get '/kinase/:kinase' => sub {
 		}
 	}
 
+	#############################################################################
+	# PDB Kinase Domain Data
+	#############################################################################
+	$template_data{pdb_domain}{include} = 0;
+
+	if (-e "../data_sets/PDB_kinases/$template_data{kinase}.csv") {
+		$template_data{pdb_domain}{include} = 1;
+
+		my $data = csv(
+			in => "../data_sets/PDB_kinases/$template_data{kinase}.csv",
+			headers => 'auto');
+
+		for my $entry_num (0..scalar(@$data) - 1) {
+			my @split_smiles = split(";",$data->[$entry_num]{smiles});
+			$data->[$entry_num]{smiles} = \@split_smiles;
+
+			my @split_chemicalName = split(";",$data->[$entry_num]{chemicalName});
+			$data->[$entry_num]{chemicalName} = \@split_chemicalName;
+		}
+		$template_data{pdb_domain}{data} = $data;
+	}
 
 	#############################################################################
 	# Template Passing

@@ -1,0 +1,2 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,PDB,title,expMethod,deposition_date,last_modification_date,resolution,InChI,InChIKey,chemicalName,smiles,formula,molecularWeight
+79837,PIP4K2C,phosphatidylinositol-5-phosphate 4-kinase type 2 gamma,0,0,0,1,4,Tchem,2GK9,"Human Phosphatidylinositol-4-phosphate 5-kinase, type II, gamma",X-RAY DIFFRACTION,2006-03-31,2017-10-18,2.8,NA,NA,NA,NA,NA,NA

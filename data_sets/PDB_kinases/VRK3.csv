@@ -1,0 +1,2 @@
+gene_id,gene_symbol,name,in_manning,in_kinmap,in_uniprot_kinasedomain,in_IDG_darkkinases,n_pubmed_citations_2013to2018,pharos_designation,PDB,title,expMethod,deposition_date,last_modification_date,resolution,InChI,InChIKey,chemicalName,smiles,formula,molecularWeight
+51231,VRK3,vaccinia related kinase 3,1,1,1,1,8,Tbio,2JII,Structure of vaccinia related kinase 3,X-RAY DIFFRACTION,2007-06-28,2018-02-28,2,"InChI=1S/C2H6O2/c3-1-2-4/h3-4H,1-2H2",LYCAIKOWRPUZTN-UHFFFAOYSA-N,"1,2-ETHANEDIOL",C(CO)O,C2 H6 O2,62.068

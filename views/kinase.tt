@@ -12,7 +12,7 @@
       }
     };
   </script>
-
+	
 
 <!-- Kinase Name/CORAL Vis -->
 <div class=row>
@@ -97,9 +97,99 @@
 </div>
 <br/>
 
+[% IF pdb_domain.include == 1 %]
+[% USE Dumper %]
+<script src="https://unpkg.com/ngl"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
+<script>
+	function stage_PDB(PDB_id) {
+		if (document.getElementById(PDB_id + "-data").innerHTML == "") {
+			var PDBTabContent = document.getElementById("PDBTabContent");
+			document.getElementById(PDB_id + "-data").style.width = PDBTabContent.clientWidth*1/2 + "px";
+			document.getElementById(PDB_id + "-data").style.height = PDBTabContent.clientWidth*1/2*3/4 + "px";
+			setTimeout(function() {
+				var stage = new NGL.Stage(PDB_id + "-data", {backgroundColor:'white'});
+				stage.viewer.scene.background = new THREE.Color( 0xffffff );
+				stage.loadFile("rcsb://" + PDB_id, {defaultRepresentation: true}).then(function (component) {
+					component.autoView();
+				});
+			}, 250);
+		}
+	}
+</script>
+<div class=card>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				PDB Kinase Domains	
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" 
+						type="button" 
+	  					data-toggle="collapse" 
+						data-target="#PDBCollapse" 
+						aria-expanded="false" 
+						aria-controls="NetworkCollapse" 
+						onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="PDBCollapse" class="collapse">
+		<div class="card-body">
+			<ul class="nav nav-tabs" id="PDBTab" role="tablist">
+				[% FOREACH entry in pdb_domain.data %]
+				<li class="nav-item">
+					<a class="nav-link" 
+					   id="abc[% entry.PDB %]-tab" 
+					   data-toggle="tab" 
+					   href="#abc[% entry.PDB %]" 
+					   role="tab" 
+					   aria-controls="abc[% entry.PDB%]" 
+					   aria-selected="true" 
+					   onclick="stage_PDB('[% entry.PDB %]')">[% entry.PDB %]</a>
+				</li>
+				[% END %]
+			</ul>
+			<br/>
+			<div class="tab-content" id="PDBTabContent">
+				[% FOREACH entry in pdb_domain.data %]
+				<div class="tab-pane fade" id="abc[% entry.PDB %]" role="tabpanel" aria-labelledby="abc[% entry.PDB %]-tab">
+                  <div class="row">
+                    <div class="col-6">
+					<div id="[% entry.PDB %]-data" style="width:400px; height:300px;"></div>
+                    </div>
+                    <div class="col-6">
+                      <h3>Kinase Domain Structure:</h3>
+                      <ul>
+                        <li><b>Title:</b> [% entry.title %]</li>
+                        <li><b>Resolution:</b> [% entry.resolution %]</li>
+                      </ul>
+
+                      <h3>Associated Compounds:</h3>
+                      <ul>
+                      [% FOREACH compound in entry.chemicalName %]
+                        <li>[% compound %]</li>
+                      [% END %]
+                      </ul>
+                      <hr>
+                      <a href="https://www.rcsb.org/structure/[% entry.PDB %]">View This Structure on RCSB PDB</a>
+                    </div>
+                  </div>
+				</div>
+				[% END %]
+			</div>
+		</div>
+	</div>
+</div>
+
+<br/>
+[% END %]
+
 [% IF compound.include == 1 %]
 [% INCLUDE 'kinase_page_components/compounds.tt' %]
 [% END %]
+
 
 [% IF include_ReNcell == 1 %]
 [% INCLUDE 'kinase_page_components/ReNcell.tt' %]
