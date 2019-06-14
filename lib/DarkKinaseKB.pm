@@ -18,56 +18,17 @@ use NanoBRET;
 our $VERSION = '0.1';
 
 hook before => sub {
-	my $parser = Text::CSV::Simple->new;
-	my @kinase_info = $parser->read_file('../data_sets/full_kinase_list.csv') or die "$!";
-
-	my @dark_kinase_info;
-	for (1..(scalar(@kinase_info) - 1)) {
-		if ($kinase_info[$_][3] eq "Dark") {
-			push @dark_kinase_info, $kinase_info[$_];
-		}
-	}
-
-	var kinase_info => \@kinase_info;
+	my $kinase_info = csv(in => '../data_sets/all_kinases.csv', 
+		headers => 'auto') or die "$!";
+	
+	my @dark_kinase_info = grep $_->{class} eq "Dark", @{$kinase_info};
+	
+	var kinase_info => \@{$kinase_info};
 	var dark_kinase_info => \@dark_kinase_info;
 };
 
 get '/' => sub {
-	my @kinase_info = @{var 'kinase_info'};
-
-	my @kinase_list = @{var 'dark_kinase_info'};
-
-	@kinase_list = map $_->[1], @kinase_list;
-	@kinase_list = sort @kinase_list;
-
-	my $kinase_list_length = ceil(scalar(@kinase_list)/10);
-
-	my %split_kinase_lists = (
-		1 => [ splice @kinase_list, 0, $kinase_list_length ],
-		2 => [ splice @kinase_list, 0, $kinase_list_length ],
-		3 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		4 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		5 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		6 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		7 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		8 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		9 => [ splice @kinase_list, 0 ,$kinase_list_length ],
-		10 => [ splice @kinase_list, 0 ],
-	);
-
-	template 'index' => { 'title' => 'DarkKinaseKB', 
-		'kinase_1' => $split_kinase_lists{1},
-		'kinase_2' => $split_kinase_lists{2},
-		'kinase_3' => $split_kinase_lists{3},
-		'kinase_4' => $split_kinase_lists{4},
-		'kinase_5' => $split_kinase_lists{5},
-		'kinase_6' => $split_kinase_lists{6},
-		'kinase_7' => $split_kinase_lists{7},
-		'kinase_8' => $split_kinase_lists{8},
-		'kinase_9' => $split_kinase_lists{9},
-		'kinase_10' => $split_kinase_lists{10},
-		'kinase_all' => @kinase_list,
-	};
+	template 'index';
 };
 
 get '/kinase/:kinase' => sub {
@@ -81,11 +42,11 @@ get '/kinase/:kinase' => sub {
 	$template_data{kinase} = route_parameters->get('kinase');
 	$template_data{title} = $template_data{kinase};
 
-	my @this_kinase_info = grep $_->[1] eq $template_data{kinase}, @kinase_info;
-	$template_data{description} = $this_kinase_info[0][4]; 
+	my @this_kinase_info = grep $_->{symbol} eq $template_data{kinase}, @kinase_info;
+	$template_data{description} = $this_kinase_info[0]->{name}; 
 
-	my $hgnc_num = "NA"; 
-	if($this_kinase_info[0][0] =~ /(\d+)/) {
+	my $hgnc_num = "NA";
+	if($this_kinase_info[0]->{hgnc_id} =~ /(\d+)/) {
 		$template_data{hgnc_num} = $1;
 	}
 
@@ -308,7 +269,7 @@ get '/kinase/:kinase' => sub {
 
 get '/search' => sub {
 	my @dark_kinase_info = @{var 'dark_kinase_info'};
-	my @this_kinase_info = grep $_->[1] eq params->{kinase_text}, @dark_kinase_info;
+	my @this_kinase_info = grep $_->{symbol} eq params->{kinase_text}, @dark_kinase_info;
 
 	# The search hit only one kinase, forward the user onto that kinase page
 	if (scalar(@this_kinase_info) == 1) {
@@ -318,7 +279,7 @@ get '/search' => sub {
 	my $search_text = params->{kinase_text};
 
 	my $kinase_search = Text::Fuzzy->new($search_text);
-	my @kinase_list = map $_->[1], @dark_kinase_info[1..$#dark_kinase_info];
+	my @kinase_list = map $_->{symbol}, @dark_kinase_info;
 
 	my @potential_matches = grep $_ =~ /$search_text/i, @kinase_list;
 
@@ -330,15 +291,15 @@ get '/search' => sub {
 
 	# @potential_matches = @potential_matches[0..9];
 
-	my %template_data =('potential_matches' => \@potential_matches);
+	my %template_data = ('potential_matches' => \@potential_matches);
 
 	template 'search' => \%template_data;
 };
 
 get '/data' => sub {
 	my @kinase_list = @{var 'dark_kinase_info'};
-
-	@kinase_list = map $_->[1], @kinase_list;
+	
+	@kinase_list = map $_->{symbol}, @kinase_list;
 	@kinase_list = sort @kinase_list;
 	
 	my %template_data;
