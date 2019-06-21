@@ -51,7 +51,7 @@ We have also developed or cataloged <a href="/NanoBRET">NanoBRET</a> assays for 
 <ul class="list-unstyled row list-group-flush">
 	[% FOREACH this_NanoBRET IN NanoBRET %]
 	<li class="col-sm-1">
-		<a href="/NanoBRET">[% this_NanoBRET.symbol %]</a>
+		<a href="/kinase/[% this_NanoBRET.symbol %]">[% this_NanoBRET.symbol %]</a>
 	</li>
 	[% END %]
 </ul>
