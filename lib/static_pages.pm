@@ -19,6 +19,10 @@ get '/people' => sub {
   template 'people';
 };
 
+get '/DK_CRISPRi' => sub {
+  template 'DK_CRISPRi';
+};
+
 get '/kinase_bubbles' => sub {
   template 'kinase_bubbles';
 };

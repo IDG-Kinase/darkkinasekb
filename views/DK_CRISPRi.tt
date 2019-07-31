@@ -1,0 +1,40 @@
+<main role="main" class="container">
+
+<br/>
+<br/>
+
+<div class="row">
+
+	<div class="col">
+
+		<h1>CRISPRi Library for Understudied Kinases Pertubation</h1>
+
+		<br/>
+
+		<p>The CRISPRi library for IDG kinases was designed using the optimized
+		libraries published by the Weissman lab in 2016 (<a href="https://www.ncbi.nlm.nih.gov/pubmed/27661255" target = "_blank">PMID 27661255</a>) under
+		the guidance of Kol Jia Ph.D. in the McManus lab at UCSF.  Two kinases
+		were not included in the Weissman library, POMK and SBK3, so sgRNAs for
+		these targets were designed using the Broad Institute’s sgRNA Designer
+		Tool.  Ten guide RNAs per annotated transcriptional start site were
+		included for each kinase in the final library resulting in 1740 sgRNAs
+		targeting 162 dark kinases.  The library was constructed using the
+		vector VDB783 kindly provided by the McManus lab which also encodes for
+		a puromycin selectable marker and red fluorescent protein.</p>
+
+		<hr>
+		
+		<h3>Resources</h3>
+		
+		<ul>
+			<li><a href="documents/DK_CRISPRi_targeting_sequences.csv">Understudied Kinase CRISPRi Targetting Sequences</a></li>
+			<li><a href="documents/VDB783.dna">VDB783 Vector Map</a></li>
+			<li><a href="https://portals.broadinstitute.org/gpp/public/analysis-tools/sgrna-design-crisprai">Broad Institute sgRNA Designer</a></li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+</main>
