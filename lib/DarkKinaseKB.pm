@@ -273,7 +273,8 @@ get '/search' => sub {
 
 	# The search hit only one kinase, forward the user onto that kinase page
 	if (scalar(@this_kinase_info) == 1) {
-		redirect '/kinase/'.$this_kinase_info[0][1];
+		debug(Dumper(\@this_kinase_info));
+		redirect '/kinase/'.$this_kinase_info[0]{symbol};
 	}
 
 	my $search_text = params->{kinase_text};
