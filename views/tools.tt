@@ -37,7 +37,7 @@
 
 <div class="row align-items-center">
   <div class="col-lg-3">
-    <a href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">
+    <a href="http://www.smallmoleculesuite.org/">
       <img class="img-fluid" src="images/small-molecule-logo.png">
     </a>
   </div>
@@ -55,7 +55,7 @@
     published data.
     
 	</p>The Small Molecule Suite was developed by the <a href="http://hits.harvard.edu/the-program/laboratory-of-systems-pharmacology/about/">Laboratory of Systems
-		Pharmacology</a> and the <a href="">Laboratory for Statistical Genomics and Systems Biology</a>. It is freely available on <a href="https://github.com/sorgerlab/smallmoleculesuite">github</a> and the <a href="http://www.smallmoleculesuite.org/apps/hms_small_mol/">web</a>.
+		Pharmacology</a> and the <a href="">Laboratory for Statistical Genomics and Systems Biology</a>. It is freely available on <a href="https://github.com/sorgerlab/smallmoleculesuite">github</a> and the <a href="http://www.smallmoleculesuite.org/">web</a>.
   </div>
 </div>
 
