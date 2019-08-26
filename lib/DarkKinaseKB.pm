@@ -11,7 +11,6 @@ use File::Basename;
 
 use static_pages;
 use compounds;
-use tissues;
 use traits;
 use NanoBRET;
 
