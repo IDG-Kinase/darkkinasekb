@@ -105,7 +105,6 @@
 [% INCLUDE 'kinase_page_components/compounds.tt' %]
 [% END %]
 
-
 [% IF include_ReNcell == 1 %]
 [% INCLUDE 'kinase_page_components/ReNcell.tt' %]
 [% END %]
@@ -114,7 +113,6 @@
 [% INCLUDE 'kinase_page_components/Interactions.tt' %]
 [% END %]
 
-
 [% IF include_PRM == 1 %]
 [% INCLUDE 'kinase_page_components/PRM.tt' %]
 [% END %]
@@ -122,6 +120,10 @@
 [% IF include_KO == 1 || include_recomb == 1 || 
 	  include_mouse_KO == 1 || include_NanoBRET == 1 %]
 [% INCLUDE 'kinase_page_components/outside_materials.tt' %]
+[% END %]
+
+[% IF include_expression == 1 %]
+[% INCLUDE kinase_page_components/expression.tt %]
 [% END %]
 
 <div class="alert alert-info col-4" role="alert">

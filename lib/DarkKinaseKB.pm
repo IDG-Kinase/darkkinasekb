@@ -93,6 +93,16 @@ get '/kinase/:kinase' => sub {
 	if (scalar(@ReNcell_file_matches) > 0) {
 		$template_data{include_ReNcell} = 1;
 	}
+	
+	#############################################################################
+	# Kinase Expression
+	#############################################################################
+	my $expression_file = "../public/images/kinase_expression/kinase_percentile_graphs/$template_data{kinase}.svg";
+	
+	$template_data{include_expression} = 0;
+	if (-r $expression_file) {
+		$template_data{include_expression} = 1;
+	}
 
 	#############################################################################
 	# INDRA Clustered Results
