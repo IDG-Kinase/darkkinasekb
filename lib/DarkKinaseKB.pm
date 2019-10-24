@@ -285,7 +285,9 @@ get '/search' => sub {
 		redirect '/kinase/'.$this_kinase_info[0]{symbol};
 	}
 
-	my $search_text = params->{kinase_text};
+	#all the kinases are stored as uppercase strings, so lets make sure the
+	#search string is also all uppercase
+	my $search_text = uc params->{kinase_text};
 
 	my $kinase_search = Text::Fuzzy->new($search_text);
 	my @kinase_list = map $_->{symbol}, @dark_kinase_info;
