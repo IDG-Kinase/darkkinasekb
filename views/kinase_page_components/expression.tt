@@ -18,7 +18,7 @@
 							  target="_blank">GTEx project</a>. To gain a better
 						  understanding of the kinase tissue distribution, we've
 						  created an <a
-		 href="http://expression.darkkinome.org/?input_kinase=PKMYT1" target="_blank">application</a> that describes
+		 href="http://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">application</a> that describes
 	 and summarizes the expression of each dark kinase in the context of the
 	 rest of the kinome. These visualizations show a snapshot of the data associated with [% kinase %]. The two anatograms show the five organs where [% kinase %] is most abundant. The graph summarizes the expression of the kinase across all the organ systems.</p>
 				<p>This data can further explored at our <a href="http://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">Kinase Expression Data Application</a>.</p>
