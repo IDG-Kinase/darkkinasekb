@@ -151,6 +151,33 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
   </div>
 </div>
 
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class="row align-items-center">
+  <div class="col-lg-3">
+    <a href="https://rimsk.shinyapps.io/Appkin/">
+      <img class="img-fluid" src="images/CKI_logo.png">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>Clinical Kinase Index</h4>
+	</p>The <a href="https://rimsk.shinyapps.io/Appkin/">clinical kinase
+		index</a> is a TCGA kinase data browser being developed by the <a
+			href="http://schurerlab.org/" target="_blank">Sch&#x00FC;er lab</a>
+	at the University of Miami. The data browser allows the user to browse at
+	both the individual kinase level and cancer type.
+  </div>
+</div>
+
+<div class=row>
+  <br>
+</div>
+
 <!-- <div class=row> -->
 <!--   <div class="col-lg-3"> -->
 <!--     <a href="http://www.grcalculator.org/grtutorial/Home.html"> -->
