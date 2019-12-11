@@ -158,7 +158,7 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
 
 <div class="row align-items-center">
   <div class="col-lg-3">
-    <a href="https://rimsk.shinyapps.io/Appkin/">
+    <a href="http://cki.ccs.miami.edu/">
       <img class="img-fluid" src="images/CKI_logo.png">
     </a>
   </div>
@@ -166,7 +166,7 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
   </div>
   <div class="col-lg-8">
     <h4>Clinical Kinase Index</h4>
-	</p>The <a href="https://rimsk.shinyapps.io/Appkin/">clinical kinase
+	</p>The <a href="http://cki.ccs.miami.edu/">clinical kinase
 		index</a> is a TCGA kinase data browser being developed by the <a
 			href="http://schurerlab.org/" target="_blank">Sch&#x00FC;er lab</a>
 	at the University of Miami. The data browser allows the user to browse at
