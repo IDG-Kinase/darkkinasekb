@@ -158,6 +158,27 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
 
 <div class="row align-items-center">
   <div class="col-lg-3">
+    <a href="https://idg.reactome.org/">
+      <img class="img-fluid" src="images/Reactome_logo.svg">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>IDG Reactome</h4>
+	</p>The <a href="https://reactome.org/">Reactome Knowledgebase</a> of Human Biological Pathways and Processes is a curated and peer-reviewed knowledgebase available online as an open access resource that can be freely used and distributed by all members of the biological research community. Reactome extends the classic maps of intermediary metabolism by broadening the scope of reactions to include components of signaling, transport and other processes of cell biology. With tools and techniques such as pathway visualization and enrichment analysis, Reactome can be used to reduce large, complex and noisy genome-scale datasets involving thousands of genes to a manageable set of patterns, from which to draw testable hypotheses relating specific processes, their interplay, and their role in generating disease phenotypes. The <a href="https://idg.reactome.org/">Reactome IDG portal</a> is designed to project understudied proteins, including dark kinases, onto the well-known pathway contexts, facilitating to infer potential functional involvement of these proteins within the pathways.
+
+	</p>The Reactome was developed by an international multidisciplinary team from <a href="http://oicr.on.ca/">OICR</a>, <a href="http://www.ohsu.edu/">OHSU</a>, <a href="http://www.ebi.ac.uk/">EMBL-EBI</a>, and <a href="http://nyulangone.org/">NYULMC</a>.
+  </div>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class="row align-items-center">
+  <div class="col-lg-3">
     <a href="http://cki.ccs.miami.edu/">
       <img class="img-fluid" src="images/CKI_logo.png">
     </a>
@@ -175,6 +196,7 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
 </div>
 
 <div class=row>
+  <br>
   <br>
 </div>
 
