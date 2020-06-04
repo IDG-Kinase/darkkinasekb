@@ -31,4 +31,8 @@ get '/home_alternative' => sub {
   template 'home_alternative';
 };
 
+get '/cluster_analysis' => sub {
+  template 'cluster_analysis';
+};
+
 true;
