@@ -193,7 +193,7 @@ get '/kinase/:kinase' => sub {
 	# NanoBRET Data
 	#############################################################################
 	$parser = Text::CSV::Simple->new;
-	my $NanoBRET_info = csv(in => '../data_sets/dark_NanoBRET_promega.csv',
+	my $NanoBRET_info = csv(in => '../data_sets/dark_NanoBRET.csv',
 		headers => 'auto') or die "$!";
 
 	my @NanoBRET_hits = grep $_->{'symbol'} eq $template_data{kinase}, @{$NanoBRET_info};
@@ -322,7 +322,7 @@ get '/data' => sub {
 		headers => 'auto');
 
 	$template_data{NanoBRET} = csv(
-		in => '../data_sets/dark_NanoBRET_promega.csv',
+		in => '../data_sets/dark_NanoBRET.csv',
 		headers => 'auto');
     
 	my @tracer_sheets = <"../public/tracer_sheets/*">;

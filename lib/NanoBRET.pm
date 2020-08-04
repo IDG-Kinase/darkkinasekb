@@ -16,7 +16,7 @@ get '/NanoBRET' => sub {
 	#############################################################################
 	# NanoBRET Data
 	#############################################################################
-	my $NanoBRET_info = csv(in => '../data_sets/dark_NanoBRET_promega.csv',
+	my $NanoBRET_info = csv(in => '../data_sets/dark_NanoBRET.csv',
 		headers => 'auto') or die "$!";
 	
 	my %template_data;
