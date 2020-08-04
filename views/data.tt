@@ -12,6 +12,17 @@ without repositories, we will use our synapse <a href="https://www.synapse.org/#
 
 <hr>
 
+We maintain downloadable collections of the data sets associated with this website:
+
+<ul>
+  <li><a href="data_sets/compounds.csv">Compounds</a> associated with Dark Kinases (CSV format)</li>
+  <li><a href="data_sets/dark_NanoBRET.csv">NanoBRET Reagents</a> (CSV format)</li>
+  <li><a href="data_sets/param_table.csv">PRM Peptides</a> for the dark kinases (CSV format)</li>
+  <li><a href="javascripts/PPI/ppi.json">Protein Interaction Data</a> (JSON format)</li>
+</ul>
+
+<hr>
+
 For reference, a complete list of the dark kinases follows, with corresponding
 links to information about each kinase:
 
