@@ -123,24 +123,6 @@ get '/kinase/:kinase' => sub {
 	}
 
 	#############################################################################
-	# INDRA Filtered Results
-	#############################################################################
-	my @INDRA_filtered_file_matches = grep basename($_) eq "$template_data{kinase}.png", 
-	<'../public/images/INDRA/filtered/*'>;
-
-	$template_data{include_filtered_INDRA} = 0;
-	if (scalar(@INDRA_filtered_file_matches) > 0) {
-		$template_data{include_filtered_INDRA} = 1;
-
-		$parser = Text::CSV::Simple->new;
-		my @INDRA_filtered = $parser->read_file('../data_sets/INDRA_URL_filtered.csv') or die "$!";
-
-		@INDRA_filtered = grep $_->[0] eq $template_data{kinase}, @INDRA_filtered;
-
-		$template_data{filtered_INDRA_URL} = $INDRA_filtered[0][1];
-	}
-
-	#############################################################################
 	# APMS Results
 	#############################################################################
 	open(FILE, "../public/javascripts/PPI/ppi.json");
