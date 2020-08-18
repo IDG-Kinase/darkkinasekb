@@ -18,6 +18,18 @@ footer {
   background-color: #f5f5f5;
 }
 
+.fill img {
+  width: 100%;
+}
+
+/* img { */
+/*   object-fit: cover; */
+/*   /* min-width: 100%; */ */
+/*   /* min-height: 100%; */ */
+/*   /* width: auto; */ */
+/*   /* height: auto; */ */
+/* } */
+
 .hidden {
   display: none;
 }
