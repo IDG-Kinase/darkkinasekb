@@ -31,14 +31,18 @@
 			<hr/>
 
 			<div class="row">
-				[% IF from_SGC %]
-				<p>This compound is available through special request from the <a href="[% compound.acquire_link %]" target="_blank">[% compound.source %]</a>.</p>
+				[% IF compound.from_SGC %]
+				<p>This compound is available through special request from the <a href="[% compound.acquire_link %]" onclick="getOutboundLink('[% acquire_link %]'); return false;" target="_blank">[% compound.source %]</a>.</p>
 				[% ELSE %]
-				<p>This compound is available through <a href="[% compound.acquire_link %]" target="_blank">[% compound.source %]</a>.</p>
+				<p>This compound is available through <a href="[% compound.acquire_link %]" onclick="getOutboundLink('[% compound.acquire_link %]'); return false;" target="_blank">[% compound.source %]</a>.</p>
 				[% END %]
 			</div>
 			<div class="row">
+              [% IF compound.use_outside_link %]
+				<p>Additional data concerning this compound can be found <a href="[% compound.outside_link %]" target="_blank">here</a>.</p>
+              [% ELSE %]
 				<p>Additional data concerning this compound can be found <a href="/compound_data_sheets/[% compound.kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a>.</p>
+              [% END %]
 
 			</div>
 		</div>

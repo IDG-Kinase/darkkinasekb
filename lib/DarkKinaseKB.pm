@@ -222,10 +222,16 @@ get '/kinase/:kinase' => sub {
 			$template_data{compound}{$header} = $compounds[$kinase_row][$_];
 		}
 
-		if ($template_data{source} eq "SGC-UNC") {
-			$template_data{from_SGC} = 1;
+		if ($template_data{compound}{source} eq "SGC-UNC") {
+			$template_data{compound}{from_SGC} = 1;
 		} else {
-			$template_data{from_SGC} = 0;
+			$template_data{compound}{from_SGC} = 0;
+		}
+		
+        if ($template_data{compound}{outside_link} ne "") {
+			$template_data{compound}{use_outside_link} = 1;
+		} else {
+			$template_data{compound}{use_outside_link} = 0;
 		}
 	}
 

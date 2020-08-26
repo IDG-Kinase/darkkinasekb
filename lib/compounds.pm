@@ -59,6 +59,12 @@ get '/compounds/:compound' => sub {
 			$template_data{from_SGC} = 0;
 		}
 
+        if ($template_data{outside_link} ne "") {
+			$template_data{use_outside_link} = 1;
+		} else {
+			$template_data{use_outside_link} = 0;
+		}
+
 		# debug(Dumper(\%template_data));
 
 		template 'compounds' => \%template_data;

@@ -31,7 +31,7 @@
 
 <div class="row">
 	[% IF from_SGC %]
-	<p>This compound is available through special request from the <a href="[% acquire_link %]" target="_blank">[% source %]</a>.</p>
+	<p>This compound is available through special request from the <a href="[% acquire_link %]" onclick="getOutboundLink('[% acquire_link %]'); return false;" target="_blank">[% source %]</a>.</p>
 	[% ELSE %]
 	<p>This compound is available through <a href="[% acquire_link %]" onclick="getOutboundLink('[% acquire_link %]'); return false;" target = "_blank">[% source %]</a>.</p>
 	[% END %]
@@ -39,7 +39,11 @@
 <div class="row">
 	<p>Additional data concerning this compound can be found 
 		[% FOREACH this_kinase = kinase %]
-		<a href="/compound_data_sheets/[% this_kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a> 
+              [% IF use_outside_link %]
+				<a href="[% outside_link %]" target="_blank">here</a> 
+              [% ELSE %]
+				<a href="/compound_data_sheets/[% this_kinase %] DK Chemical Tool PDF.pdf" target="_blank">here</a> 
+              [% END %]
 		[% END %].</p>
 </div>
 <div class="row">
