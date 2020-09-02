@@ -19,7 +19,7 @@
 		</p>
 		<p><b>Chemical Name</b>: [% chemical_name %]</p>
 		<p><b>CHEBI</b>: [% CHEBI %]</p>
-		<p><b>Smile String</b>: [% smiles %]</p>
+		<p><b>SMILES String</b>: [% smiles %]</p>
 		<p><b>Chemical Formula</b>: [% chemical_formula %]</p>
 		<p><b>Molecular Weight</b>: [% molecular_weight %]</p>
 		<p><b>cLogP</b>: [% cLogP %]</p>
