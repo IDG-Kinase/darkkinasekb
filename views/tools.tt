@@ -133,7 +133,7 @@
 
 <div class="row align-items-center">
   <div class="col-lg-3">
-    <a href="http://expression.darkkinome.org">
+    <a href="https://expression.darkkinome.org">
       <img class="img-fluid" src="images/GTEx-DK_logo.png">
     </a>
   </div>
@@ -142,7 +142,7 @@
   <div class="col-lg-8">
     <h4>GTEx Dark Kinase Data Browser</h4>
 	</p>We've working on developing a <a
-	href="http://expression.darkkinome.org" target="_blank">browser</a> for the expression data
+	href="https://expression.darkkinome.org" target="_blank">browser</a> for the expression data
 collected by the <a href="https://www.gtexportal.org/home/" target="_blank">GTEx consortium</a> and the Human Proteome Map <a href = "http://humanproteomemap.org/index.php">Project</a> 
 with a focus on the relative expression of the dark kinases in context with the
 entire kinome. This browser displays understudied kinases with especially high
