@@ -18,10 +18,10 @@
                   target="_blank">GTEx project</a> and the <a href="http://humanproteomemap.org/index.php">Human Proteome Map</a>. To gain a better
 						  understanding of the kinase tissue distribution, we've
 						  created an <a
-		 href="http://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">application</a> that describes
+		 href="https://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">application</a> that describes
 	 and summarizes the expression of each dark kinase in the context of the
 	 rest of the kinome. This interactive window onto the full applications shows the data associated with [% kinase %]. The graph summarizes the expression of the kinase across all the organ systems.</p>
-				<p>The full application can further explored at the <a href="http://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">Kinase Expression Data Application</a>.</p>
+				<p>The full application can further explored at the <a href="https://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">Kinase Expression Data Application</a>.</p>
 			</div>
 			<hr/>
 			<div class="row">
