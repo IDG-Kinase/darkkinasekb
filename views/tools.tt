@@ -133,7 +133,7 @@
 
 <div class="row align-items-center">
   <div class="col-lg-3">
-    <a href="http://expression.darkkinome.org">
+    <a href="https://expression.darkkinome.org">
       <img class="img-fluid" src="images/GTEx-DK_logo.png">
     </a>
   </div>
@@ -142,7 +142,7 @@
   <div class="col-lg-8">
     <h4>GTEx Dark Kinase Data Browser</h4>
 	</p>We've working on developing a <a
-	href="http://expression.darkkinome.org" target="_blank">browser</a> for the expression data
+	href="https://expression.darkkinome.org" target="_blank">browser</a> for the expression data
 collected by the <a href="https://www.gtexportal.org/home/" target="_blank">GTEx consortium</a> and the Human Proteome Map <a href = "http://humanproteomemap.org/index.php">Project</a> 
 with a focus on the relative expression of the dark kinases in context with the
 entire kinome. This browser displays understudied kinases with especially high
@@ -180,18 +180,22 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
 <div class="row align-items-center">
   <div class="col-lg-3">
     <a href="http://cki.ccs.miami.edu/">
-      <img class="img-fluid" src="images/CKI_logo.png">
+	  <img class="img-fluid" src="images/CKI_logo.png">
     </a>
   </div>
   <div class="col-lg-1">
   </div>
   <div class="col-lg-8">
     <h4>Clinical Kinase Index</h4>
-	</p>The <a href="http://cki.ccs.miami.edu/">clinical kinase
-		index</a> is a TCGA kinase data browser being developed by the <a
-			href="http://schurerlab.org/" target="_blank">Sch&#x00FC;er lab</a>
-	at the University of Miami. The data browser allows the user to browse at
-	both the individual kinase level and cancer type.
+
+	</p>The Clinical Kinase Index (<a href="http://cki.ccs.miami.edu/">CKI</a>) is
+	an interactive App developed by the <a href="http://schurerlab.org/">Schürer
+	lab</a> to search browse and visualize the clinical relevance of kinases for
+solid tumors based gene expression data from the TCGA integrated with survival-,
+tumor (TNM)-, pathological-, and histological staging data, and various kinase
+annotations, including target development level, and phylogenetic and functional
+classifications.
+
   </div>
 </div>
 

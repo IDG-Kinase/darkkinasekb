@@ -15,26 +15,18 @@
 			<div class="row">
 				<p>The expression of kinases varies widely across the human
 				tissues assayed by the <a href="https://gtexportal.org/home/"
-							  target="_blank">GTEx project</a>. To gain a better
+                  target="_blank">GTEx project</a> and the <a href="http://humanproteomemap.org/index.php">Human Proteome Map</a>. To gain a better
 						  understanding of the kinase tissue distribution, we've
 						  created an <a
-		 href="http://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">application</a> that describes
+		 href="https://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">application</a> that describes
 	 and summarizes the expression of each dark kinase in the context of the
-	 rest of the kinome. These visualizations show a snapshot of the data associated with [% kinase %]. The two anatograms show the five organs where [% kinase %] is most abundant. The graph summarizes the expression of the kinase across all the organ systems.</p>
-				<p>This data can further explored at our <a href="http://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">Kinase Expression Data Application</a>.</p>
+	 rest of the kinome. This interactive window onto the full applications shows the data associated with [% kinase %]. The graph summarizes the expression of the kinase across all the organ systems.</p>
+				<p>The full application can further explored at the <a href="https://expression.darkkinome.org/?input_kinase=[% kinase %]" target="_blank">Kinase Expression Data Application</a>.</p>
 			</div>
 			<hr/>
 			<div class="row">
-				<div class="col-3">
-					<img src="/images/kinase_expression/top_5_anatograms/[% kinase %]-male.svg">
-				</div>
-				<div class="col-1"></div>
-				<div class="col-3">
-					<img src="/images/kinase_expression/top_5_anatograms/[% kinase %]-female.svg">
-				</div>
-				<div class="col-1"></div>
-				<div class="col-3">
-					<img src="/images/kinase_expression/kinase_percentile_graphs/[% kinase %].svg">
+				<div class="col">
+					<iframe id="expression_browser" src="https://expression.darkkinome.org/?input_kinase=[% kinase %]&embed=1" style="position: relative; height: 600px; width: 100%; border: 0px; "></iframe>
 				</div>
 			</div>
 		</div>
