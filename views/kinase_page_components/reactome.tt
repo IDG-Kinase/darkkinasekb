@@ -1,0 +1,34 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"></script> -->
+
+<script src="/javascripts/reactome/reactome-gene-hierarchy.min.js"></script>
+<script src="/javascripts/reactome/reactome-interactor-search.min.js"></script>
+
+<div class=card>
+	<div class="card-header">
+		<div class="row align-items-center">
+			<div class="col-11">
+				IDG Reactome
+			</div>
+			<div class="col-1">
+				<button class="btn float-right" 
+						type="button" 
+	  					data-toggle="collapse" 
+						data-target="#ReactomeCollapse" 
+						aria-expanded="false" 
+						aria-controls="NetworkCollapse" 
+						onclick="change_collapse_icon(this)">+</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="ReactomeCollapse" class="collapse">
+		<div class="card-body">
+
+			<reactome-gene-hierarchy term="[% kinase %]" darkmode="false"></reactome-gene-hierarchy>
+			<reactome-interactor-search term="[% kinase %]" darkmode="false"></reactome-interactor-search>
+		</div>
+	</div>
+</div>
+
+<br/>
