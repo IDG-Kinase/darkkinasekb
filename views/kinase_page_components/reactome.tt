@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"></script> -->
 
-<script src="/javascripts/reactome/reactome-gene-hierarchy.min.js"></script>
+<script src="/javascripts/reactome/reactome-pathway-hierarchy.min.js"></script>
 <script src="/javascripts/reactome/reactome-interactor-search.min.js"></script>
 
 <div class=card>
@@ -25,7 +25,7 @@
 	<div id="ReactomeCollapse" class="collapse">
 		<div class="card-body">
 
-			<reactome-gene-hierarchy term="[% kinase %]" darkmode="false"></reactome-gene-hierarchy>
+			<reactome-pathway-hierarchy term="[% kinase %]" darkmode="false"></reactome-pathway-hierarchy>
 			<reactome-interactor-search term="[% kinase %]" darkmode="false"></reactome-interactor-search>
 		</div>
 	</div>
