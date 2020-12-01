@@ -234,6 +234,21 @@ get '/kinase/:kinase' => sub {
 			$template_data{compound}{use_outside_link} = 0;
 		}
 	}
+	
+	#############################################################################
+	# Addgene Data
+	#############################################################################
+	my $plasmid_info = csv(in => '../data_sets/major_lab_plasmids.csv',
+		headers => 'auto') or die "$!";
+
+	my @plasmid_hits = grep $_->{'symbol'} eq $template_data{kinase}, @{$plasmid_info};
+	
+	debug(Dumper(\@plasmid_hits));
+	$template_data{include_plasmids} = 0;
+	if (scalar(@NanoBRET_hits) > 0) {
+		$template_data{include_plasmids} = 1;
+		$template_data{plasmid_info} = \@plasmid_hits;
+	}
 
 	#############################################################################
 	# PDB Kinase Domain Data

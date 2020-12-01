@@ -3,7 +3,7 @@
 	<div class="card-header">
 		<div class="row align-items-center">
 			<div class="col-11">
-				Available Assays, Cell Lines and Animal Models	
+				Available Assays, Plasmids, Cell Lines and Animal Models	
 			</div>
 			<div class="col-1">
 				<button class="btn float-right" type="button" data-toggle="collapse" data-target="#CellAnimalCollapse" aria-expanded="false" aria-controls="CellAnimalCollapse" onclick="change_collapse_icon(this)">+</button>
@@ -105,6 +105,23 @@
 								[% NanoBRET_info.vector_catalog_number %]</a>. 
 
 							[% END %]
+						</div>
+					</div>
+				</div>
+				[% END %]
+				[% IF include_plasmids == 1 %]
+				<div class="col-sm-3">
+					<div class=card>
+						<div class="card-header">
+							BioID Plasmids
+						</div>
+						<div class="card-body">
+							These plasmids are provided by Ben Major's lab through Addgene and facilitate producing protein interaction networks using BioID. More information about these plasmids can be found at the following links:
+							<ul>
+							[% FOREACH i IN plasmid_info %]
+							<li><a href="https://addgene.org/[% i.addgene_id %]">[% i.plasmid_name %]</a></li>
+							[% END %]
+							</ul>
 						</div>
 					</div>
 				</div>
