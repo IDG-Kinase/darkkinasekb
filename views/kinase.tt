@@ -128,8 +128,8 @@
 
 [% INCLUDE 'kinase_page_components/reactome.tt' %]
 
-<div class="alert alert-info col-4" role="alert">
-	<h4 class="alert-heading">Resources</h4>
+<div class="alert alert-info col-12" role="alert">
+	<h4 class="alert-heading">Outside Resources</h4>
 	<hr>
 	<a href="https://pharos.nih.gov/idg/targets/[% kinase %]" target="_blank">Pharos</a> |
 	<a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=[% kinase %]" target="_blank">Gene Cards</a> |

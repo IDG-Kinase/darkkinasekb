@@ -24,7 +24,7 @@
 
 	<div id="ReactomeCollapse" class="collapse">
 		<div class="card-body">
-
+			<p>The <a href="https://reactome.org/">Reactome Knowledgebase</a> of Human Biological Pathways and Processes is a curated and peer-reviewed knowledgebase available online as an open access resource that can be freely used and distributed by all members of the biological research community. This view of the reactome database is focused on [% kinase %] and displays the pathways associated with [% kinase %].
 			<reactome-pathway-hierarchy term="[% kinase %]" darkmode="false"></reactome-pathway-hierarchy>
 			<reactome-interactor-search term="[% kinase %]" darkmode="false"></reactome-interactor-search>
 		</div>
