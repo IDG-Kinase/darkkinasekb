@@ -126,6 +126,8 @@
 [% INCLUDE kinase_page_components/expression.tt %]
 [% END %]
 
+[% INCLUDE 'kinase_page_components/reactome.tt' %]
+
 <div class="alert alert-info col-4" role="alert">
 	<h4 class="alert-heading">Resources</h4>
 	<hr>
