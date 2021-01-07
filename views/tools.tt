@@ -5,6 +5,31 @@
 
 <div class="row align-items-center">
   <div class="col-lg-3">
+    <a href="https://expression.darkkinome.org">
+      <img class="img-fluid" src="images/GTEx-DK_logo.png">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>Dark Kinase Expression Data Browser</h4>
+	</p>We've developed a <a
+	href="https://expression.darkkinome.org" target="_blank">browser</a> for the expression data
+collected by the <a href="https://www.gtexportal.org/home/" target="_blank">GTEx consortium</a> and the Human Proteome Map <a href = "http://humanproteomemap.org/index.php">Project</a> 
+with a focus on the relative expression of the dark kinases in context with the
+entire kinome. This browser displays understudied kinases with especially high
+expression in the tissues that have been studied by the GTEx and the HPM consortiums. The
+results can be browsed on the basis of specific kinases or organ/tissue systems.
+  </div>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class="row align-items-center">
+  <div class="col-lg-3">
     <a href="http://phanstiel-lab.med.unc.edu/CORAL/">
       <img class="img-fluid" src="images/coral-logo.png">
     </a>
@@ -124,31 +149,6 @@
 
 <div class=row>
 	<h2>Preview Tools and Applications</h2>
-</div>
-
-<div class=row>
-  <br>
-  <br>
-</div>
-
-<div class="row align-items-center">
-  <div class="col-lg-3">
-    <a href="https://expression.darkkinome.org">
-      <img class="img-fluid" src="images/GTEx-DK_logo.png">
-    </a>
-  </div>
-  <div class="col-lg-1">
-  </div>
-  <div class="col-lg-8">
-    <h4>GTEx Dark Kinase Data Browser</h4>
-	</p>We've working on developing a <a
-	href="https://expression.darkkinome.org" target="_blank">browser</a> for the expression data
-collected by the <a href="https://www.gtexportal.org/home/" target="_blank">GTEx consortium</a> and the Human Proteome Map <a href = "http://humanproteomemap.org/index.php">Project</a> 
-with a focus on the relative expression of the dark kinases in context with the
-entire kinome. This browser displays understudied kinases with especially high
-expression in the tissues that have been studied by the GTEx consortium. The
-results can be browsed on the basis of specific kinases or organ/tissue systems.
-  </div>
 </div>
 
 <div class=row>
