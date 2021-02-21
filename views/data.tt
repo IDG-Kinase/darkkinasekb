@@ -20,7 +20,7 @@ We maintain downloadable collections of the data sets associated with this websi
   <li><a href="data_sets/compounds.csv">Compounds</a> associated with Dark Kinases (CSV format)</li>
   <li><a href="data_sets/dark_NanoBRET.csv">NanoBRET Reagents</a> (CSV format)</li>
   <li><a href="data_sets/param_table.csv">PRM Peptides</a> for the dark kinases (CSV format)</li>
-  <li><a href="javascripts/PPI/ppi.json">Protein Interaction Data</a> (JSON format)</li>
+  <li><a href="data_sets/ppi.csv">Protein Interaction and Proximity Data</a> (CSV format)</li>
 </ul>
 
 <hr>
