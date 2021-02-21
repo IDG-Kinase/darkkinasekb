@@ -1,5 +1,5 @@
 $(function() {
-    var maxDistance = 4;
+    var maxDistance = 3;
 
     var style = [
         // Nodes
@@ -456,14 +456,6 @@ $(function() {
                     style: style
                 });
 
-                layout = cy.layout({ name: 'cola',
-                    nodeSpacing: 5,
-                    edgeLengthVal: 45,
-                    animate: true,
-                    randomize: true,
-                    maxSimulationTime: 5000}
-                );
-
                 cy.on('mouseover', 'node', function(e) {
                     var node = e.target;
                     var neighborhood = node.closedNeighborhood();
@@ -563,11 +555,19 @@ $(function() {
 
                 delete toCompletelyRemove;
 
-                layout.run();
-
                 cy.endBatch();
 
+                layout = cy.layout({ name: 'cola',
+                    nodeSpacing: 5,
+                    edgeLengthVal: 45,
+                    animate: true,
+                    randomize: true,
+                    maxSimulationTime: 5000}
+                );
+
                 updateNetworkFromQuery(bait, numBait, 1, true, true, false, "None");
+
+                layout.run();
 
             });
 
