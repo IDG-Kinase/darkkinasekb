@@ -52,8 +52,7 @@ get '/kinase/:kinase' => sub {
 	#############################################################################
 	# Long Kinase Descriptions
 	#############################################################################
-	my @kinase_description_file = grep $_ =~ /$template_data{kinase}/, 
-	<'../data_sets/kinase_descriptions/*'>;
+	my @kinase_description_file = grep $_ =~ /$template_data{kinase}/, <'../data_sets/kinase_descriptions/*'>;
 
 	$template_data{include_long_description} = 0;
 	if (scalar(@kinase_description_file) == 1) {
@@ -68,6 +67,16 @@ get '/kinase/:kinase' => sub {
 
 		$template_data{kinase_text} = $kinase_text;
 	} 
+	
+	#############################################################################
+	# TCGA Summaries
+	#############################################################################
+	my @TCGA_file_matches = grep basename($_) eq "$template_data{kinase}.svg", <'../public/images/mutation_heatmaps/*'>;
+
+	$template_data{include_TCGA} = 0;
+	if (scalar(@TCGA_file_matches) > 0) {
+		$template_data{include_TCGA} = 1;
+	}
 
 	#############################################################################
 	# PRM Images

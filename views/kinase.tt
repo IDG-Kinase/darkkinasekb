@@ -35,6 +35,8 @@
 
 <hr/>
 
+
+[% IF include_TCGA == 1 %]
 <!-- TCGA Data -->
 <div class="card">
   <div class="card-header">
@@ -96,6 +98,7 @@
 </div>
 </div>
 <br/>
+[% END %]
 
 [% IF pdb_domain.include == 1 %]
 [% INCLUDE 'kinase_page_components/PDB.tt' %]
