@@ -253,7 +253,7 @@ get '/kinase/:kinase' => sub {
 	my @plasmid_hits = grep $_->{'symbol'} eq $template_data{kinase}, @{$plasmid_info};
 	
 	$template_data{include_plasmids} = 0;
-	if (scalar(@NanoBRET_hits) > 0) {
+	if (scalar(@plasmid_hits) > 0) {
 		$template_data{include_plasmids} = 1;
 		$template_data{plasmid_info} = \@plasmid_hits;
 	}
