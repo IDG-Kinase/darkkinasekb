@@ -110,7 +110,7 @@ get '/kinase/:kinase' => sub {
 
 	#These two kinases aren't present in GTEx, so I won't try to display the 
 	#kinase expression box for these genes
-	if ($template_data{kinase} == "PRAG1" || $template_data{kinase} == "TSSK2") {
+	if ($template_data{kinase} eq "PRAG1" | $template_data{kinase} eq "TSSK2") {
 		$template_data{include_expression} = 0;
 	}
 
