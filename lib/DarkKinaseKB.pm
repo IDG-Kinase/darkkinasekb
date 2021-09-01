@@ -106,11 +106,12 @@ get '/kinase/:kinase' => sub {
 	#############################################################################
 	# Kinase Expression
 	#############################################################################
-	my $expression_file = "../public/images/kinase_expression/kinase_percentile_graphs/$template_data{kinase}.svg";
-	
-	$template_data{include_expression} = 0;
-	if (-r $expression_file) {
-		$template_data{include_expression} = 1;
+	$template_data{include_expression} = 1;
+
+	#These two kinases aren't present in GTEx, so I won't try to display the 
+	#kinase expression box for these genes
+	if ($template_data{kinase} == "PRAG1" || $template_data{kinase} == "TSSK2") {
+		$template_data{include_expression} = 0;
 	}
 
 	#############################################################################
