@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="2000"
+   height="2000"
+   viewBox="0 0 529.16665 529.16668"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo_flowed.svg"
+   inkscape:export-filename="./logo_flowed.png"
+   inkscape:export-xdpi="9.6000004"
+   inkscape:export-ydpi="9.6000004"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.92"
+     inkscape:cx="999.45652"
+     inkscape:cy="1000"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="3738"
+     inkscape:window-height="2082"
+     inkscape:window-x="102"
+     inkscape:window-y="41"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10.5833333;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 8.6928499,10.592456 c 0,0 90.9810401,-5.7769007 142.4963901,34.714958 51.51535,40.491859 78.58104,62.277386 113.26211,218.917036 34.68107,156.63965 77.071,174.26132 127.25821,213.7979 50.18721,39.53657 128.50029,39.83409 128.50029,39.83409"
+       id="path855"
+       sodipodi:nodetypes="czzzc" />
+    <text
+       xml:space="preserve"
+       style="font-size:86.4306px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;stroke-width:7.22157"
+       x="259.79868"
+       y="67.646927"
+       id="text5276"><tspan
+         sodipodi:role="line"
+         style="font-size:86.4306px;stroke-width:7.22157"
+         x="259.79868"
+         y="67.646927"
+         id="tspan1311">Kinase</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:86.43055528px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;stroke-width:5.8553"
+       x="0.72098821"
+       y="522.23901"
+       id="text5276-3"><tspan
+         sodipodi:role="line"
+         id="tspan5274-6"
+         style="stroke-width:5.8553;font-size:86.43055528px"
+         x="0.72098821"
+         y="522.23901">Prediction</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:86.4306px;line-height:1.25;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';letter-spacing:0px;word-spacing:0px;stroke-width:0.249125"
+       id="text9855"
+       transform="translate(7.9375004,-5.8208336)"><textPath
+         xlink:href="#path855"
+         id="textPath61341"
+         style="font-size:86.4306px">            Inhibitor</textPath></text>
+  </g>
+</svg>
