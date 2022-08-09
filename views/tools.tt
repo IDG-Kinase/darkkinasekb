@@ -147,15 +147,6 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
   <br>
 </div>
 
-<div class=row>
-	<h2>Preview Tools and Applications</h2>
-</div>
-
-<div class=row>
-  <br>
-  <br>
-</div>
-
 <div class="row align-items-center">
   <div class="col-lg-3">
     <a href="https://idg.reactome.org/">
@@ -194,9 +185,39 @@ results can be browsed on the basis of specific kinases or organ/tissue systems.
 solid tumors based gene expression data from the TCGA integrated with survival-,
 tumor (TNM)-, pathological-, and histological staging data, and various kinase
 annotations, including target development level, and phylogenetic and functional
-classifications.
+classifications. This tool has been published in 
+<a href="https://doi.org/10.1016/j.xcrm.2020.100128">Cell Reports Medicine</a>.
+
 
   </div>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class=row>
+	<h2>Preview Tools and Applications</h2>
+</div>
+
+<div class=row>
+  <br>
+  <br>
+</div>
+
+<div class="row align-items-center">
+  <div class="col-lg-3">
+    <a href="http://kipred.gomezlab.org/">
+	  <img class="img-fluid" src="images/kipred_logo_flowed.svg">
+    </a>
+  </div>
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-8">
+    <h4>Kinase Inhibitor Cell Viability Predictions - kipred Server</h4>
+
+	</p>The <a href="https://kipred.gomezlab.org">kinase inhibitor cell viability prediction server</a> is a tool that allows any user with an RNAseq data set to make cell viability predictions for a set of about 230 kinase inhibitors. These inhibitors were <a href="https://doi.org/10.1126/science.aan4368">previously characterized</a> using a mass spectroscopy kinobead assay. Using this data, cell viability results associated with each compound from <a href="https://www.theprismlab.org/the-prism-assay">PRISM</a> and other multiomic data from the <a href="https://sites.broadinstitute.org/ccle/">CCLE</a>, we have developed a model that uses RNAseq data to make custom predictions for this set of kinase inhibitors. To make it easier for potential users to access this tool, we have also used the pre-processed RNAseq data available through <a href="https://maayanlab.cloud/archs4/">ARCHS4</a> to enable any human GEO data sample to processed without any need for the user to upload their data. The ARCHS submission was made possible through a collaboration with <a href="https://profiles.mountsinai.org/alexander-lachmann">Alexander Lachmann</a> and <a href="https://icahn.mssm.edu/profiles/avi-maayan">Avi Ma'ayan</a>.</div>
 </div>
 
 <div class=row>
