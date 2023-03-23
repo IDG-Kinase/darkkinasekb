@@ -1,5 +1,5 @@
 [% USE Dumper %]
-<script src="https://unpkg.com/ngl"></script>
+<script src="https://unpkg.com/ngl@0.8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
 <script>
 	function stage_PDB(PDB_id) {
