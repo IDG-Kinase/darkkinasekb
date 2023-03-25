@@ -39,17 +39,17 @@
     <script src="/javascripts/typeahead.js/typeahead.bundle.min.js"></script>
     
     <script src="/javascripts/kinase_typeahead.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYM8VKXTPQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38268502-3"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-38268502-3');
-	</script>
-	
+      gtag('config', 'G-GYM8VKXTPQ');
+    </script>
+	  
 	<!-- Script to track clicks to outbound links --!>
 	<script>
 /**
