@@ -1,6 +1,5 @@
 [% USE Dumper %]
-<script src="https://unpkg.com/ngl@0.8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.min.js"></script>
+<script src="https://unpkg.com/ngl/dist/ngl.js"></script>
 <script>
 	function stage_PDB(PDB_id) {
 		if (document.getElementById(PDB_id + "-data").innerHTML == "") {
@@ -9,7 +8,6 @@
 			document.getElementById(PDB_id + "-data").style.height = PDBTabContent.clientWidth*1/2*3/4 + "px";
 			setTimeout(function() {
 				var stage = new NGL.Stage(PDB_id + "-data", {backgroundColor:'white'});
-				stage.viewer.scene.background = new THREE.Color( 0xffffff );
 				stage.loadFile("rcsb://" + PDB_id, {defaultRepresentation: true}).then(function (component) {
 					component.autoView();
 				});
